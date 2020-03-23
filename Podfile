@@ -6,10 +6,17 @@ target 'TsundokuBreak' do
   use_frameworks!
 
   # Pods for TsundokuBreak
+    pod 'SwiftLint'
+    pod 'R.swift'
+    pod 'RxSwift'
+    pod 'RxCocoa'
+
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
     # Pods for testing
+    pod 'RxBlocking'
+    pod 'RxTest'
   end
 
   target 'TsundokuBreakUITests' do
