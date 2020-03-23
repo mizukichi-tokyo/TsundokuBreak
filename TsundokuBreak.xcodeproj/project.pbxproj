@@ -682,7 +682,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VQK249U2S;
@@ -705,7 +705,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 168AD90A284DE8731D068C7B /* Pods-TsundokuBreakTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VQK249U2S;
@@ -728,7 +728,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VQK249U2S;
 				INFOPLIST_FILE = TsundokuBreakUITests/Info.plist;
@@ -749,7 +749,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9VQK249U2S;
 				INFOPLIST_FILE = TsundokuBreakUITests/Info.plist;
