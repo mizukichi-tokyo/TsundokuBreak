@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2446BF2BD84AFFEEB6559C9F /* Pods_TsundokuBreak_TsundokuBreakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECEEE1F6EB33E21311149 /* Pods_TsundokuBreak_TsundokuBreakUITests.framework */; };
+		B206B2BBA9562D05BFD4E3A5 /* Pods_TsundokuBreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8953B91220F65947BBB51A3F /* Pods_TsundokuBreak.framework */; };
+		B25B29122F51D1E89BD35B7C /* Pods_TsundokuBreakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E393BE0FF29D18021969D6E /* Pods_TsundokuBreakTests.framework */; };
 		D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8B24289D4900440CAF /* AppDelegate.swift */; };
 		D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8D24289D4900440CAF /* SceneDelegate.swift */; };
 		D3E78A9024289D4900440CAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8F24289D4900440CAF /* ViewController.swift */; };
@@ -35,6 +38,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		168AD90A284DE8731D068C7B /* Pods-TsundokuBreakTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreakTests.release.xcconfig"; path = "Target Support Files/Pods-TsundokuBreakTests/Pods-TsundokuBreakTests.release.xcconfig"; sourceTree = "<group>"; };
+		2E393BE0FF29D18021969D6E /* Pods_TsundokuBreakTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsundokuBreakTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8953B91220F65947BBB51A3F /* Pods_TsundokuBreak.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsundokuBreak.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; sourceTree = "<group>"; };
+		A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreakTests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreakTests/Pods-TsundokuBreakTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		D3E78A8824289D4900440CAF /* TsundokuBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TsundokuBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E78A8B24289D4900440CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E78A8D24289D4900440CAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +58,9 @@
 		D3E78AA924289D4A00440CAF /* TsundokuBreakUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TsundokuBreakUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E78AAD24289D4A00440CAF /* TsundokuBreakUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuBreakUITests.swift; sourceTree = "<group>"; };
 		D3E78AAF24289D4A00440CAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7A4C95D2E803F290430925F /* Pods-TsundokuBreak.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak.release.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak/Pods-TsundokuBreak.release.xcconfig"; sourceTree = "<group>"; };
+		E2FECEEE1F6EB33E21311149 /* Pods_TsundokuBreak_TsundokuBreakUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TsundokuBreak_TsundokuBreakUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F02A25F61438B364D1F0B313 /* Pods-TsundokuBreak.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak/Pods-TsundokuBreak.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B206B2BBA9562D05BFD4E3A5 /* Pods_TsundokuBreak.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B25B29122F51D1E89BD35B7C /* Pods_TsundokuBreakTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +84,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2446BF2BD84AFFEEB6559C9F /* Pods_TsundokuBreak_TsundokuBreakUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		617977457072AE21B736947D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F02A25F61438B364D1F0B313 /* Pods-TsundokuBreak.debug.xcconfig */,
+				D7A4C95D2E803F290430925F /* Pods-TsundokuBreak.release.xcconfig */,
+				CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */,
+				8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */,
+				A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */,
+				168AD90A284DE8731D068C7B /* Pods-TsundokuBreakTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E1C7D7B20AE32617F5B72BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8953B91220F65947BBB51A3F /* Pods_TsundokuBreak.framework */,
+				E2FECEEE1F6EB33E21311149 /* Pods_TsundokuBreak_TsundokuBreakUITests.framework */,
+				2E393BE0FF29D18021969D6E /* Pods_TsundokuBreakTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		D3E78A7F24289D4900440CAF = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +122,8 @@
 				D3E78AA124289D4A00440CAF /* TsundokuBreakTests */,
 				D3E78AAC24289D4A00440CAF /* TsundokuBreakUITests */,
 				D3E78A8924289D4900440CAF /* Products */,
+				617977457072AE21B736947D /* Pods */,
+				8E1C7D7B20AE32617F5B72BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -135,6 +176,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E78AB224289D4A00440CAF /* Build configuration list for PBXNativeTarget "TsundokuBreak" */;
 			buildPhases = (
+				98B0C362B140A45E54110C10 /* [CP] Check Pods Manifest.lock */,
 				D3E78A8424289D4900440CAF /* Sources */,
 				D3E78A8524289D4900440CAF /* Frameworks */,
 				D3E78A8624289D4900440CAF /* Resources */,
@@ -152,6 +194,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E78AB524289D4A00440CAF /* Build configuration list for PBXNativeTarget "TsundokuBreakTests" */;
 			buildPhases = (
+				7B72F5103AD761C1C41C837F /* [CP] Check Pods Manifest.lock */,
 				D3E78A9A24289D4A00440CAF /* Sources */,
 				D3E78A9B24289D4A00440CAF /* Frameworks */,
 				D3E78A9C24289D4A00440CAF /* Resources */,
@@ -170,6 +213,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3E78AB824289D4A00440CAF /* Build configuration list for PBXNativeTarget "TsundokuBreakUITests" */;
 			buildPhases = (
+				7B1061263442E8BF144A6688 /* [CP] Check Pods Manifest.lock */,
 				D3E78AA524289D4A00440CAF /* Sources */,
 				D3E78AA624289D4A00440CAF /* Frameworks */,
 				D3E78AA724289D4A00440CAF /* Resources */,
@@ -253,6 +297,75 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7B1061263442E8BF144A6688 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TsundokuBreak-TsundokuBreakUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B72F5103AD761C1C41C837F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TsundokuBreakTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		98B0C362B140A45E54110C10 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TsundokuBreak-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D3E78A8424289D4900440CAF /* Sources */ = {
@@ -432,6 +545,7 @@
 		};
 		D3E78AB324289D4A00440CAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F02A25F61438B364D1F0B313 /* Pods-TsundokuBreak.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -444,12 +558,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.kubota.TsundokuBreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		D3E78AB424289D4A00440CAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7A4C95D2E803F290430925F /* Pods-TsundokuBreak.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -462,12 +577,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.mizuki.kubota.TsundokuBreak;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		D3E78AB624289D4A00440CAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -490,6 +606,7 @@
 		};
 		D3E78AB724289D4A00440CAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 168AD90A284DE8731D068C7B /* Pods-TsundokuBreakTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -512,6 +629,7 @@
 		};
 		D3E78AB924289D4A00440CAF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -532,6 +650,7 @@
 		};
 		D3E78ABA24289D4A00440CAF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
