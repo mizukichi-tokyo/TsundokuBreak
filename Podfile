@@ -1,5 +1,5 @@
 # Uncomment the next line to define a global platform for your project
-platform :ios, '9.0'
+platform :ios, '13.2'
 
 target 'TsundokuBreak' do
   # Comment the next line if you don't want to use dynamic frameworks
@@ -10,6 +10,7 @@ target 'TsundokuBreak' do
     pod 'R.swift'
     pod 'RxSwift'
     pod 'RxCocoa'
+    pod 'Moya'
 
 
   target 'TsundokuBreakTests' do

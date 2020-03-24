@@ -7,7 +7,8 @@ excluded:
   - R.generated.swift
   - TsundokuBreak/AppDelegate.swift
   - TsundokuBreak/SceneDelegate.swift
-
+  # GoogleBooksAPIsの形式に準拠するため
+  - TsundokuBreak/Struct/BookInfo.swift
 # swiftlintがfastlaneのswiftコードを見に行ってしまうので、vendorをlint対象外としている。
 disabled_rules:
 - line_length
