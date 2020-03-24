@@ -6,91 +6,116 @@
 //  Copyright © 2020 MizukiKubota. All rights reserved.
 //
 
-// This file was generated from JSON Schema using quicktype, do not modify it directly.
-// To parse the JSON, add this file to your project and do:
-//
-//   let googleBooksAPIs = try? newJSONDecoder().decode(GoogleBooksAPIs.self, from: jsonData)
-
 import Foundation
+import Moya
 
-// MARK: - GoogleBooksAPIs
-struct GoogleBooksAPIs: Codable {
-    let kind: String?
-    let totalItems: Int?
-    let items: [Item]?
+enum GoogleBooksAPIs {
+    case search(String)
 }
-
-// MARK: - Item
-struct Item: Codable {
-    let kind, id, etag: String?
-    let selfLink: String?
-    let volumeInfo: VolumeInfo?
-    let saleInfo: SaleInfo?
-    let accessInfo: AccessInfo?
-    let searchInfo: SearchInfo?
-}
-
-// MARK: - AccessInfo
-struct AccessInfo: Codable {
-    let country, viewability: String?
-    let embeddable, publicDomain: Bool?
-    let textToSpeechPermission: String?
-    let epub, pdf: Epub?
-    let webReaderLink: String?
-    let accessViewStatus: String?
-    let quoteSharingAllowed: Bool?
-}
-
-// MARK: - Epub
-struct Epub: Codable {
-    let isAvailable: Bool?
-}
-
-// MARK: - SaleInfo
-struct SaleInfo: Codable {
-    let country, saleability: String?
-    let isEbook: Bool?
-}
-
-// MARK: - SearchInfo
-struct SearchInfo: Codable {
-    let textSnippet: String?
-}
-
-// MARK: - VolumeInfo
-struct VolumeInfo: Codable {
-    let title, subtitle: String?
-    let authors: [String]?
-    let publishedDate, volumeInfoDescription: String?
-    let industryIdentifiers: [IndustryIdentifier]?
-    let readingModes: ReadingModes?
-    let pageCount: Int?
-    let printType, maturityRating: String?
-    let allowAnonLogging: Bool?
-    let contentVersion: String?
-    let imageLinks: ImageLinks?
-    let language: String?
-    let previewLink, infoLink: String?
-    let canonicalVolumeLink: String?
-
-    enum CodingKeys: String, CodingKey {
-        case title, subtitle, authors, publishedDate
-        case volumeInfoDescription = "description"
-        case industryIdentifiers, readingModes, pageCount, printType, maturityRating, allowAnonLogging, contentVersion, imageLinks, language, previewLink, infoLink, canonicalVolumeLink
+extension GoogleBooksAPIs: TargetType {
+    var baseURL: URL {
+        return URL(string: "https://www.googleapis.com/books/v1")!
     }
+
+    var path: String {
+        switch self {
+        case .search:
+            return "/volumes"
+        }
+    }
+
+    var method: Moya.Method {
+        return .get
+    }
+
+    var sampleData: Data {
+        return APITestData.data(using: .utf8)!
+    }
+
+    var task: Task {
+        switch self {
+        case .search(let query):
+            return .requestParameters(parameters: ["q": query], encoding: URLEncoding.default)
+        }
+    }
+
+    var headers: [String: String]? {
+        return nil
+    }
+
 }
 
-// MARK: - ImageLinks
-struct ImageLinks: Codable {
-    let smallThumbnail, thumbnail: String?
+let APITestData = """
+{
+"kind": "books#volumes",
+"totalItems": 1,
+"items": [
+{
+"kind": "books#volume",
+"id": "RhbBoAEACAAJ",
+"etag": "yXGiAe/R9mQ",
+"selfLink": "https://www.googleapis.com/books/v1/volumes/RhbBoAEACAAJ",
+"volumeInfo": {
+"title": "マイクロインタラクション",
+"subtitle": "UI/UXデザインの神が宿る細部",
+"authors": [
+"Dan Saffer"
+],
+"publishedDate": "2014-03-20",
+"description": "マイクロインタラクションの概念を提唱する書籍",
+"industryIdentifiers": [
+{
+"type": "ISBN_10",
+"identifier": "4873116597"
+},
+{
+"type": "ISBN_13",
+"identifier": "9784873116594"
 }
-
-// MARK: - IndustryIdentifier
-struct IndustryIdentifier: Codable {
-    let type, identifier: String?
+],
+"readingModes": {
+"text": false,
+"image": false
+},
+"pageCount": 217,
+"printType": "BOOK",
+"maturityRating": "NOT_MATURE",
+"allowAnonLogging": false,
+"contentVersion": "preview-1.0.0",
+"imageLinks": {
+"smallThumbnail": "http://books.google.com/books/content?id=RhbBoAEACAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api",
+"thumbnail": "http://books.google.com/books/content?id=RhbBoAEACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+},
+"language": "ja",
+"previewLink": "http://books.google.co.jp/books?id=RhbBoAEACAAJ&dq=isbn:9784873116594&hl=&cd=1&source=gbs_api",
+"infoLink": "http://books.google.co.jp/books?id=RhbBoAEACAAJ&dq=isbn:9784873116594&hl=&source=gbs_api",
+"canonicalVolumeLink": "https://books.google.com/books/about/%E3%83%9E%E3%82%A4%E3%82%AF%E3%83%AD%E3%82%A4%E3%83%B3%E3%82%BF%E3%83%A9%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%B3.html?hl=&id=RhbBoAEACAAJ"
+},
+"saleInfo": {
+"country": "JP",
+"saleability": "NOT_FOR_SALE",
+"isEbook": false
+},
+"accessInfo": {
+"country": "JP",
+"viewability": "NO_PAGES",
+"embeddable": false,
+"publicDomain": false,
+"textToSpeechPermission": "ALLOWED",
+"epub": {
+"isAvailable": false
+},
+"pdf": {
+"isAvailable": false
+},
+"webReaderLink": "http://play.google.com/books/reader?id=RhbBoAEACAAJ&hl=&printsec=frontcover&source=gbs_api",
+"accessViewStatus": "NONE",
+"quoteSharingAllowed": false
+},
+"searchInfo": {
+"textSnippet": "マイクロインタラクションの概念を提唱する書籍"
 }
-
-// MARK: - ReadingModes
-struct ReadingModes: Codable {
-    let text, image: Bool?
 }
+]
+}
+"""
