@@ -11,6 +11,10 @@ import Moya
 
 class FirstViewController: UIViewController {
 
+    @IBAction func barcodeButtonTouchUp(_ sender: Any) {
+        //        self.present(BarCodeReaderVC(), animated: true, completion: nil)
+        self.present(ScannerViewController(), animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         let provider = MoyaProvider<GoogleBooksAPIs>()

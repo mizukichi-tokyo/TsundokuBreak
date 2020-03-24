@@ -15,6 +15,8 @@
 		D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35AFAB02428B68A0018EE9E /* FirstViewController.xib */; };
 		D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABB2429C4830018EE9E /* BookInfo.swift */; };
 		D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */; };
+		D35AFAC5242A06550018EE9E /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAC4242A06550018EE9E /* BarCodeReaderViewController.swift */; };
+		D35AFAC7242A0CE00018EE9E /* ScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAC6242A0CE00018EE9E /* ScannerViewController.swift */; };
 		D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8B24289D4900440CAF /* AppDelegate.swift */; };
 		D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8D24289D4900440CAF /* SceneDelegate.swift */; };
 		D3E78A9024289D4900440CAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E78A8F24289D4900440CAF /* ViewController.swift */; };
@@ -53,6 +55,8 @@
 		D35AFAB02428B68A0018EE9E /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		D35AFABB2429C4830018EE9E /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIs.swift; sourceTree = "<group>"; };
+		D35AFAC4242A06550018EE9E /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
+		D35AFAC6242A0CE00018EE9E /* ScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerViewController.swift; sourceTree = "<group>"; };
 		D3E78A8824289D4900440CAF /* TsundokuBreak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TsundokuBreak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3E78A8B24289D4900440CAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3E78A8D24289D4900440CAF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -171,9 +175,19 @@
 		D35AFABA2429C14D0018EE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
 				D35AFAAE2428B6620018EE9E /* FirstView */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		D35AFAC3242A061E0018EE9E /* BarCodeReaderView */ = {
+			isa = PBXGroup;
+			children = (
+				D35AFAC6242A0CE00018EE9E /* ScannerViewController.swift */,
+				D35AFAC4242A06550018EE9E /* BarCodeReaderViewController.swift */,
+			);
+			path = BarCodeReaderView;
 			sourceTree = "<group>";
 		};
 		D3E78A7F24289D4900440CAF = {
@@ -535,7 +549,9 @@
 			files = (
 				D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */,
 				D3E78A9024289D4900440CAF /* ViewController.swift in Sources */,
+				D35AFAC5242A06550018EE9E /* BarCodeReaderViewController.swift in Sources */,
 				D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */,
+				D35AFAC7242A0CE00018EE9E /* ScannerViewController.swift in Sources */,
 				D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,

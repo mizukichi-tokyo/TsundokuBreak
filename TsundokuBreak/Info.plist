@@ -56,5 +56,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>バーコードを読み取るためにカメラを起動します</string>
 </dict>
 </plist>
