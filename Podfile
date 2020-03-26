@@ -11,6 +11,7 @@ target 'TsundokuBreak' do
     pod 'RxSwift'
     pod 'RxCocoa'
     pod 'Moya'
+    pod 'LicensePlist'
 
 
   target 'TsundokuBreakTests' do

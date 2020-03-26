@@ -1,5 +1,6 @@
 PODS:
   - Alamofire (5.0.2)
+  - LicensePlist (2.14.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -20,6 +21,7 @@ PODS:
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - LicensePlist
   - Moya
   - R.swift
   - RxBlocking
@@ -31,6 +33,7 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - LicensePlist
     - Moya
     - R.swift
     - R.swift.Library
@@ -43,6 +46,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  LicensePlist: d52efb2ce5d3cf58833d362f82967ba4af25fe9a
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
@@ -53,6 +57,6 @@ SPEC CHECKSUMS:
   RxTest: 0132f952a61da82d5233abedaa559df91e5330e5
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: cc69cf7659722bee247161db0ae98b720f718d2d
+PODFILE CHECKSUM: 5180ea17328c61a5b6ef6dcca2ffa29b032fd8fe
 
 COCOAPODS: 1.8.3

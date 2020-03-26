@@ -1,0 +1,100 @@
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 5.0.2
+
+name: Alamofire, nameSpecified: 
+body: Copyright (c) 2014-2…
+version: 5.0.2
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.14.0
+
+name: LicensePlist, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 2.14.0
+
+name: Moya, nameSpecified: 
+body: The MIT License (MIT…
+version: 14.0.0
+
+name: Moya, nameSpecified: 
+body: The MIT License (MIT…
+version: 14.0.0
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+name: R.swift, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+name: R.swift.Library, nameSpecified: 
+body: The MIT License (MIT…
+version: 5.1.0
+
+name: RxBlocking, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxCocoa, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxCocoa, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxRelay, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxRelay, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxSwift, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: RxTest, nameSpecified: 
+body: **The MIT License**
+…
+version: 5.0.1
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.39.1
+
+name: SwiftLint, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.39.1
+
+add-version-numbers: false
+
+LicensePlist Version: 2.14.0
