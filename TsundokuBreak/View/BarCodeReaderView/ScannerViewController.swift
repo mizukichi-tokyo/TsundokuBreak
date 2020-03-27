@@ -12,8 +12,34 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
+    struct BarcodeReadableArea {
+        // swiftlint:disable identifier_name
+        let x: CGFloat = 0.1
+        let y: CGFloat = 0.4
+        // swiftlint:enable identifier_name
+        let width: CGFloat = 0.8
+        let height: CGFloat = 0.2
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        barcodeReader(BarcodeReadableArea())
+
+    }
+
+}
+
+extension ScannerViewController {
+    func barcodeReader(_ barcodeReadableArea: BarcodeReadableArea) {
+        // 読み取り可能エリアの設定を行う
+        // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
+        // swiftlint:disable identifier_name
+        let x: CGFloat = barcodeReadableArea.x
+        let y: CGFloat = barcodeReadableArea.y
+        // swiftlint:enable identifier_name
+        let width: CGFloat = barcodeReadableArea.width
+        let height: CGFloat = barcodeReadableArea.height
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
@@ -32,59 +58,47 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             captureSession.addInput(videoInput)
         } else {
             failed()
-            print("Error occured while adding videoInput")
             return
         }
 
         let metadataOutput = AVCaptureMetadataOutput()
-
-        // 読み取り可能エリアの設定を行う
-        // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
-        // swiftlint:disable identifier_name
-        let x: CGFloat = 0.1
-        let y: CGFloat = 0.4
-        // swiftlint:enable identifier_name
-        let width: CGFloat = 0.8
-        let height: CGFloat = 0.2
         metadataOutput.rectOfInterest = CGRect(x: y, y: 1 - x - width, width: height, height: width)
 
         if captureSession.canAddOutput(metadataOutput) {
             captureSession.addOutput(metadataOutput)
 
             metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-            metadataOutput.metadataObjectTypes = [.ean8, .ean13]
+            metadataOutput.metadataObjectTypes = [.ean13]
         } else {
             failed()
             return
         }
 
-
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
-        
-        
-        // UIImage インスタンスの生成
-        let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
-        // UIImageView 初期化
-        let imageView = UIImageView(image: barcodeImage)
 
-        // ImageView frame をCGRectで作った矩形に合わせる
-        imageView.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
-
-        // UIImageViewのインスタンスをビューに追加
-        view.addSubview(imageView)
-
-        
+        barcodeImageSet(x: x, y: y, width: width, height: height)
 
         captureSession.startRunning()
     }
 
+    // swiftlint:disable identifier_name
+    func barcodeImageSet(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+
+        let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
+        let imageView = UIImageView(image: barcodeImage)
+        imageView.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
+        view.addSubview(imageView)
+
+    }
+    // swiftlint:enable identifier_name
+
     func failed() {
-        let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        let alertController = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        present(alertController, animated: true)
         captureSession = nil
     }
 
@@ -128,4 +142,5 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
+
 }
