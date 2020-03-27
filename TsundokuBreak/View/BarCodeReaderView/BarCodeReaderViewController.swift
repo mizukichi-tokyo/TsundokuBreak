@@ -67,6 +67,17 @@ class BarCodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
                         detectionArea.layer.borderWidth = 3
                         view.addSubview(detectionArea)
 
+                        // UIImage インスタンスの生成
+                        let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
+                        // UIImageView 初期化
+                        let imageView = UIImageView(image: barcodeImage)
+
+                        // ImageView frame をCGRectで作った矩形に合わせる
+                        imageView.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
+
+                        // UIImageViewのインスタンスをビューに追加
+                        self.view.addSubview(imageView)
+
                         // 閉じるボタン
                         let closeBtn: UIButton = UIButton()
                         closeBtn.frame = CGRect(x: 20, y: 20, width: 100, height: 40)
@@ -86,12 +97,22 @@ class BarCodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
     }
 
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
+
         // swiftlint:disable force_cast
         for metadata in metadataObjects as! [AVMetadataMachineReadableCodeObject] {
             // swiftlint:enable force_cast
             // バーコードの内容が空かどうかの確認
             if metadata.stringValue == nil { continue }
 
+            let selectionFeedback: Any? = {
+                let generator: UIFeedbackGenerator = UISelectionFeedbackGenerator()
+                generator.prepare()
+                return generator
+            }()
+
+            if let generator = selectionFeedback as? UISelectionFeedbackGenerator {
+                generator.selectionChanged()
+            }
             // 読み取ったデータの値
             print(metadata.type)
             print(metadata.stringValue!)
