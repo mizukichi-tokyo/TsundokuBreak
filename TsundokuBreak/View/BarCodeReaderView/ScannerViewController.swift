@@ -12,7 +12,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
-    struct BarcodeReadableArea {
+    struct BarCodeReadableArea {
         // swiftlint:disable identifier_name
         let x: CGFloat = 0.1
         let y: CGFloat = 0.4
@@ -23,23 +23,23 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        barcodeReader(BarcodeReadableArea())
+        let readableArea = BarCodeReadableArea()
+        barCodeReader(readableArea)
 
     }
 
 }
 
 extension ScannerViewController {
-    func barcodeReader(_ barcodeReadableArea: BarcodeReadableArea) {
+    func barCodeReader(_ barCodeReadableArea: BarCodeReadableArea) {
         // 読み取り可能エリアの設定を行う
         // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
         // swiftlint:disable identifier_name
-        let x: CGFloat = barcodeReadableArea.x
-        let y: CGFloat = barcodeReadableArea.y
+        let x: CGFloat = barCodeReadableArea.x
+        let y: CGFloat = barCodeReadableArea.y
         // swiftlint:enable identifier_name
-        let width: CGFloat = barcodeReadableArea.width
-        let height: CGFloat = barcodeReadableArea.height
+        let width: CGFloat = barCodeReadableArea.width
+        let height: CGFloat = barCodeReadableArea.height
 
         view.backgroundColor = UIColor.black
         captureSession = AVCaptureSession()
@@ -79,13 +79,13 @@ extension ScannerViewController {
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
 
-        barcodeImageSet(x: x, y: y, width: width, height: height)
+        barCodeImageSet(x: x, y: y, width: width, height: height)
 
         captureSession.startRunning()
     }
 
     // swiftlint:disable identifier_name
-    func barcodeImageSet(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
+    func barCodeImageSet(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
 
         let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
         let imageView = UIImageView(image: barcodeImage)
