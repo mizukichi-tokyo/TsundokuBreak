@@ -24,6 +24,7 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
         do {
             videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
         } catch {
+            print("Error occured while creating video device input")
             return
         }
 
@@ -31,10 +32,21 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             captureSession.addInput(videoInput)
         } else {
             failed()
+            print("Error occured while adding videoInput")
             return
         }
 
         let metadataOutput = AVCaptureMetadataOutput()
+
+        // 読み取り可能エリアの設定を行う
+        // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
+        // swiftlint:disable identifier_name
+        let x: CGFloat = 0.1
+        let y: CGFloat = 0.4
+        // swiftlint:enable identifier_name
+        let width: CGFloat = 0.8
+        let height: CGFloat = 0.2
+        metadataOutput.rectOfInterest = CGRect(x: y, y: 1 - x - width, width: height, height: width)
 
         if captureSession.canAddOutput(metadataOutput) {
             captureSession.addOutput(metadataOutput)
@@ -46,10 +58,25 @@ class ScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsDel
             return
         }
 
+
         previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
         previewLayer.frame = view.layer.bounds
         previewLayer.videoGravity = .resizeAspectFill
         view.layer.addSublayer(previewLayer)
+        
+        
+        // UIImage インスタンスの生成
+        let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
+        // UIImageView 初期化
+        let imageView = UIImageView(image: barcodeImage)
+
+        // ImageView frame をCGRectで作った矩形に合わせる
+        imageView.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
+
+        // UIImageViewのインスタンスをビューに追加
+        view.addSubview(imageView)
+
+        
 
         captureSession.startRunning()
     }

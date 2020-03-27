@@ -71,14 +71,6 @@ class BarCodeReaderVC: UIViewController, AVCaptureMetadataOutputObjectsDelegate 
                         let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
                         // UIImageView 初期化
                         let imageView = UIImageView(image: barcodeImage)
-                        // 画像の縦横サイズを取得
-                        //                        let imgWidth:CGFloat = barcodeImage.size.width
-                        //                        let imgHeight:CGFloat = barcodeImage.size.height
-
-                        //                        // 画像サイズをスクリーン幅に合わせる
-                        //                        let scale:CGFloat = screenWidth / imgWidth
-                        //                        let rect:CGRect =
-                        //                            CGRect(x:0, y:0, width:imgWidth*scale, height:imgHeight*scale)
 
                         // ImageView frame をCGRectで作った矩形に合わせる
                         imageView.frame = CGRect(x: view.frame.size.width * x, y: view.frame.size.height * y, width: view.frame.size.width * width, height: view.frame.size.height * height)
