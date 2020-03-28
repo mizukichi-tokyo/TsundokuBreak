@@ -4,27 +4,25 @@ import ColorMatchTabs
 class StubContentViewControllersProvider {
 
     static let viewControllers: [UIViewController] = {
-        //        let productsViewController = StubContentViewController()
-        //        productsViewController.type = .products
 
-        let productsViewController = FirstViewController()
+        let productsViewController = TotalCountViewController.makeVC()
 
-        //        let venuesViewController = StubContentViewController()
-        //        venuesViewController.type = .venues
-
-        let venuesViewController = FirstViewController()
-
-        //        let reviewsViewController = StubContentViewController()
-        //        reviewsViewController.type = .reviews
+        let venuesViewController = TotalCountViewController.makeVC()
 
         let reviewsViewController = FirstViewController()
-
-        //        let usersViewController = StubContentViewController()
-        //        usersViewController.type = .users
 
         let usersViewController = FirstViewController()
 
         return [productsViewController, venuesViewController, reviewsViewController, usersViewController]
     }()
 
+}
+
+extension TotalCountViewController {
+    static func makeVC () -> TotalCountViewController {
+        let model = TotalCountModel(with: TotalCountModel.Dependency.init())
+        let viewModel =  TotalCountViewModel(with: model)
+        let viewControler =  TotalCountViewController(with: viewModel)
+        return viewControler
+    }
 }

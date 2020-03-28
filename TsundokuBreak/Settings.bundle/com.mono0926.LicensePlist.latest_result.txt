@@ -6,6 +6,18 @@ name: Alamofire, nameSpecified:
 body: Copyright (c) 2014-2…
 version: 5.0.2
 
+name: Cards, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 1.4.0
+
+name: Cards, nameSpecified: 
+body: MIT License
+
+Copyrig…
+version: 1.4.0
+
 name: ColorMatchTabs, nameSpecified: 
 body: The MIT License (MIT…
 version: 3.3
@@ -33,6 +45,14 @@ version: 14.0.0
 name: Moya, nameSpecified: 
 body: The MIT License (MIT…
 version: 14.0.0
+
+name: Player, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.13.0
+
+name: Player, nameSpecified: 
+body: The MIT License (MIT…
+version: 0.13.0
 
 name: R.swift, nameSpecified: 
 body: The MIT License (MIT…
