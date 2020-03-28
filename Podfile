@@ -13,6 +13,7 @@ target 'TsundokuBreak' do
     pod 'Moya'
     pod 'LicensePlist'
     pod 'ColorMatchTabs'
+    pod 'Cards'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

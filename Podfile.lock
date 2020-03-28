@@ -1,11 +1,14 @@
 PODS:
   - Alamofire (5.0.2)
+  - Cards (1.4.0):
+    - Player (= 0.13.0)
   - ColorMatchTabs (3.3)
   - LicensePlist (2.14.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Player (0.13.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -22,6 +25,7 @@ PODS:
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
+  - Cards
   - ColorMatchTabs
   - LicensePlist
   - Moya
@@ -35,9 +39,11 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Alamofire
+    - Cards
     - ColorMatchTabs
     - LicensePlist
     - Moya
+    - Player
     - R.swift
     - R.swift.Library
     - RxBlocking
@@ -49,9 +55,11 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Alamofire: 3ba7a4db18b4f62c4a1c0e1cb39d7f3d52e10ada
+  Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   LicensePlist: d52efb2ce5d3cf58833d362f82967ba4af25fe9a
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   RxBlocking: c5e090f42d046df8b0e7752742510f349963710f
@@ -61,6 +69,6 @@ SPEC CHECKSUMS:
   RxTest: 0132f952a61da82d5233abedaa559df91e5330e5
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: dab41899e0edb0c892330ededa863867be161907
+PODFILE CHECKSUM: 9dc569c21b1501692ef550c196a56f822b9b28d1
 
 COCOAPODS: 1.8.3
