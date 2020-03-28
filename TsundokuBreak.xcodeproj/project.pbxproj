@@ -13,6 +13,11 @@
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
+		D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EA242F3745006F3AAA /* TabSwitcherItemsProvider.swift */; };
+		D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EB242F3745006F3AAA /* ControllersProvider.swift */; };
+		D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EE242F376A006F3AAA /* TabItem.swift */; };
+		D32B48F1242F3A94006F3AAA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48F0242F3A94006F3AAA /* MainViewController.swift */; };
+		D32B48F3242F3AD0006F3AAA /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D32B48F2242F3AD0006F3AAA /* MainStoryboard.storyboard */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
 		D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */; };
 		D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35AFAB02428B68A0018EE9E /* FirstViewController.xib */; };
@@ -54,6 +59,11 @@
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
+		D32B48EA242F3745006F3AAA /* TabSwitcherItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabSwitcherItemsProvider.swift; sourceTree = "<group>"; };
+		D32B48EB242F3745006F3AAA /* ControllersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersProvider.swift; sourceTree = "<group>"; };
+		D32B48EE242F376A006F3AAA /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		D32B48F0242F3A94006F3AAA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		D32B48F2242F3AD0006F3AAA /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D35AFAB02428B68A0018EE9E /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -128,6 +138,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D32B48E4242F34D1006F3AAA /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				D32B48F0242F3A94006F3AAA /* MainViewController.swift */,
+				D32B48F2242F3AD0006F3AAA /* MainStoryboard.storyboard */,
+			);
+			path = MainView;
+			sourceTree = "<group>";
+		};
+		D32B48E9242F3736006F3AAA /* TabDataProviders */ = {
+			isa = PBXGroup;
+			children = (
+				D32B48EB242F3745006F3AAA /* ControllersProvider.swift */,
+				D32B48EA242F3745006F3AAA /* TabSwitcherItemsProvider.swift */,
+			);
+			path = TabDataProviders;
+			sourceTree = "<group>";
+		};
 		D35AFAAE2428B6620018EE9E /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
@@ -154,6 +182,7 @@
 		D35AFAB72429C0C30018EE9E /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				D32B48EE242F376A006F3AAA /* TabItem.swift */,
 				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
 				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
 			);
@@ -177,6 +206,7 @@
 		D35AFABA2429C14D0018EE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D32B48E4242F34D1006F3AAA /* MainView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
 				D35AFAAE2428B6620018EE9E /* FirstView */,
 			);
@@ -219,6 +249,7 @@
 		D3E78A8A24289D4900440CAF /* TsundokuBreak */ = {
 			isa = PBXGroup;
 			children = (
+				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB82429C0D60018EE9E /* Strings */,
 				D35AFAB72429C0C30018EE9E /* Struct */,
 				D35AFAB92429C0EA0018EE9E /* Protocol */,
@@ -366,6 +397,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32B48F3242F3AD0006F3AAA /* MainStoryboard.storyboard in Resources */,
 				D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */,
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
@@ -571,6 +603,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */,
+				D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */,
+				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
+				D32B48F1242F3A94006F3AAA /* MainViewController.swift in Sources */,
 				D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */,
 				D3E78A9024289D4900440CAF /* ViewController.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,

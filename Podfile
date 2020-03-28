@@ -12,7 +12,7 @@ target 'TsundokuBreak' do
     pod 'RxCocoa'
     pod 'Moya'
     pod 'LicensePlist'
-
+    pod 'ColorMatchTabs'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
