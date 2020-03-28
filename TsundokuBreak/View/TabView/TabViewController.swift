@@ -1,12 +1,4 @@
 //
-//  MainViewController.swift
-//  TsundokuBreak
-//
-//  Created by Mizuki Kubota on 2020/03/28.
-//  Copyright © 2020 MizukiKubota. All rights reserved.
-//
-
-//
 //  TabViewController.swift
 //  TsundokuBreak
 //
