@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qfh-kb-HaK">
-                    <rect key="frame" x="20" y="44" width="374" height="818"/>
+                    <rect key="frame" x="21" y="88" width="374" height="494"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                     <state key="normal" title="BarCodeReader"/>
@@ -29,10 +29,10 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="qfh-kb-HaK" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="trailingMargin" id="K71-WD-C4t"/>
-                <constraint firstItem="qfh-kb-HaK" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leadingMargin" id="OSN-cv-twG"/>
-                <constraint firstItem="qfh-kb-HaK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="srI-8c-K5q"/>
-                <constraint firstItem="qfh-kb-HaK" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="yqX-DR-Dgp"/>
+                <constraint firstItem="qfh-kb-HaK" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="Qmx-yZ-xcN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="qfh-kb-HaK" secondAttribute="trailing" constant="19" id="f4L-MH-0lv"/>
+                <constraint firstItem="qfh-kb-HaK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="44" id="kLC-4d-j8q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="qfh-kb-HaK" secondAttribute="bottom" constant="280" id="tRh-BV-WND"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="148.66071428571428"/>
