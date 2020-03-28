@@ -7,17 +7,17 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--TsundokuBreak-->
+        <!--TsudokuBreak-->
         <scene sceneID="SdK-vr-be5">
             <objects>
-                <viewController id="Pl2-Cp-c2L" customClass="TabViewController" customModule="TsundokuBreak" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="TsudokuBreak" id="Pl2-Cp-c2L" customClass="TabViewController" customModule="TsundokuBreak" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="r2z-pz-eNe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="sVh-9o-iTe"/>
                     </view>
-                    <navigationItem key="navigationItem" title="TsundokuBreak" id="ElP-7b-rBt"/>
+                    <navigationItem key="navigationItem" id="ElP-7b-rBt"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B4I-ZT-TEJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
