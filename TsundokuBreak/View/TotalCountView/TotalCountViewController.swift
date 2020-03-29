@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Cards
 
 class TotalCountViewController: UIViewController, Injectable {
 
