@@ -20,6 +20,14 @@
 		</dict>
 		<dict>
 			<key>File</key>
+			<string>com.mono0926.LicensePlist/Cards</string>
+			<key>Title</key>
+			<string>Cards</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
 			<string>com.mono0926.LicensePlist/ColorMatchTabs</string>
 			<key>Title</key>
 			<string>ColorMatchTabs</string>
@@ -39,6 +47,14 @@
 			<string>com.mono0926.LicensePlist/Moya</string>
 			<key>Title</key>
 			<string>Moya</string>
+			<key>Type</key>
+			<string>PSChildPaneSpecifier</string>
+		</dict>
+		<dict>
+			<key>File</key>
+			<string>com.mono0926.LicensePlist/Player</string>
+			<key>Title</key>
+			<string>Player</string>
 			<key>Type</key>
 			<string>PSChildPaneSpecifier</string>
 		</dict>

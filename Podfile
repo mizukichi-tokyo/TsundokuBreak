@@ -13,6 +13,7 @@ target 'TsundokuBreak' do
     pod 'Moya'
     pod 'LicensePlist'
     pod 'ColorMatchTabs'
+    pod 'Cards'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
@@ -23,6 +24,18 @@ target 'TsundokuBreak' do
 
   target 'TsundokuBreakUITests' do
     # Pods for testing
+  end
+
+  post_install do |installer|
+    installer.pods_project.build_configurations.each do |config|
+      config.build_settings['LD_RUNPATH_SEARCH_PATHS'] = [
+        '$(FRAMEWORK_SEARCH_PATHS)'
+      ]
+      installer.pods_project.build_configurations.each do |config|
+          config.build_settings.delete('CODE_SIGNING_ALLOWED')
+          config.build_settings.delete('CODE_SIGNING_REQUIRED')
+     end
+  end
   end
 
 end

@@ -16,6 +16,11 @@
 		D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EA242F3745006F3AAA /* TabSwitcherItemsProvider.swift */; };
 		D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EB242F3745006F3AAA /* ControllersProvider.swift */; };
 		D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48EE242F376A006F3AAA /* TabItem.swift */; };
+		D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BF0242F8B890071EBC3 /* Injectable.swift */; };
+		D32E6BF9242F8E8F0071EBC3 /* TotalCountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BF7242F8E8F0071EBC3 /* TotalCountViewController.swift */; };
+		D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */; };
+		D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */; };
+		D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
 		D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */; };
 		D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35AFAB02428B68A0018EE9E /* FirstViewController.xib */; };
@@ -61,6 +66,11 @@
 		D32B48EA242F3745006F3AAA /* TabSwitcherItemsProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabSwitcherItemsProvider.swift; sourceTree = "<group>"; };
 		D32B48EB242F3745006F3AAA /* ControllersProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllersProvider.swift; sourceTree = "<group>"; };
 		D32B48EE242F376A006F3AAA /* TabItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabItem.swift; sourceTree = "<group>"; };
+		D32E6BF0242F8B890071EBC3 /* Injectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Injectable.swift; sourceTree = "<group>"; };
+		D32E6BF7242F8E8F0071EBC3 /* TotalCountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewController.swift; sourceTree = "<group>"; };
+		D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCountViewController.xib; sourceTree = "<group>"; };
+		D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountModel.swift; sourceTree = "<group>"; };
+		D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewModel.swift; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		D35AFAB02428B68A0018EE9E /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
@@ -145,6 +155,15 @@
 			path = TabDataProviders;
 			sourceTree = "<group>";
 		};
+		D32E6BF6242F8E680071EBC3 /* TotalCountView */ = {
+			isa = PBXGroup;
+			children = (
+				D32E6BF7242F8E8F0071EBC3 /* TotalCountViewController.swift */,
+				D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */,
+			);
+			path = TotalCountView;
+			sourceTree = "<group>";
+		};
 		D35AFAAE2428B6620018EE9E /* FirstView */ = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +176,7 @@
 		D35AFAB52429C07E0018EE9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -164,6 +184,7 @@
 		D35AFAB62429C08E0018EE9E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +209,7 @@
 		D35AFAB92429C0EA0018EE9E /* Protocol */ = {
 			isa = PBXGroup;
 			children = (
+				D32E6BF0242F8B890071EBC3 /* Injectable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -195,6 +217,7 @@
 		D35AFABA2429C14D0018EE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D32E6BF6242F8E680071EBC3 /* TotalCountView */,
 				D3AC4666242F4D0800C517A5 /* TabView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
 				D35AFAAE2428B6620018EE9E /* FirstView */,
@@ -395,6 +418,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */,
+				D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */,
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,
 				D3AC46C4242F595A00C517A5 /* MainStoryboard.storyboard in Resources */,
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
@@ -604,12 +628,16 @@
 				D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
 				D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */,
+				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,
+				D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */,
 				D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */,
 				D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */,
 				D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */,
+				D32E6BF9242F8E8F0071EBC3 /* TotalCountViewController.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,
+				D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */,
 				D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
