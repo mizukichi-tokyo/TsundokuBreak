@@ -1,18 +1,17 @@
 //
-//  TotalCountViewController.swift
+//  TsundokuViewController.swift
 //  TsundokuBreak
 //
-//  Created by Mizuki Kubota on 2020/03/28.
+//  Created by Mizuki Kubota on 2020/03/31.
 //  Copyright © 2020 MizukiKubota. All rights reserved.
 //
 
 import UIKit
-import Cards
 
-class TotalCountViewController: UIViewController, Injectable {
+class TsundokuViewController: UIViewController, Injectable {
 
-    typealias Dependency = TotalCountViewModelType
-    private let viewModel: TotalCountViewModelType
+    typealias Dependency = TsundokuViewModelType
+    private let viewModel: TsundokuViewModelType
 
     required init(with dependency: Dependency) {
         viewModel = dependency
@@ -41,11 +40,11 @@ class TotalCountViewController: UIViewController, Injectable {
 
 }
 
-extension TotalCountViewController {
-    static func makeVC () -> TotalCountViewController {
-        let model = TotalCountModel(with: TotalCountModel.Dependency.init())
-        let viewModel =  TotalCountViewModel(with: model)
-        let viewControler =  TotalCountViewController(with: viewModel)
+extension TsundokuViewController {
+    static func makeVC () -> TsundokuViewController {
+        let model = TsundokuModel(with: TsundokuModel.Dependency.init())
+        let viewModel =  TsundokuViewModel(with: model)
+        let viewControler =  TsundokuViewController(with: viewModel)
         return viewControler
     }
 }

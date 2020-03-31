@@ -10,6 +10,16 @@
 		2446BF2BD84AFFEEB6559C9F /* Pods_TsundokuBreak_TsundokuBreakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECEEE1F6EB33E21311149 /* Pods_TsundokuBreak_TsundokuBreakUITests.framework */; };
 		B206B2BBA9562D05BFD4E3A5 /* Pods_TsundokuBreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8953B91220F65947BBB51A3F /* Pods_TsundokuBreak.framework */; };
 		B25B29122F51D1E89BD35B7C /* Pods_TsundokuBreakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E393BE0FF29D18021969D6E /* Pods_TsundokuBreakTests.framework */; };
+		D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */; };
+		D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF0243313660062B0F3 /* DokuryoModel.swift */; };
+		D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF22433139C0062B0F3 /* BarCodeReader.swift */; };
+		D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */; };
+		D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */; };
+		D320FDF9243315900062B0F3 /* BarCodeReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */; };
+		D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDFA243333FF0062B0F3 /* TsundokuViewController.swift */; };
+		D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */; };
+		D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDFE243334570062B0F3 /* DokuryoViewController.swift */; };
+		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -60,6 +70,16 @@
 		8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreakTests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreakTests/Pods-TsundokuBreakTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuModel.swift; sourceTree = "<group>"; };
+		D320FDF0243313660062B0F3 /* DokuryoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoModel.swift; sourceTree = "<group>"; };
+		D320FDF22433139C0062B0F3 /* BarCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReader.swift; sourceTree = "<group>"; };
+		D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuViewModel.swift; sourceTree = "<group>"; };
+		D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewModel.swift; sourceTree = "<group>"; };
+		D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewModel.swift; sourceTree = "<group>"; };
+		D320FDFA243333FF0062B0F3 /* TsundokuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuViewController.swift; sourceTree = "<group>"; };
+		D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TsundokuViewController.xib; sourceTree = "<group>"; };
+		D320FDFE243334570062B0F3 /* DokuryoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewController.swift; sourceTree = "<group>"; };
+		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -146,6 +166,24 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		D320FDEC24330CA60062B0F3 /* TsundokuView */ = {
+			isa = PBXGroup;
+			children = (
+				D320FDFA243333FF0062B0F3 /* TsundokuViewController.swift */,
+				D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */,
+			);
+			path = TsundokuView;
+			sourceTree = "<group>";
+		};
+		D320FDED24330D5A0062B0F3 /* DokuryoView */ = {
+			isa = PBXGroup;
+			children = (
+				D320FDFE243334570062B0F3 /* DokuryoViewController.swift */,
+				D320FDFF243334570062B0F3 /* DokuryoViewController.xib */,
+			);
+			path = DokuryoView;
+			sourceTree = "<group>";
+		};
 		D32B48E9242F3736006F3AAA /* TabDataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,6 +215,9 @@
 			isa = PBXGroup;
 			children = (
 				D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */,
+				D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */,
+				D320FDF0243313660062B0F3 /* DokuryoModel.swift */,
+				D320FDF22433139C0062B0F3 /* BarCodeReader.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -185,6 +226,9 @@
 			isa = PBXGroup;
 			children = (
 				D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */,
+				D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */,
+				D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */,
+				D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -217,8 +261,10 @@
 		D35AFABA2429C14D0018EE9E /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D32E6BF6242F8E680071EBC3 /* TotalCountView */,
 				D3AC4666242F4D0800C517A5 /* TabView */,
+				D32E6BF6242F8E680071EBC3 /* TotalCountView */,
+				D320FDEC24330CA60062B0F3 /* TsundokuView */,
+				D320FDED24330D5A0062B0F3 /* DokuryoView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
 				D35AFAAE2428B6620018EE9E /* FirstView */,
 			);
@@ -423,7 +469,9 @@
 				D3AC46C4242F595A00C517A5 /* MainStoryboard.storyboard in Resources */,
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
 				D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */,
+				D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */,
 				D3E78A9524289D4A00440CAF /* Assets.xcassets in Resources */,
+				D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,10 +674,14 @@
 			files = (
 				D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */,
 				D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */,
+				D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */,
+				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
 				D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */,
 				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
+				D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,
+				D320FDF9243315900062B0F3 /* BarCodeReaderViewModel.swift in Sources */,
 				D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */,
 				D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */,
 				D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */,
@@ -637,7 +689,11 @@
 				D32E6BF9242F8E8F0071EBC3 /* TotalCountViewController.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,
+				D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */,
+				D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */,
+				D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */,
 				D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */,
+				D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */,
 				D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

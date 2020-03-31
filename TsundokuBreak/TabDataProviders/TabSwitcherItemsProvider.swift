@@ -22,13 +22,13 @@ class TabItemsProvider {
                 tintColor: UIColor(red: 1.00, green: 0.61, blue: 0.16, alpha: 1.00),
                 normalImage: UIImage(named: "reviews_normal")!,
                 highlightedImage: UIImage(named: "reviews_highlighted")!
-            ),
-            TabItem(
-                title: "Friends",
-                tintColor: UIColor(red: 0.96, green: 0.61, blue: 0.58, alpha: 1.00),
-                normalImage: UIImage(named: "users_normal")!,
-                highlightedImage: UIImage(named: "users_highlighted")!
             )
+            //            TabItem(
+            //                title: "Friends",
+            //                tintColor: UIColor(red: 0.96, green: 0.61, blue: 0.58, alpha: 1.00),
+            //                normalImage: UIImage(named: "users_normal")!,
+            //                highlightedImage: UIImage(named: "users_highlighted")!
+            //            )
         ]
     }()
 

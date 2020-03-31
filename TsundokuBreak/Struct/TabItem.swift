@@ -9,7 +9,6 @@
 import UIKit
 
 struct TabItem {
-
     let title: String
     let tintColor: UIColor
     let normalImage: UIImage

@@ -12,7 +12,7 @@ import Moya
 class FirstViewController: UIViewController {
 
     @IBAction func barcodeButtonTouchUp(_ sender: Any) {
-        self.view.window?.rootViewController?.present(BarCodeReaderViewController(), animated: true, completion: nil)
+        self.view.window?.rootViewController?.present(BarCodeReaderViewController.makeVC(), animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()

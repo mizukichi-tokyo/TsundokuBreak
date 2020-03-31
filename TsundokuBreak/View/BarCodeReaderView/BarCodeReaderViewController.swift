@@ -1,6 +1,6 @@
 //
 //  BarCodeReaderViewController.swift
-//  TsundokuBreak
+//  BarCodeReaderBreak
 //
 //  Created by Mizuki Kubota on 2020/03/28.
 //  Copyright © 2020 MizukiKubota. All rights reserved.
@@ -9,7 +9,19 @@
 import UIKit
 import AVFoundation
 
-class BarCodeReaderViewController: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
+class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
+
+    typealias Dependency = BarCodeReaderViewModelType
+    private let viewModel: BarCodeReaderViewModelType
+
+    required init(with dependency: Dependency) {
+        viewModel = dependency
+        super.init(nibName: nil, bundle: nil)
+    }
+
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
 
     @IBOutlet weak var cameraView: UIView!
 
@@ -147,4 +159,13 @@ extension BarCodeReaderViewController {
         return .portrait
     }
 
+}
+
+extension BarCodeReaderViewController {
+    static func makeVC () -> BarCodeReaderViewController {
+        let model = BarCodeReaderModel(with: BarCodeReaderModel.Dependency.init())
+        let viewModel =  BarCodeReaderViewModel(with: model)
+        let viewControler =  BarCodeReaderViewController(with: viewModel)
+        return viewControler
+    }
 }

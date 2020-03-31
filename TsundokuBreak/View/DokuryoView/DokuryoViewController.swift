@@ -1,18 +1,17 @@
 //
-//  TotalCountViewController.swift
-//  TsundokuBreak
+//  DokuryoViewController.swift
+//  DokuryoBreak
 //
-//  Created by Mizuki Kubota on 2020/03/28.
+//  Created by Mizuki Kubota on 2020/03/31.
 //  Copyright © 2020 MizukiKubota. All rights reserved.
 //
 
 import UIKit
-import Cards
 
-class TotalCountViewController: UIViewController, Injectable {
+class DokuryoViewController: UIViewController, Injectable {
 
-    typealias Dependency = TotalCountViewModelType
-    private let viewModel: TotalCountViewModelType
+    typealias Dependency = DokuryoViewModelType
+    private let viewModel: DokuryoViewModelType
 
     required init(with dependency: Dependency) {
         viewModel = dependency
@@ -41,11 +40,11 @@ class TotalCountViewController: UIViewController, Injectable {
 
 }
 
-extension TotalCountViewController {
-    static func makeVC () -> TotalCountViewController {
-        let model = TotalCountModel(with: TotalCountModel.Dependency.init())
-        let viewModel =  TotalCountViewModel(with: model)
-        let viewControler =  TotalCountViewController(with: viewModel)
+extension DokuryoViewController {
+    static func makeVC () -> DokuryoViewController {
+        let model = DokuryoModel(with: DokuryoModel.Dependency.init())
+        let viewModel =  DokuryoViewModel(with: model)
+        let viewControler =  DokuryoViewController(with: viewModel)
         return viewControler
     }
 }
