@@ -38,6 +38,36 @@ body: MIT License
 Copyrig…
 version: 2.14.0
 
+name: MaterialComponents, nameSpecified: 
+body: 
+                   …
+version: 107.4.0
+
+name: MaterialComponents, nameSpecified: 
+body: 
+                   …
+version: 107.4.0
+
+name: MDFInternationalization, nameSpecified: 
+body: 
+                   …
+version: 2.0.0
+
+name: MDFInternationalization, nameSpecified: 
+body: 
+                   …
+version: 2.0.0
+
+name: MDFTextAccessibility, nameSpecified: 
+body: 
+                   …
+version: 2.0.0
+
+name: MDFTextAccessibility, nameSpecified: 
+body: 
+                   …
+version: 2.0.0
+
 name: Moya, nameSpecified: 
 body: The MIT License (MIT…
 version: 14.0.0

@@ -4,6 +4,48 @@ PODS:
     - Player (= 0.13.0)
   - ColorMatchTabs (3.3)
   - LicensePlist (2.14.0)
+  - MaterialComponents/AnimationTiming (107.4.0)
+  - MaterialComponents/Availability (107.4.0)
+  - MaterialComponents/Buttons (107.4.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (107.4.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (107.4.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (107.4.0)
+  - MaterialComponents/private/Color (107.4.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (107.4.0)
+  - MaterialComponents/Ripple (107.4.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (107.4.0)
+  - MaterialComponents/ShadowLayer (107.4.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (107.4.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (107.4.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
   - Moya (14.0.0):
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
@@ -28,6 +70,7 @@ DEPENDENCIES:
   - Cards
   - ColorMatchTabs
   - LicensePlist
+  - MaterialComponents/Buttons
   - Moya
   - R.swift
   - RxBlocking
@@ -42,6 +85,9 @@ SPEC REPOS:
     - Cards
     - ColorMatchTabs
     - LicensePlist
+    - MaterialComponents
+    - MDFInternationalization
+    - MDFTextAccessibility
     - Moya
     - Player
     - R.swift
@@ -58,6 +104,9 @@ SPEC CHECKSUMS:
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   LicensePlist: d52efb2ce5d3cf58833d362f82967ba4af25fe9a
+  MaterialComponents: 52e2ade4684e3017eff7f62587b37522d217ea50
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
@@ -69,6 +118,6 @@ SPEC CHECKSUMS:
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: d4f68f5dd6ef6f7b7ad48a86996b25542b5009cc
+PODFILE CHECKSUM: 790d6be0aa74947e9112e3bf7b5bb250bb58874a
 
 COCOAPODS: 1.9.1

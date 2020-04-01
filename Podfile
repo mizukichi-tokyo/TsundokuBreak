@@ -14,6 +14,7 @@ target 'TsundokuBreak' do
     pod 'LicensePlist'
     pod 'ColorMatchTabs'
     pod 'Cards'
+    pod 'MaterialComponents/Buttons'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
