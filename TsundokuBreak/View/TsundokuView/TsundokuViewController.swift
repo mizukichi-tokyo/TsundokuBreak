@@ -7,9 +7,13 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class TsundokuViewController: UIViewController, Injectable {
 
+    @IBAction func buttonTouch(_ sender: Any) {
+        self.view.window?.rootViewController?.present(BarCodeReaderViewController.makeVC(), animated: true, completion: nil)
+    }
     typealias Dependency = TsundokuViewModelType
     private let viewModel: TsundokuViewModelType
 

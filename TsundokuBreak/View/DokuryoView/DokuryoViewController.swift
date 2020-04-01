@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import MaterialComponents
 
 class DokuryoViewController: UIViewController, Injectable {
+    @IBAction func buttonTouch(_ sender: Any) {
+        self.view.window?.rootViewController?.present(BarCodeReaderViewController.makeVC(), animated: true, completion: nil)
+    }
 
     typealias Dependency = DokuryoViewModelType
     private let viewModel: DokuryoViewModelType

@@ -30,6 +30,9 @@
                     </constraints>
                     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <state key="normal" image="plus" catalog="system"/>
+                    <connections>
+                        <action selector="buttonTouch:" destination="-1" eventType="touchUpInside" id="iVB-ny-R8G"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
