@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-nF-7yz" customClass="MDCFloatingButton">
-                    <rect key="frame" x="182" y="671.33333333333337" width="50" height="50"/>
+                    <rect key="frame" x="182" y="649.33333333333337" width="50" height="50"/>
                     <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="9uP-er-ZcW"/>
@@ -32,7 +32,7 @@
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="fZx-nF-7yz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6LR-7J-8of"/>
-                <constraint firstItem="fZx-nF-7yz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.98" id="LtT-0u-NCd"/>
+                <constraint firstItem="fZx-nF-7yz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.95" id="LtT-0u-NCd"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>

@@ -18,7 +18,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTb-TU-eQo" customClass="MDCFloatingButton">
-                    <rect key="frame" x="182" y="671.33333333333337" width="50" height="50"/>
+                    <rect key="frame" x="182" y="649.33333333333337" width="50" height="50"/>
                     <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="I05-W8-bOg"/>
@@ -36,7 +36,7 @@
             <constraints>
                 <constraint firstItem="HTb-TU-eQo" firstAttribute="width" secondItem="HTb-TU-eQo" secondAttribute="height" multiplier="1:1" id="2MS-ca-78M"/>
                 <constraint firstItem="HTb-TU-eQo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3WO-2l-nzo"/>
-                <constraint firstItem="HTb-TU-eQo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.98" id="tHa-P2-4hf"/>
+                <constraint firstItem="HTb-TU-eQo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.95" id="tHa-P2-4hf"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="130"/>
