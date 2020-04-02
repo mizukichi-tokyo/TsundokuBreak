@@ -23,6 +23,9 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         fatalError("init(coder:) has not been implemented")
     }
 
+    @IBAction func bushCrossButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBOutlet weak var cameraView: UIView!
 
     var captureSession: AVCaptureSession!
@@ -134,7 +137,7 @@ extension BarCodeReaderViewController {
             found(code: stringValue)
         }
 
-        dismiss(animated: true)
+        //        dismiss(animated: true)
     }
 
     func found(code: String) {
@@ -156,6 +159,7 @@ extension BarCodeReaderViewController {
         let model = BarCodeReaderModel(with: BarCodeReaderModel.Dependency.init())
         let viewModel =  BarCodeReaderViewModel(with: model)
         let viewControler =  BarCodeReaderViewController(with: viewModel)
+        viewControler.modalPresentationStyle = .fullScreen
         return viewControler
     }
 }
