@@ -32,8 +32,6 @@
 		D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */; };
 		D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
-		D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */; };
-		D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D35AFAB02428B68A0018EE9E /* FirstViewController.xib */; };
 		D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABB2429C4830018EE9E /* BookInfo.swift */; };
 		D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */; };
 		D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC46BF242F584500C517A5 /* TabViewController.swift */; };
@@ -92,8 +90,6 @@
 		D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountModel.swift; sourceTree = "<group>"; };
 		D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewModel.swift; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
-		D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		D35AFAB02428B68A0018EE9E /* FirstViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FirstViewController.xib; sourceTree = "<group>"; };
 		D35AFABB2429C4830018EE9E /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIs.swift; sourceTree = "<group>"; };
 		D3AC46BF242F584500C517A5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -202,15 +198,6 @@
 			path = TotalCountView;
 			sourceTree = "<group>";
 		};
-		D35AFAAE2428B6620018EE9E /* FirstView */ = {
-			isa = PBXGroup;
-			children = (
-				D35AFAAF2428B68A0018EE9E /* FirstViewController.swift */,
-				D35AFAB02428B68A0018EE9E /* FirstViewController.xib */,
-			);
-			path = FirstView;
-			sourceTree = "<group>";
-		};
 		D35AFAB52429C07E0018EE9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +253,6 @@
 				D320FDEC24330CA60062B0F3 /* TsundokuView */,
 				D320FDED24330D5A0062B0F3 /* DokuryoView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
-				D35AFAAE2428B6620018EE9E /* FirstView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -468,7 +454,6 @@
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,
 				D3AC46C4242F595A00C517A5 /* MainStoryboard.storyboard in Resources */,
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
-				D35AFAB22428B68A0018EE9E /* FirstViewController.xib in Resources */,
 				D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */,
 				D3E78A9524289D4A00440CAF /* Assets.xcassets in Resources */,
 				D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */,
@@ -677,7 +662,6 @@
 				D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */,
 				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
-				D35AFAB12428B68A0018EE9E /* FirstViewController.swift in Sources */,
 				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
 				D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,
