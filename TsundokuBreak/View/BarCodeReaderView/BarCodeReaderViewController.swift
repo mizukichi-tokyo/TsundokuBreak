@@ -28,15 +28,6 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
-    struct BarCodeReadableArea {
-        // swiftlint:disable identifier_name
-        let x: CGFloat = 0.15
-        let y: CGFloat = 0.4
-        // swiftlint:enable identifier_name
-        let width: CGFloat = 0.6
-        let height: CGFloat = 0.2
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         let readableArea = BarCodeReadableArea()
@@ -49,7 +40,6 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
 extension BarCodeReaderViewController {
     func barCodeReader(_ barCodeReadableArea: BarCodeReadableArea) {
         // 読み取り可能エリアの設定を行う
-        // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
         // swiftlint:disable identifier_name
         let x: CGFloat = barCodeReadableArea.x
         let y: CGFloat = barCodeReadableArea.y

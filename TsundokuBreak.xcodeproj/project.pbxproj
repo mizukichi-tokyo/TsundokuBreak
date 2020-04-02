@@ -20,6 +20,7 @@
 		D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */; };
 		D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDFE243334570062B0F3 /* DokuryoViewController.swift */; };
 		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
+		D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -78,6 +79,7 @@
 		D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TsundokuViewController.xib; sourceTree = "<group>"; };
 		D320FDFE243334570062B0F3 /* DokuryoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewController.swift; sourceTree = "<group>"; };
 		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
+		D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReadableArea.swift; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -226,6 +228,7 @@
 				D32B48EE242F376A006F3AAA /* TabItem.swift */,
 				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
 				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
+				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -679,6 +682,7 @@
 				D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */,
 				D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */,
 				D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */,
+				D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
