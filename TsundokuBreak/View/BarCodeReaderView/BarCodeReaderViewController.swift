@@ -46,7 +46,7 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
 
     func setup() {
         let input = BarCodeReaderViewModelInput(
-            isbnSignal: isbnRelay
+            isbnRelay: isbnRelay
         )
         viewModel.setup(input: input)
 
@@ -56,7 +56,6 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
 
 extension BarCodeReaderViewController {
     func barCodeReader(_ barCodeReadableArea: BarCodeReadableArea) {
-        // 読み取り可能エリアの設定を行う
         // swiftlint:disable identifier_name
         let x: CGFloat = barCodeReadableArea.x
         let y: CGFloat = barCodeReadableArea.y
