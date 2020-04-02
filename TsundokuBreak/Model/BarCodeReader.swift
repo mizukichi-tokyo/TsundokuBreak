@@ -58,6 +58,10 @@ extension BarCodeReaderModel {
                     print(data)
                     let jsonData = try? JSONDecoder().decode(BookInfo.self, from: moyaResponse.data)
                     print(jsonData?.items?[0].volumeInfo?.title as Any)
+                    print(jsonData?.items?[0].volumeInfo?.authors?[0] as Any)
+                    print(jsonData?.items?[0].volumeInfo?.publishedDate as Any)
+                    print(jsonData?.items?[0].volumeInfo?.pageCount as Any)
+
                 } catch {
                     print("json parse失敗")
                 }
