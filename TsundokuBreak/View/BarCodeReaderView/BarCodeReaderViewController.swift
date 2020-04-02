@@ -8,6 +8,8 @@
 
 import UIKit
 import AVFoundation
+import RxSwift
+import RxCocoa
 
 class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -16,6 +18,7 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
 
     required init(with dependency: Dependency) {
         viewModel = dependency
+        self.isbnRelay = PublishRelay<String>()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -31,10 +34,21 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
+    private let disposeBag = DisposeBag()
+    private let isbnRelay: PublishRelay<String>
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         let readableArea = BarCodeReadableArea()
         barCodeReader(readableArea)
+    }
+
+    func setup() {
+        let input = BarCodeReaderViewModelInput(
+            isbnSignal: isbnRelay
+        )
+        viewModel.setup(input: input)
 
     }
 
@@ -136,12 +150,10 @@ extension BarCodeReaderViewController {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
         }
-
-        //        dismiss(animated: true)
     }
 
     func found(code: String) {
-        print(code)
+        isbnRelay.accept(code)
     }
 
     override var prefersStatusBarHidden: Bool {

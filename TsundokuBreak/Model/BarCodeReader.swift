@@ -7,8 +7,11 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
 
 struct  BarCodeReaderModelInput {
+    let isbnSignal: PublishRelay<String>
 }
 
 protocol  BarCodeReaderModelOutput {
@@ -24,11 +27,16 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable, BarCodeRead
 
     var outputs: BarCodeReaderModelOutput?
 
+    private let disposeBag = DisposeBag()
+
     init(with dependency: Dependency) {
         self.outputs = self
     }
 
     func setup(input: BarCodeReaderModelInput) {
+        input.isbnSignal.subscribe(onNext: { isbn in
+            print(isbn)
+        }).disposed(by: disposeBag)
 
     }
 
