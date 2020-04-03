@@ -16,6 +16,7 @@ struct  BarCodeReaderModelInput {
 }
 
 protocol  BarCodeReaderModelOutput {
+    var urlRelay: PublishRelay<URL> { get }
 }
 
 protocol BarCodeReaderModelType {
@@ -23,26 +24,30 @@ protocol BarCodeReaderModelType {
     func setup(input: BarCodeReaderModelInput)
 }
 
-final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable, BarCodeReaderModelOutput {
+final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
     struct Dependency {}
 
     var outputs: BarCodeReaderModelOutput?
 
     private let disposeBag = DisposeBag()
     private let provider = MoyaProvider<GoogleBooksAPIs>()
+    private let bookInfo: PublishRelay<BookInfo>
+    private var thumbnailUrl: String?
 
     init(with dependency: Dependency) {
+        self.bookInfo = PublishRelay<BookInfo>()
         self.outputs = self
     }
 
     func setup(input: BarCodeReaderModelInput) {
-        input.isbnRelay.subscribe(onNext: { [weak self] isbn in
-            guard let self = self else { return }
-            self.getRequest(isbnNumber: isbn)
-        }).disposed(by: disposeBag)
+        input.isbnRelay
+            .subscribe(onNext: { [weak self] isbn in
+                guard let self = self else { return }
+                self.getRequest(isbnNumber: isbn)
+            })
+            .disposed(by: disposeBag)
 
     }
-
 }
 
 extension BarCodeReaderModel {
@@ -54,14 +59,8 @@ extension BarCodeReaderModel {
             switch result {
             case let .success(moyaResponse):
                 do {
-                    //                    let data = try moyaResponse.mapJSON()
-                    //                    print(data)
                     let jsonData = try JSONDecoder().decode(BookInfo.self, from: moyaResponse.data)
-                    print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-                    print(jsonData.items?[0].volumeInfo?.title as Any)
-                    print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-                    print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-                    print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+                    self.processJsonData(jsonData: jsonData)
 
                 } catch {
                     print("json parse失敗")
@@ -71,5 +70,34 @@ extension BarCodeReaderModel {
             }
 
         }
+    }
+
+    private func processJsonData(jsonData: BookInfo) {
+        self.bookInfo.accept(jsonData)
+        //                    print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
+        //                    print(jsonData.items?[0].volumeInfo?.title as Any)
+        //                    print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
+        //                    print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
+        //                    print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+
+    }
+
+}
+
+extension BarCodeReaderModel: BarCodeReaderModelOutput {
+    var urlRelay: PublishRelay<URL> {
+        let urlRelay =  PublishRelay<URL>()
+
+        self.bookInfo
+            .subscribe(onNext: { info in
+                let urlString = info.items?[0].volumeInfo?.imageLinks?.thumbnail
+                guard var url = urlString else {return}
+                url = "https" + url.dropFirst(4)
+                urlRelay.accept(URL(string: url)!)
+                self.thumbnailUrl = url
+            })
+            .disposed(by: disposeBag)
+
+        return urlRelay
     }
 }

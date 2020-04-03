@@ -10,28 +10,29 @@ import Foundation
 import RxSwift
 import RxCocoa
 
-struct   BarCodeReaderViewModelInput {
+struct BarCodeReaderViewModelInput {
     let isbnRelay: PublishRelay<String>
 }
 
-protocol   BarCodeReaderViewModelOutput {
+protocol BarCodeReaderViewModelOutput {
+    var urlSignal: PublishRelay<URL> { get }
 }
 
-protocol  BarCodeReaderViewModelType {
+protocol BarCodeReaderViewModelType {
     var outputs: BarCodeReaderViewModelOutput? { get }
     func setup(input: BarCodeReaderViewModelInput)
 }
 
-final class   BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable, BarCodeReaderViewModelOutput {
+final class BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable {
     typealias Dependency = BarCodeReaderModelType
 
     private let model: BarCodeReaderModelType
     var outputs: BarCodeReaderViewModelOutput?
+    private let disposeBag = DisposeBag()
 
     init(with dependency: Dependency) {
         model = dependency
         self.outputs = self
-
     }
 
     func setup(input: BarCodeReaderViewModelInput) {
@@ -40,6 +41,19 @@ final class   BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable, Ba
             isbnRelay: input.isbnRelay
         )
         model.setup(input: modelInput)
+
+        //        model.outputs?.urlRelay
+        //            .subscribe(onNext: { url in
+        //                print("viewModel")
+        //                print(url)
+        //            })
+        //            .disposed(by: disposeBag)
+    }
+}
+
+extension BarCodeReaderViewModel: BarCodeReaderViewModelOutput {
+    var urlSignal: PublishRelay<URL> {
+        return model.outputs!.urlRelay
     }
 
 }

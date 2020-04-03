@@ -6,6 +6,14 @@ name: Alamofire, nameSpecified:
 body: Copyright (c) 2014-2…
 version: 5.0.5
 
+name: AlamofireImage, nameSpecified: 
+body: Copyright (c) 2015 A…
+version: 4.0.3
+
+name: AlamofireImage, nameSpecified: 
+body: Copyright (c) 2015 A…
+version: 4.0.3
+
 name: Cards, nameSpecified: 
 body: MIT License
 

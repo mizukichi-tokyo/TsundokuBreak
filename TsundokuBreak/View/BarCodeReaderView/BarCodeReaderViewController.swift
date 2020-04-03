@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import RxSwift
 import RxCocoa
+import AlamofireImage
 
 class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -55,6 +56,13 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
             isbnRelay: isbnRelay
         )
         viewModel.setup(input: input)
+
+        viewModel.outputs?.urlSignal
+            .subscribe(onNext: { [weak self] url in
+                guard let self = self else { return }
+                self.bookImage.af.setImage(withURL: url)
+            })
+            .disposed(by: disposeBag)
 
     }
 
