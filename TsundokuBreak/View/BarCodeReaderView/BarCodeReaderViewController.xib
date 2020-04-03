@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarCodeReaderViewController" customModule="TsundokuBreak" customModuleProvider="target">
             <connections>
+                <outlet property="bookImage" destination="1o0-0z-r52" id="Qh0-iz-5oP"/>
                 <outlet property="cameraView" destination="EDS-Yh-q8b" id="7jt-sB-yDK"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>

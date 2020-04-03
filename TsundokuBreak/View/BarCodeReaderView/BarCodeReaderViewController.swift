@@ -30,6 +30,12 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         dismiss(animated: true)
     }
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var bookImage: UIImageView!
+    //        {
+    //        didSet {
+    //            bookImage.image = UIImage(named: "default.png")
+    //        }
+    //    }
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
