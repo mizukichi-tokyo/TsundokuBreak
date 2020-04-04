@@ -32,6 +32,7 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
     }
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var bookImage: UIImageView!
+
     //        {
     //        didSet {
     //            bookImage.image = UIImage(named: "default.png")
@@ -148,7 +149,6 @@ extension BarCodeReaderViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         if captureSession?.isRunning == true {
             captureSession.stopRunning()
         }
