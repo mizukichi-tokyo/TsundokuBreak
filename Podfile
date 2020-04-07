@@ -16,6 +16,7 @@ target 'TsundokuBreak' do
     pod 'Cards'
     pod 'MaterialComponents/Buttons'
     pod 'AlamofireImage'
+    pod 'SwiftGifOrigin'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

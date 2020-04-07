@@ -66,6 +66,7 @@ PODS:
   - RxSwift (5.1.1)
   - RxTest (5.1.1):
     - RxSwift (~> 5)
+  - SwiftGifOrigin (1.7.0)
   - SwiftLint (0.39.1)
 
 DEPENDENCIES:
@@ -80,6 +81,7 @@ DEPENDENCIES:
   - RxCocoa
   - RxSwift
   - RxTest
+  - SwiftGifOrigin
   - SwiftLint
 
 SPEC REPOS:
@@ -101,6 +103,7 @@ SPEC REPOS:
     - RxRelay
     - RxSwift
     - RxTest
+    - SwiftGifOrigin
     - SwiftLint
 
 SPEC CHECKSUMS:
@@ -121,8 +124,9 @@ SPEC CHECKSUMS:
   RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
   RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
   RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 89b93f2699240ec48d0ab9ad3d4d223801eae774
+PODFILE CHECKSUM: 4c8f0b2c7dd59b97232d40b00efc3d41f051490f
 
 COCOAPODS: 1.9.1

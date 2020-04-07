@@ -11,6 +11,7 @@ import AVFoundation
 import RxSwift
 import RxCocoa
 import AlamofireImage
+import SwiftGifOrigin
 
 class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -31,13 +32,16 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         dismiss(animated: true)
     }
     @IBOutlet weak var cameraView: UIView!
-    @IBOutlet weak var bookImage: UIImageView!
+    @IBOutlet weak var bookImage: UIImageView! {
+        didSet {
+            bookImage.image = UIImage.gif(name: "lupe")
+        }
+    }
 
-    //        {
-    //        didSet {
-    //            bookImage.image = UIImage(named: "default.png")
-    //        }
-    //    }
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var publicationLabel: UILabel!
+    @IBOutlet weak var pageCountLabel: UILabel!
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -59,9 +63,45 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         viewModel.setup(input: input)
 
         viewModel.outputs?.urlSignal
-            .subscribe(onNext: { [weak self] url in
+            .emit(onNext: { [weak self] url in
                 guard let self = self else { return }
-                self.bookImage.af.setImage(withURL: url)
+                let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
+                let placeFolder = UIImage.gif(name: "loading")
+
+                self.bookImage.af.setImage(
+                    withURL: url,
+                    placeholderImage: placeFolder,
+                    filter: filter,
+                    imageTransition: .crossDissolve(0.5)
+                )
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.titleSignal
+            .emit(onNext: { [weak self] title in
+                guard let self = self else { return }
+                self.titleLabel.text = title
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.authorSignal
+            .emit(onNext: { [weak self] author in
+                guard let self = self else { return }
+                self.authorLabel.text = author
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.publicationSignal
+            .emit(onNext: { [weak self] publication in
+                guard let self = self else { return }
+                self.publicationLabel.text = publication
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.pageCountSignal
+            .emit(onNext: { [weak self] pageCount in
+                guard let self = self else { return }
+                self.pageCountLabel.text = pageCount
             })
             .disposed(by: disposeBag)
 

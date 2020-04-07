@@ -15,7 +15,11 @@ struct BarCodeReaderViewModelInput {
 }
 
 protocol BarCodeReaderViewModelOutput {
-    var urlSignal: PublishRelay<URL> { get }
+    var urlSignal: Signal<URL> { get }
+    var titleSignal: Signal<String> { get }
+    var authorSignal: Signal<String> { get }
+    var publicationSignal: Signal<String> { get }
+    var pageCountSignal: Signal<String> { get }
 }
 
 protocol BarCodeReaderViewModelType {
@@ -40,20 +44,30 @@ final class BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable {
         let modelInput = BarCodeReaderModelInput(
             isbnRelay: input.isbnRelay
         )
-        model.setup(input: modelInput)
 
-        //        model.outputs?.urlRelay
-        //            .subscribe(onNext: { url in
-        //                print("viewModel")
-        //                print(url)
-        //            })
-        //            .disposed(by: disposeBag)
+        model.setup(input: modelInput)
     }
 }
 
 extension BarCodeReaderViewModel: BarCodeReaderViewModelOutput {
-    var urlSignal: PublishRelay<URL> {
-        return model.outputs!.urlRelay
+    var urlSignal: Signal<URL> {
+        return model.outputs!.urlRelay.asSignal()
+    }
+
+    var titleSignal: Signal<String> {
+        return model.outputs!.titleRelay.asSignal()
+    }
+
+    var authorSignal: Signal<String> {
+        return model.outputs!.authorRelay.asSignal()
+    }
+
+    var publicationSignal: Signal<String> {
+        return model.outputs!.publicationRelay.asSignal()
+    }
+
+    var pageCountSignal: Signal<String> {
+        return model.outputs!.pageCountRelay.asSignal()
     }
 
 }
