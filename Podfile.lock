@@ -46,6 +46,7 @@ PODS:
   - MaterialComponents/Typography (107.4.0):
     - MaterialComponents/private/Application
     - MaterialComponents/private/Math
+  - MBProgressHUD (1.2.0)
   - MDFInternationalization (2.0.0)
   - MDFTextAccessibility (2.0.0)
   - Moya (14.0.0):
@@ -75,6 +76,7 @@ DEPENDENCIES:
   - ColorMatchTabs
   - LicensePlist
   - MaterialComponents/Buttons
+  - MBProgressHUD
   - Moya
   - R.swift
   - RxBlocking
@@ -92,6 +94,7 @@ SPEC REPOS:
     - ColorMatchTabs
     - LicensePlist
     - MaterialComponents
+    - MBProgressHUD
     - MDFInternationalization
     - MDFTextAccessibility
     - Moya
@@ -113,6 +116,7 @@ SPEC CHECKSUMS:
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   LicensePlist: d52efb2ce5d3cf58833d362f82967ba4af25fe9a
   MaterialComponents: 52e2ade4684e3017eff7f62587b37522d217ea50
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
@@ -127,6 +131,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 4c8f0b2c7dd59b97232d40b00efc3d41f051490f
+PODFILE CHECKSUM: 0cbddee67f399350a20012c65bd478a4fd747daa
 
 COCOAPODS: 1.9.1

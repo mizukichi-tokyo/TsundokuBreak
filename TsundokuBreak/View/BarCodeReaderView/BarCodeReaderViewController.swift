@@ -12,8 +12,9 @@ import RxSwift
 import RxCocoa
 import AlamofireImage
 import SwiftGifOrigin
+import MBProgressHUD
 
-class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
+final class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
     typealias Dependency = BarCodeReaderViewModelType
     private let viewModel: BarCodeReaderViewModelType
@@ -56,12 +57,20 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         barCodeReader(readableArea)
     }
 
-    func setup() {
+    private func setup() {
         let input = BarCodeReaderViewModelInput(
             isbnRelay: isbnRelay
         )
         viewModel.setup(input: input)
 
+        setEmit()
+    }
+
+}
+
+extension BarCodeReaderViewController {
+
+    func setEmit() {
         viewModel.outputs?.urlSignal
             .emit(onNext: { [weak self] url in
                 guard let self = self else { return }
@@ -74,6 +83,7 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
                     filter: filter,
                     imageTransition: .crossDissolve(0.5)
                 )
+                MBProgressHUD.hide(for: self.view, animated: true)
             })
             .disposed(by: disposeBag)
 
@@ -106,7 +116,6 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
             .disposed(by: disposeBag)
 
     }
-
 }
 
 extension BarCodeReaderViewController {
@@ -207,6 +216,7 @@ extension BarCodeReaderViewController {
 
     func found(code: String) {
         isbnRelay.accept(code)
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
 
     override var prefersStatusBarHidden: Bool {

@@ -56,6 +56,14 @@ body:
                    …
 version: 107.4.0
 
+name: MBProgressHUD, nameSpecified: 
+body: Copyright © 2009-202…
+version: 1.2.0
+
+name: MBProgressHUD, nameSpecified: 
+body: Copyright © 2009-202…
+version: 1.2.0
+
 name: MDFInternationalization, nameSpecified: 
 body: 
                    …
