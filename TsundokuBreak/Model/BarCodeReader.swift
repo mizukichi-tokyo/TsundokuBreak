@@ -16,6 +16,7 @@ struct  BarCodeReaderModelInput {
 }
 
 protocol  BarCodeReaderModelOutput {
+    var zeroItemRelay: PublishRelay<Bool> { get }
     var urlRelay: PublishRelay<URL> { get }
     var titleRelay: PublishRelay<String> { get }
     var authorRelay: PublishRelay<String> { get }
@@ -82,17 +83,37 @@ extension BarCodeReaderModel {
 
     private func processJsonData(jsonData: BookInfo) {
         self.bookInfo.accept(jsonData)
-        //                    print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-        //                    print(jsonData.items?[0].volumeInfo?.title as Any)
-        //                    print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-        //                    print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-        //                    print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+        print(jsonData.totalItems!)
+        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
+        print(jsonData.items?[0].volumeInfo?.title as Any)
+        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
+        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
+        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
 
     }
 
 }
 
 extension BarCodeReaderModel: BarCodeReaderModelOutput {
+    var zeroItemRelay: PublishRelay<Bool> {
+        let zeroRelay = PublishRelay<Bool>()
+
+        self.bookInfo
+            .subscribe(onNext: { info in
+                let itemCount = info.totalItems!
+                if itemCount == 0 {
+                    zeroRelay.accept(true)
+                    print("item ないよう")
+                } else {
+                    zeroRelay.accept(false)
+                    print("item あるよう")
+                }
+            })
+            .disposed(by: disposeBag)
+
+        return zeroRelay
+    }
+
     var titleRelay: PublishRelay<String> {
         let titleRelay =  PublishRelay<String>()
 

@@ -15,6 +15,7 @@ struct BarCodeReaderViewModelInput {
 }
 
 protocol BarCodeReaderViewModelOutput {
+    var zeroItemSignal: Signal<Bool> { get }
     var urlSignal: Signal<URL> { get }
     var titleSignal: Signal<String> { get }
     var authorSignal: Signal<String> { get }
@@ -50,6 +51,10 @@ final class BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable {
 }
 
 extension BarCodeReaderViewModel: BarCodeReaderViewModelOutput {
+    var zeroItemSignal: Signal<Bool> {
+        return model.outputs!.zeroItemRelay.asSignal()
+    }
+
     var urlSignal: Signal<URL> {
         return model.outputs!.urlRelay.asSignal()
     }

@@ -13,6 +13,7 @@ import RxCocoa
 import AlamofireImage
 import SwiftGifOrigin
 import MBProgressHUD
+import Alertift
 
 final class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -71,12 +72,20 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
 extension BarCodeReaderViewController {
 
     func setEmit() {
+        viewModel.outputs?.zeroItemSignal
+            .emit(onNext: { [weak self] bool in
+                guard let self = self else { return }
+                if bool {
+                    self.zeroItemProcess()
+                }
+            })
+            .disposed(by: disposeBag)
+
         viewModel.outputs?.urlSignal
             .emit(onNext: { [weak self] url in
                 guard let self = self else { return }
                 let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
                 let placeFolder = UIImage.gif(name: "loading")
-
                 self.bookImage.af.setImage(
                     withURL: url,
                     placeholderImage: placeFolder,
@@ -114,7 +123,16 @@ extension BarCodeReaderViewController {
                 self.pageCountLabel.text = pageCount
             })
             .disposed(by: disposeBag)
+    }
 
+    func zeroItemProcess() {
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+
+        Alertift.alert(title: "読み取りエラー", message: "上段のバーコードを読み取っていないか、データベースに該当書籍がありません。もう一度上段のバーコードを読み取ってください")
+            .action(.default("OK")) {
+                MBProgressHUD.hide(for: self.view, animated: true)
+                self.captureSession.startRunning()
+        }.show(on: self)
     }
 }
 

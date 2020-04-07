@@ -2,6 +2,7 @@ PODS:
   - Alamofire (5.0.5)
   - AlamofireImage (4.0.3):
     - Alamofire (< 6.0.0, >= 5.0.2)
+  - Alertift (4.1.1)
   - Cards (1.4.0):
     - Player (= 0.13.0)
   - ColorMatchTabs (3.3)
@@ -72,6 +73,7 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
+  - Alertift
   - Cards
   - ColorMatchTabs
   - LicensePlist
@@ -90,6 +92,7 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
+    - Alertift
     - Cards
     - ColorMatchTabs
     - LicensePlist
@@ -112,6 +115,7 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: df2f8f826963b08b9a870791ad48e07a10090b2e
   AlamofireImage: 3d1a2010519e58675318735580eb856e88840ff7
+  Alertift: 950483ca193717cc8bb508a7dbbe34f4af321daf
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   LicensePlist: d52efb2ce5d3cf58833d362f82967ba4af25fe9a
@@ -131,6 +135,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 55e96a4a4d537d4a3156859fc1c54bd24851a046
 
-PODFILE CHECKSUM: 0cbddee67f399350a20012c65bd478a4fd747daa
+PODFILE CHECKSUM: ec65a361bc2873394be7232d495aeb37b6c77070
 
 COCOAPODS: 1.9.1
