@@ -128,7 +128,7 @@ extension BarCodeReaderViewController {
     func zeroItemProcess() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
 
-        Alertift.alert(title: "読み取りエラー", message: "上段のバーコードを読み取っていないか、データベースに該当書籍がありません。もう一度上段のバーコードを読み取ってください")
+        Alertift.alert(title: "読み取りエラー", message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\nもう一度上段のバーコードを読み取ってください")
             .action(.default("OK")) {
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.captureSession.startRunning()
