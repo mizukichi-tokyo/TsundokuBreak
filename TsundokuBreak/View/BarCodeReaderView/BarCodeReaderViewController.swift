@@ -13,8 +13,8 @@ import RxCocoa
 import AlamofireImage
 import SwiftGifOrigin
 import MBProgressHUD
-import Alertift
 import MaterialComponents
+import CDAlertView
 
 final class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
@@ -138,11 +138,23 @@ extension BarCodeReaderViewController {
     func zeroItemTrueProcess() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
 
-        Alertift.alert(title: "読み取りエラー", message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\nもう一度上段のバーコードを読み取ってください")
-            .action(.default("OK")) {
-                MBProgressHUD.hide(for: self.view, animated: true)
-                self.captureSession.startRunning()
-        }.show(on: self)
+        let alert = CDAlertView(title: "バーコードエラー",
+                                message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\n\nもう一度、\n上段のバーコードを読み取ってください",
+                                type: .warning
+        )
+        let doneAction = CDAlertViewAction(
+            title: "OK! 💪",
+            handler: { _ in self.restartCapture()}
+        )
+        alert.add(action: doneAction)
+        alert.show()
+
+    }
+
+    func restartCapture() -> Bool {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        self.captureSession.startRunning()
+        return true
     }
 
     func zeroItemFalseProcess() {

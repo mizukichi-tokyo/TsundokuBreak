@@ -18,7 +18,7 @@ target 'TsundokuBreak' do
     pod 'AlamofireImage'
     pod 'SwiftGifOrigin'
     pod 'MBProgressHUD'
-    pod 'Alertift'
+    pod "CDAlertView"
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
