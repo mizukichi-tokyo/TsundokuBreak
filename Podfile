@@ -15,6 +15,10 @@ target 'TsundokuBreak' do
     pod 'ColorMatchTabs'
     pod 'Cards'
     pod 'MaterialComponents/Buttons'
+    pod 'AlamofireImage'
+    pod 'SwiftGifOrigin'
+    pod 'MBProgressHUD'
+    pod "CDAlertView"
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

@@ -51,7 +51,7 @@ let APITestData = """
 "totalItems": 1,
 "items": [
 {
-"kind": "books#volume",
+"kind": "books#volume",g
 "id": "RhbBoAEACAAJ",
 "etag": "yXGiAe/R9mQ",
 "selfLink": "https://www.googleapis.com/books/v1/volumes/RhbBoAEACAAJ",

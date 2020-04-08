@@ -5,7 +5,8 @@ class StubContentViewControllersProvider {
 
     static let viewControllers: [UIViewController] = {
 
-        let totalCountViewController = TotalCountViewController.makeVC()
+        //        let totalCountViewController = TotalCountViewController.makeVC()
+        let totalCountViewController = TsundokuViewController.makeVC()
 
         let tsundokuViewController = TsundokuViewController.makeVC()
 

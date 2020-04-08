@@ -8,14 +8,22 @@
 
 import UIKit
 import AVFoundation
+import RxSwift
+import RxCocoa
+import AlamofireImage
+import SwiftGifOrigin
+import MBProgressHUD
+import MaterialComponents
+import CDAlertView
 
-class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
+final class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
     typealias Dependency = BarCodeReaderViewModelType
     private let viewModel: BarCodeReaderViewModelType
 
     required init(with dependency: Dependency) {
         viewModel = dependency
+        self.isbnRelay = PublishRelay<String>()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -23,33 +31,140 @@ class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetada
         fatalError("init(coder:) has not been implemented")
     }
 
+    @IBAction func bushCrossButton(_ sender: Any) {
+        dismiss(animated: true)
+    }
     @IBOutlet weak var cameraView: UIView!
+    @IBOutlet weak var bookImage: UIImageView! {
+        didSet {
+            bookImage.image = UIImage.gif(name: "lupe")
+        }
+    }
+
+    @IBOutlet weak var instructLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var publicationLabel: UILabel!
+    @IBOutlet weak var pageCountLabel: UILabel!
+    @IBOutlet weak var addButton: MDCRaisedButton!
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
-    struct BarCodeReadableArea {
-        // swiftlint:disable identifier_name
-        let x: CGFloat = 0.15
-        let y: CGFloat = 0.4
-        // swiftlint:enable identifier_name
-        let width: CGFloat = 0.6
-        let height: CGFloat = 0.2
-    }
+    private let disposeBag = DisposeBag()
+    private let isbnRelay: PublishRelay<String>
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
         let readableArea = BarCodeReadableArea()
         barCodeReader(readableArea)
+    }
 
+    private func setup() {
+        let input = BarCodeReaderViewModelInput(
+            isbnRelay: isbnRelay
+        )
+        viewModel.setup(input: input)
+        setLabelConfig()
+        setEmit()
     }
 
 }
 
 extension BarCodeReaderViewController {
+
+    func setLabelConfig() {
+        titleLabel.adjustsFontSizeToFitWidth = true
+        authorLabel.adjustsFontSizeToFitWidth = true
+    }
+
+    func setEmit() {
+        viewModel.outputs?.zeroItemSignal
+            .emit(onNext: { [weak self] bool in
+                guard let self = self else { return }
+                if bool {
+                    self.zeroItemTrueProcess()
+                } else {
+                    self.zeroItemFalseProcess()
+                }
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.urlSignal
+            .emit(onNext: { [weak self] url in
+                guard let self = self else { return }
+                let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
+                let placeFolder = UIImage.gif(name: "loading")
+                self.bookImage.af.setImage(
+                    withURL: url,
+                    placeholderImage: placeFolder,
+                    filter: filter,
+                    imageTransition: .crossDissolve(0.5)
+                )
+                MBProgressHUD.hide(for: self.view, animated: true)
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.titleSignal
+            .emit(onNext: { [weak self] title in
+                guard let self = self else { return }
+                self.titleLabel.text = title
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.authorSignal
+            .emit(onNext: { [weak self] author in
+                guard let self = self else { return }
+                self.authorLabel.text = author
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.publicationSignal
+            .emit(onNext: { [weak self] publication in
+                guard let self = self else { return }
+                self.publicationLabel.text = publication
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.pageCountSignal
+            .emit(onNext: { [weak self] pageCount in
+                guard let self = self else { return }
+                self.pageCountLabel.text = pageCount
+            })
+            .disposed(by: disposeBag)
+    }
+
+    func zeroItemTrueProcess() {
+        AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
+
+        let alert = CDAlertView(title: "バーコードエラー",
+                                message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\n\nもう一度、\n上段のバーコードを読み取ってください",
+                                type: .warning
+        )
+        let doneAction = CDAlertViewAction(
+            title: "OK! 💪",
+            handler: { _ in self.restartCapture()}
+        )
+        alert.add(action: doneAction)
+        alert.show()
+
+    }
+
+    func restartCapture() -> Bool {
+        MBProgressHUD.hide(for: self.view, animated: true)
+        self.captureSession.startRunning()
+        return true
+    }
+
+    func zeroItemFalseProcess() {
+        instructLabel.text = "書籍のデータを取得しました"
+        addButton.isEnabled = true
+    }
+}
+
+extension BarCodeReaderViewController {
     func barCodeReader(_ barCodeReadableArea: BarCodeReadableArea) {
-        // 読み取り可能エリアの設定を行う
-        // 画面の横、縦に対して、左が10%、上が40%のところに、横幅80%、縦幅20%を読み取りエリアに設定
         // swiftlint:disable identifier_name
         let x: CGFloat = barCodeReadableArea.x
         let y: CGFloat = barCodeReadableArea.y
@@ -128,7 +243,6 @@ extension BarCodeReaderViewController {
 
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-
         if captureSession?.isRunning == true {
             captureSession.stopRunning()
         }
@@ -143,12 +257,11 @@ extension BarCodeReaderViewController {
             AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
             found(code: stringValue)
         }
-
-        dismiss(animated: true)
     }
 
     func found(code: String) {
-        print(code)
+        isbnRelay.accept(code)
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
 
     override var prefersStatusBarHidden: Bool {
@@ -166,6 +279,7 @@ extension BarCodeReaderViewController {
         let model = BarCodeReaderModel(with: BarCodeReaderModel.Dependency.init())
         let viewModel =  BarCodeReaderViewModel(with: model)
         let viewControler =  BarCodeReaderViewController(with: viewModel)
+        viewControler.modalPresentationStyle = .fullScreen
         return viewControler
     }
 }
