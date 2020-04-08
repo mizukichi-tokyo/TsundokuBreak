@@ -14,6 +14,7 @@ import AlamofireImage
 import SwiftGifOrigin
 import MBProgressHUD
 import Alertift
+import MaterialComponents
 
 final class BarCodeReaderViewController: UIViewController, Injectable, AVCaptureMetadataOutputObjectsDelegate {
 
