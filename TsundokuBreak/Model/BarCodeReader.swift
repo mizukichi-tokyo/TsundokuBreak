@@ -83,12 +83,12 @@ extension BarCodeReaderModel {
 
     private func processJsonData(jsonData: BookInfo) {
         self.bookInfo.accept(jsonData)
-        print(jsonData.totalItems!)
-        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-        print(jsonData.items?[0].volumeInfo?.title as Any)
-        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+        //        print(jsonData.totalItems!)
+        //        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
+        //        print(jsonData.items?[0].volumeInfo?.title as Any)
+        //        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
+        //        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
+        //        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
 
     }
 
@@ -103,10 +103,8 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
                 let itemCount = info.totalItems!
                 if itemCount == 0 {
                     zeroRelay.accept(true)
-                    print("item ないよう")
                 } else {
                     zeroRelay.accept(false)
-                    print("item あるよう")
                 }
             })
             .disposed(by: disposeBag)
@@ -137,7 +135,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let authorString = info.items?[0].volumeInfo?.authors?[0]
                 guard let author = authorString else {return}
-                authorRelay.accept(author)
+                authorRelay.accept("著者: " + author)
                 self.author = author
             })
             .disposed(by: disposeBag)
@@ -153,7 +151,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let publicationString = info.items?[0].volumeInfo?.publishedDate
                 guard let publication = publicationString else {return}
-                publicationRelay.accept(publication)
+                publicationRelay.accept("出版日: " + publication)
                 self.publication = publication
             })
             .disposed(by: disposeBag)
@@ -169,7 +167,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let pageCountString = info.items?[0].volumeInfo?.pageCount
                 guard let pageCount = pageCountString else {return}
-                pageCountRelay.accept(String(pageCount))
+                pageCountRelay.accept("ページ数: " + String(pageCount))
                 self.pageCount = pageCount
             })
             .disposed(by: disposeBag)

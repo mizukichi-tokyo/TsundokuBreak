@@ -66,13 +66,18 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
             isbnRelay: isbnRelay
         )
         viewModel.setup(input: input)
-
+        setLabelConfig()
         setEmit()
     }
 
 }
 
 extension BarCodeReaderViewController {
+
+    func setLabelConfig() {
+        titleLabel.adjustsFontSizeToFitWidth = true
+        authorLabel.adjustsFontSizeToFitWidth = true
+    }
 
     func setEmit() {
         viewModel.outputs?.zeroItemSignal
