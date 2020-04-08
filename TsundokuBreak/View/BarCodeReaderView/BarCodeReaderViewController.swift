@@ -46,7 +46,10 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var publicationLabel: UILabel!
     @IBOutlet weak var pageCountLabel: UILabel!
-    @IBOutlet weak var addButton: MDCRaisedButton!
+    @IBOutlet weak var addButton: UIButton!
+    @IBAction func addTouched(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -63,7 +66,8 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
 
     private func setup() {
         let input = BarCodeReaderViewModelInput(
-            isbnRelay: isbnRelay
+            isbnRelay: isbnRelay,
+            addButton: addButton.rx.tap
         )
         viewModel.setup(input: input)
         setLabelConfig()

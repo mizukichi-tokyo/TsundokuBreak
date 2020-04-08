@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarCodeReaderViewController" customModule="TsundokuBreak" customModuleProvider="target">
             <connections>
-                <outlet property="addButton" destination="K2H-7D-DBJ" id="7cj-db-BUU"/>
+                <outlet property="addButton" destination="K2H-7D-DBJ" id="3Lr-y0-iRg"/>
                 <outlet property="authorLabel" destination="vIl-lZ-kxC" id="N4J-EK-RNC"/>
                 <outlet property="bookImage" destination="5bZ-Cy-VJw" id="tDi-mO-wz3"/>
                 <outlet property="cameraView" destination="EDS-Yh-q8b" id="7jt-sB-yDK"/>
@@ -110,6 +110,9 @@
                             <state key="normal" title="積読リストに追加する">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
+                            <connections>
+                                <action selector="addTouched:" destination="-1" eventType="touchUpInside" id="0k1-jE-N1N"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

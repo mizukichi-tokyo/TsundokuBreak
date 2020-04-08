@@ -19,6 +19,7 @@ target 'TsundokuBreak' do
     pod 'SwiftGifOrigin'
     pod 'MBProgressHUD'
     pod "CDAlertView"
+    pod "RealmSwift"
     pod "RxRealm"
 
   target 'TsundokuBreakTests' do

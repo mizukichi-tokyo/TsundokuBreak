@@ -89,6 +89,7 @@ DEPENDENCIES:
   - MBProgressHUD
   - Moya
   - R.swift
+  - RealmSwift
   - RxBlocking
   - RxCocoa
   - RxRealm
@@ -150,6 +151,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: d9f17d8f1792cb836be79b7b3eef078dae284304
+PODFILE CHECKSUM: 030c78a8774185c1554c58548f8d5e2bf59f8d34
 
 COCOAPODS: 1.9.1
