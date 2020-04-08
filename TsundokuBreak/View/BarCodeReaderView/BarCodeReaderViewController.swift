@@ -41,10 +41,12 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
         }
     }
 
+    @IBOutlet weak var instructLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var publicationLabel: UILabel!
     @IBOutlet weak var pageCountLabel: UILabel!
+    @IBOutlet weak var addButton: MDCRaisedButton!
 
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
@@ -77,7 +79,9 @@ extension BarCodeReaderViewController {
             .emit(onNext: { [weak self] bool in
                 guard let self = self else { return }
                 if bool {
-                    self.zeroItemProcess()
+                    self.zeroItemTrueProcess()
+                } else {
+                    self.zeroItemFalseProcess()
                 }
             })
             .disposed(by: disposeBag)
@@ -126,7 +130,7 @@ extension BarCodeReaderViewController {
             .disposed(by: disposeBag)
     }
 
-    func zeroItemProcess() {
+    func zeroItemTrueProcess() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
 
         Alertift.alert(title: "読み取りエラー", message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\nもう一度上段のバーコードを読み取ってください")
@@ -134,6 +138,11 @@ extension BarCodeReaderViewController {
                 MBProgressHUD.hide(for: self.view, animated: true)
                 self.captureSession.startRunning()
         }.show(on: self)
+    }
+
+    func zeroItemFalseProcess() {
+        instructLabel.text = "書籍のデータを取得しました"
+        addButton.isEnabled = true
     }
 }
 

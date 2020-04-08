@@ -9,9 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarCodeReaderViewController" customModule="TsundokuBreak" customModuleProvider="target">
             <connections>
+                <outlet property="addButton" destination="K2H-7D-DBJ" id="7cj-db-BUU"/>
                 <outlet property="authorLabel" destination="vIl-lZ-kxC" id="N4J-EK-RNC"/>
                 <outlet property="bookImage" destination="5bZ-Cy-VJw" id="tDi-mO-wz3"/>
                 <outlet property="cameraView" destination="EDS-Yh-q8b" id="7jt-sB-yDK"/>
+                <outlet property="instructLabel" destination="4SP-gT-f4d" id="lVf-UD-PUO"/>
                 <outlet property="pageCountLabel" destination="aE7-6t-fQW" id="yNl-AU-wgY"/>
                 <outlet property="publicationLabel" destination="YcZ-Eg-ymz" id="pib-Gw-6qU"/>
                 <outlet property="titleLabel" destination="VBb-cv-H3Q" id="Jpq-h1-U05"/>
@@ -105,7 +107,7 @@
                                 <constraint firstAttribute="height" constant="50" id="OyW-8Y-hV4"/>
                             </constraints>
                             <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            <state key="normal" title="積読する">
+                            <state key="normal" title="積読リストに追加する">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </state>
                         </button>
