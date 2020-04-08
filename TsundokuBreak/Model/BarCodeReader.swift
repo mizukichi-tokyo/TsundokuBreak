@@ -37,7 +37,7 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
     private let disposeBag = DisposeBag()
     private let provider = MoyaProvider<GoogleBooksAPIs>()
     private let bookInfo: PublishRelay<BookInfo>
-    private var thumbnailUrl: String?
+    private var thumbnailUrl: URL?
     private var title: String?
     private var author: String?
     private var publication: String?
@@ -185,7 +185,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
                 guard var url = urlString else {return}
                 url = "https" + url.dropFirst(4)
                 urlRelay.accept(URL(string: url)!)
-                self.thumbnailUrl = url
+                self.thumbnailUrl = URL(string: url)!
             })
             .disposed(by: disposeBag)
 
