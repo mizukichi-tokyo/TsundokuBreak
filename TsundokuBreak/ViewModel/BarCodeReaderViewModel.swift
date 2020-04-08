@@ -12,6 +12,7 @@ import RxCocoa
 
 struct BarCodeReaderViewModelInput {
     let isbnRelay: PublishRelay<String>
+    let addButton: ControlEvent<Void>
 }
 
 protocol BarCodeReaderViewModelOutput {
@@ -43,7 +44,8 @@ final class BarCodeReaderViewModel: BarCodeReaderViewModelType, Injectable {
     func setup(input: BarCodeReaderViewModelInput) {
 
         let modelInput = BarCodeReaderModelInput(
-            isbnRelay: input.isbnRelay
+            isbnRelay: input.isbnRelay,
+            addButton: input.addButton
         )
 
         model.setup(input: modelInput)

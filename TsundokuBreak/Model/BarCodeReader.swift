@@ -10,9 +10,13 @@ import Foundation
 import RxSwift
 import RxCocoa
 import Moya
+import Realm
+import RxRealm
+import RealmSwift
 
 struct  BarCodeReaderModelInput {
     let isbnRelay: PublishRelay<String>
+    let addButton: ControlEvent<Void>
 }
 
 protocol  BarCodeReaderModelOutput {
@@ -49,11 +53,25 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
     }
 
     func setup(input: BarCodeReaderModelInput) {
+        let realm = self.createRealm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
+
         input.isbnRelay
             .subscribe(onNext: { [weak self] isbn in
                 guard let self = self else { return }
                 self.getRequest(isbnNumber: isbn)
             })
+            .disposed(by: disposeBag)
+
+        input.addButton
+            .map { self.makeRecord() }
+            .bind(to: realm.rx.add(onError: { elements, error in
+                if let elements = elements {
+                    print("Error \(error.localizedDescription) while saving objects \(String(describing: elements))")
+                } else {
+                    print("Error \(error.localizedDescription) while opening realm.")
+                }
+            }))
             .disposed(by: disposeBag)
 
     }
@@ -90,6 +108,16 @@ extension BarCodeReaderModel {
         //        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
         //        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
 
+    }
+
+    private func makeRecord() -> Record {
+        let record = Record()
+        record.thumbnailUrl = thumbnailUrl!
+        record.title = title!
+        record.author = author!
+        record.publication = publication!
+        record.pageCount = pageCount!
+        return record
     }
 
 }
@@ -190,5 +218,19 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .disposed(by: disposeBag)
 
         return urlRelay
+    }
+}
+
+extension BarCodeReaderModel {
+    private func createRealm() -> Realm {
+        do {
+            return try Realm()
+        } catch let error as NSError {
+            assertionFailure("realm error: \(error)")
+            let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+            // swiftlint:disable:next force_try
+            return try! Realm(configuration: config)
+            // swiftlint:disable:previous force_try
+        }
     }
 }
