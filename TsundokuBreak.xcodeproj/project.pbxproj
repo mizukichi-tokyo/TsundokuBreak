@@ -204,6 +204,13 @@
 			path = TotalCountView;
 			sourceTree = "<group>";
 		};
+		D332B5D7243E20AD00B24D4D /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		D35AFAB52429C07E0018EE9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +317,7 @@
 		D3E78A8A24289D4900440CAF /* TsundokuBreak */ = {
 			isa = PBXGroup;
 			children = (
+				D332B5D7243E20AD00B24D4D /* New Group */,
 				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB82429C0D60018EE9E /* Strings */,
 				D35AFAB72429C0C30018EE9E /* Struct */,
