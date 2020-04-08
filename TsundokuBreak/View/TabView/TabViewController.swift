@@ -10,6 +10,10 @@ import UIKit
 import ColorMatchTabs
 
 class TabViewController: ColorMatchTabsViewController {
+    override var scrollEnabled: Bool {
+        get { return false }
+        set { _ = newValue }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
