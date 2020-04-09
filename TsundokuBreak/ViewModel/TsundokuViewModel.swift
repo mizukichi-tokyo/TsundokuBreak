@@ -48,19 +48,19 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
         model.outputs?.recordsObservable
             .subscribe(onNext: { [weak self] records in
                 guard let self = self else { return }
-                self.tsundokuDataRelay.accept(self.makeTsundokuData(records: records))
+                self.tsundokuDataRelay.accept(self.makeDataTupleArray(records: records))
             })
             .disposed(by: disposeBag)
 
     }
 
-    private func makeTsundokuData(records: Results<Record>? ) ->( [BookDataTuple] ) {
+    private func makeDataTupleArray(records: Results<Record>? ) ->( [BookDataTuple] ) {
 
-        var tsundokuDataArray = [BookDataTuple]()
+        var dataArray = [BookDataTuple]()
 
         for record in records! {
 
-            let tshundokuDataTuple = BookDataTuple(
+            let dataTuple = BookDataTuple(
                 thumbnailUrl: record.thumbnailUrl,
                 title: record.title,
                 author: record.author,
@@ -70,10 +70,9 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
                 dokuryoFlag: record.dokuryoFlag
             )
 
-            tsundokuDataArray.append(tshundokuDataTuple)
+            dataArray.append(dataTuple)
         }
-        print(tsundokuDataArray[0].title)
-        return tsundokuDataArray
+        return dataArray
     }
 
 }
