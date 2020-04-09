@@ -7,11 +7,17 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import RealmSwift
+import RxRealm
 
 struct   TsundokuViewModelInput {
 }
 
 protocol   TsundokuViewModelOutput {
+    var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {get}
+
 }
 
 protocol  TsundokuViewModelType {
@@ -19,11 +25,13 @@ protocol  TsundokuViewModelType {
     func setup(input: TsundokuViewModelInput)
 }
 
-final class   TsundokuViewModel: TsundokuViewModelType, Injectable, TsundokuViewModelOutput {
+final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
     typealias Dependency = TsundokuModelType
 
     private let model: TsundokuModelType
     var outputs: TsundokuViewModelOutput?
+    private let tsundokuDataRelay = BehaviorRelay<[BookDataTuple]>(value: [])
+    private let disposeBag = DisposeBag()
 
     init(with dependency: Dependency) {
         model = dependency
@@ -36,6 +44,47 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable, TsundokuView
         )
 
         model.setup(input: modelInput)
+
+        model.outputs?.recordsObservable
+            .subscribe(onNext: { [weak self] records in
+                guard let self = self else { return }
+                self.tsundokuDataRelay.accept(self.makeTsundokuData(records: records))
+            })
+            .disposed(by: disposeBag)
+
+    }
+
+    private func makeTsundokuData(records: Results<Record>? ) ->( [BookDataTuple] ) {
+
+        var tsundokuDataArray = [BookDataTuple]()
+
+        for record in records! {
+
+            let tshundokuDataTuple = BookDataTuple(
+                thumbnailUrl: record.thumbnailUrl,
+                title: record.title,
+                author: record.author,
+                publication: record.publication,
+                pageCount: record.pageCount,
+                readPage: record.readPage,
+                dokuryoFlag: record.dokuryoFlag
+            )
+
+            tsundokuDataArray.append(tshundokuDataTuple)
+        }
+        print(tsundokuDataArray[0].title)
+        return tsundokuDataArray
+    }
+
+}
+
+extension TsundokuViewModel: TsundokuViewModelOutput {
+    var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {
+        return  model.outputs!.recordsChangeObservable
+    }
+
+    var tsundokuDataDriver: Driver<[BookDataTuple]> {
+        return tsundokuDataRelay.asDriver()
     }
 
 }
