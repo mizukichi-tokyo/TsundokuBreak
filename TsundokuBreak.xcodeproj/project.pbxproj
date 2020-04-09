@@ -36,6 +36,8 @@
 		D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABB2429C4830018EE9E /* BookInfo.swift */; };
 		D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */; };
 		D3808113243E312000D6A592 /* RealmModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3808112243E312000D6A592 /* RealmModel.swift */; };
+		D394802A243F411D00307A1A /* TsundokuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3948028243F411D00307A1A /* TsundokuTableViewCell.swift */; };
+		D394802B243F411D00307A1A /* TsundokuTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3948029243F411D00307A1A /* TsundokuTableViewCell.xib */; };
 		D3AA182A243C4B700020CCCC /* lupe.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3AA1829243C4B700020CCCC /* lupe.gif */; };
 		D3AA182C243C53450020CCCC /* loading.gif in Resources */ = {isa = PBXBuildFile; fileRef = D3AA182B243C53450020CCCC /* loading.gif */; };
 		D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3AC46BF242F584500C517A5 /* TabViewController.swift */; };
@@ -98,6 +100,8 @@
 		D35AFABB2429C4830018EE9E /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIs.swift; sourceTree = "<group>"; };
 		D3808112243E312000D6A592 /* RealmModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmModel.swift; sourceTree = "<group>"; };
+		D3948028243F411D00307A1A /* TsundokuTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuTableViewCell.swift; sourceTree = "<group>"; };
+		D3948029243F411D00307A1A /* TsundokuTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TsundokuTableViewCell.xib; sourceTree = "<group>"; };
 		D3AA1829243C4B700020CCCC /* lupe.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = lupe.gif; sourceTree = "<group>"; };
 		D3AA182B243C53450020CCCC /* loading.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = loading.gif; sourceTree = "<group>"; };
 		D3AC46BF242F584500C517A5 /* TabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +179,7 @@
 			children = (
 				D320FDFA243333FF0062B0F3 /* TsundokuViewController.swift */,
 				D320FDFB243333FF0062B0F3 /* TsundokuViewController.xib */,
+				D3948027243F409400307A1A /* Cell */,
 			);
 			path = TsundokuView;
 			sourceTree = "<group>";
@@ -290,6 +295,15 @@
 				D3808112243E312000D6A592 /* RealmModel.swift */,
 			);
 			path = RealmSwift;
+			sourceTree = "<group>";
+		};
+		D3948027243F409400307A1A /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				D3948028243F411D00307A1A /* TsundokuTableViewCell.swift */,
+				D3948029243F411D00307A1A /* TsundokuTableViewCell.xib */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		D3AC4666242F4D0800C517A5 /* TabView */ = {
@@ -482,6 +496,7 @@
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,
 				D3AC46C4242F595A00C517A5 /* MainStoryboard.storyboard in Resources */,
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
+				D394802B243F411D00307A1A /* TsundokuTableViewCell.xib in Resources */,
 				D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */,
 				D3E78A9524289D4A00440CAF /* Assets.xcassets in Resources */,
 				D3AA182C243C53450020CCCC /* loading.gif in Resources */,
@@ -701,6 +716,7 @@
 				D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */,
 				D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */,
 				D3808113243E312000D6A592 /* RealmModel.swift in Sources */,
+				D394802A243F411D00307A1A /* TsundokuTableViewCell.swift in Sources */,
 				D32E6BF9242F8E8F0071EBC3 /* TotalCountViewController.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,
