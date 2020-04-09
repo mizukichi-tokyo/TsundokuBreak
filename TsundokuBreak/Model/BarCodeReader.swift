@@ -101,12 +101,12 @@ extension BarCodeReaderModel {
 
     private func processJsonData(jsonData: BookInfo) {
         self.bookInfo.accept(jsonData)
-        print(jsonData.totalItems!)
-        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-        print(jsonData.items?[0].volumeInfo?.title as Any)
-        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+        //        print(jsonData.totalItems!)
+        //        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
+        //        print(jsonData.items?[0].volumeInfo?.title as Any)
+        //        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
+        //        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
+        //        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
 
     }
 

@@ -28,11 +28,14 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable, TsundokuView
     init(with dependency: Dependency) {
         model = dependency
         self.outputs = self
-
     }
 
     func setup(input: TsundokuViewModelInput) {
 
+        let modelInput = TsundokuModelInput(
+        )
+
+        model.setup(input: modelInput)
     }
 
 }

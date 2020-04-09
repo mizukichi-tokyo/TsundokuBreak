@@ -17,4 +17,5 @@ final class Record: Object {
     @objc dynamic var publication: String = ""
     @objc dynamic var pageCount: Int = 0
     @objc dynamic var readPage: Int = 0
+    @objc dynamic var dokuryoFlag: Bool = false
 }
