@@ -32,6 +32,7 @@
 		D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */; };
 		D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */; };
 		D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */; };
+		D3585369243FC36B004806FF /* TsundokuView.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3585368243FC36B004806FF /* TsundokuView.strings */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
 		D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABB2429C4830018EE9E /* BookInfo.swift */; };
 		D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */; };
@@ -97,6 +98,7 @@
 		D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCountViewController.xib; sourceTree = "<group>"; };
 		D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountModel.swift; sourceTree = "<group>"; };
 		D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewModel.swift; sourceTree = "<group>"; };
+		D3585368243FC36B004806FF /* TsundokuView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuView.strings; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
 		D35AFABB2429C4830018EE9E /* BookInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookInfo.swift; sourceTree = "<group>"; };
 		D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleBooksAPIs.swift; sourceTree = "<group>"; };
@@ -259,6 +261,7 @@
 		D35AFAB82429C0D60018EE9E /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				D3585368243FC36B004806FF /* TsundokuView.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -494,6 +497,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3585369243FC36B004806FF /* TsundokuView.strings in Resources */,
 				D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */,
 				D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */,
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,

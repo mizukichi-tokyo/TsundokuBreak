@@ -17,6 +17,7 @@ struct   TsundokuViewModelInput {
 
 protocol   TsundokuViewModelOutput {
     var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {get}
+    var tsundokuDataDriver: Driver<[BookDataTuple]> {get}
 
 }
 

@@ -8,6 +8,10 @@
 
 import UIKit
 import MaterialComponents
+import RxSwift
+import RxCocoa
+import RealmSwift
+import RxRealm
 
 class TsundokuViewController: UIViewController, Injectable {
 
@@ -16,6 +20,21 @@ class TsundokuViewController: UIViewController, Injectable {
     }
     typealias Dependency = TsundokuViewModelType
     private let viewModel: TsundokuViewModelType
+
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.dataSource = self
+            tableView.delegate = self
+
+            tableView.register(
+                UINib(nibName: R.string.tsundokuView.tsundokuTableViewCell(), bundle: nil),
+                forCellReuseIdentifier: R.reuseIdentifier.customTsundokuTableCell.identifier
+            )
+        }
+    }
+
+    private var tsundokuDataArray = [BookDataTuple]()
+    private let disposeBag = DisposeBag()
 
     required init(with dependency: Dependency) {
         viewModel = dependency
@@ -35,8 +54,47 @@ class TsundokuViewController: UIViewController, Injectable {
         let input = TsundokuViewModelInput(
         )
         viewModel.setup(input: input)
+
+        viewModel.outputs?.recordsChangeObservable
+            .subscribe(onNext: { [unowned self] _ in
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
+
+        viewModel.outputs?.tsundokuDataDriver
+            .drive(onNext: { tsundokuData in
+                self.tsundokuDataArray = tsundokuData
+            })
+            .disposed(by: disposeBag)
     }
 
+}
+
+extension TsundokuViewController: UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return tsundokuDataArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customTsundokuTableCell.identifier) as! TsundokuTableViewCell
+        // swiftlint:enable force_cast
+        guard tsundokuDataArray.count != 0 else { return cell }
+        cell.setCell(bookDataTuple: tsundokuDataArray[indexPath.row])
+
+        return cell
+    }
+}
+
+extension TsundokuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
 }
 
 extension TsundokuViewController {
