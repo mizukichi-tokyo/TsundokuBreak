@@ -28,7 +28,7 @@ class TrackLayer: CALayer {
         let layer = CAShapeLayer()
         layer.strokeColor = leftColor.cgColor
         layer.fillColor = nil
-        layer.lineWidth = 1.0
+        layer.lineWidth = 2.0
         self.addSublayer(layer)
         return layer
     }()

@@ -92,6 +92,7 @@ extension BarCodeReaderViewController {
                 } else {
                     self.zeroItemFalseProcess()
                 }
+                MBProgressHUD.hide(for: self.view, animated: true)
             })
             .disposed(by: disposeBag)
 
@@ -106,7 +107,7 @@ extension BarCodeReaderViewController {
                     filter: filter,
                     imageTransition: .crossDissolve(0.5)
                 )
-                MBProgressHUD.hide(for: self.view, animated: true)
+                //                MBProgressHUD.hide(for: self.view, animated: true)
             })
             .disposed(by: disposeBag)
 
