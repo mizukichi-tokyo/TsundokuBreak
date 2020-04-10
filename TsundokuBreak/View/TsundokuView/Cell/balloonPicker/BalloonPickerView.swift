@@ -75,7 +75,8 @@ public typealias ProgressTrackingView = UIView & ProgressTracking
         return CGSize(width: 40, height: 40)
     }
 
-    open var ropeLength: CGFloat = 90
+    //    open var ropeLength: CGFloat = 90
+    open var ropeLength: CGFloat = 80
 
     open override var intrinsicContentSize: CGSize {
         return CGSize(width: thumbSize * 6, height: thumbSize + 2)
