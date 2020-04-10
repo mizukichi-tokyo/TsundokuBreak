@@ -64,8 +64,6 @@ class TsundokuViewController: UIViewController, Injectable {
         viewModel.outputs?.cellDataDriver
             .drive(onNext: { cellData in
                 self.cellDataArray = cellData
-                print("celldata")
-                print(cellData.count)
             })
             .disposed(by: disposeBag)
 

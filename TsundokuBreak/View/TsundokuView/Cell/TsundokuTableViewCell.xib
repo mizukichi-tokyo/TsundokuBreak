@@ -12,7 +12,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTsundokuTableCell" rowHeight="150" id="KGk-i7-Jjw" customClass="TsundokuTableViewCell" customModule="TsundokuBreak" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -35,32 +35,33 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="aZW-gc-eNb">
-                        <rect key="frame" x="14" y="110" width="292" height="30"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-U6-DIS" customClass="Slider" customModule="fluid_slider">
+                        <rect key="frame" x="16" y="102" width="288" height="24"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="288" id="i0p-kM-f4o"/>
+                            <constraint firstAttribute="height" constant="24" id="pSJ-Jd-VZJ"/>
                         </constraints>
-                    </slider>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="top" secondItem="5LL-6F-OGX" secondAttribute="bottom" constant="8" id="715-6c-HkE"/>
                     <constraint firstAttribute="trailing" secondItem="5LL-6F-OGX" secondAttribute="trailing" constant="16" id="EWf-C0-PbE"/>
-                    <constraint firstItem="aZW-gc-eNb" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="leading" id="IoA-Mn-Z1E"/>
+                    <constraint firstItem="5kY-U6-DIS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="IUZ-6Q-eLo"/>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="trailing" constant="8" id="Mhg-Xg-aRV"/>
-                    <constraint firstItem="aZW-gc-eNb" firstAttribute="top" secondItem="kZT-dt-ncj" secondAttribute="bottom" constant="12" id="Smz-mC-2nY"/>
+                    <constraint firstItem="5kY-U6-DIS" firstAttribute="top" secondItem="kZT-dt-ncj" secondAttribute="bottom" constant="4" id="USg-B5-hty"/>
                     <constraint firstItem="5LL-6F-OGX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="azK-Ju-BRa"/>
                     <constraint firstItem="kZT-dt-ncj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="cfF-Y3-uOk"/>
+                    <constraint firstAttribute="trailing" secondItem="5kY-U6-DIS" secondAttribute="trailing" constant="16" id="cfH-Yn-Qdz"/>
                     <constraint firstItem="5LL-6F-OGX" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="trailing" constant="8" id="hHt-IT-Cze"/>
                     <constraint firstItem="kZT-dt-ncj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="hgz-4c-Cqy"/>
                     <constraint firstAttribute="trailing" secondItem="VIQ-4a-4nM" secondAttribute="trailing" constant="16" id="mT2-Ew-5Ze"/>
-                    <constraint firstItem="aZW-gc-eNb" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="vG2-rB-4n3"/>
+                    <constraint firstAttribute="bottom" secondItem="5kY-U6-DIS" secondAttribute="bottom" constant="4" id="t0z-dh-3qK"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="authorLabel" destination="VIQ-4a-4nM" id="zVv-0b-ILd"/>
                 <outlet property="bookImage" destination="kZT-dt-ncj" id="6fH-o9-gaK"/>
+                <outlet property="slider" destination="5kY-U6-DIS" id="SPk-I1-D3L"/>
                 <outlet property="titleLabel" destination="5LL-6F-OGX" id="YRu-fQ-jfE"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>
