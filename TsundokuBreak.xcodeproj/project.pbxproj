@@ -32,6 +32,10 @@
 		D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */; };
 		D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */; };
 		D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */; };
+		D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A32440D1B100C2048E /* BalloonPickerView.swift */; };
+		D33166A62440D1CA00C2048E /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A52440D1CA00C2048E /* BalloonView.swift */; };
+		D33166A82440D1DD00C2048E /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A72440D1DD00C2048E /* TrackLayer.swift */; };
+		D33166AA2440D1EC00C2048E /* ThumbView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A92440D1EC00C2048E /* ThumbView.swift */; };
 		D3585369243FC36B004806FF /* TsundokuView.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3585368243FC36B004806FF /* TsundokuView.strings */; };
 		D358536B244047E9004806FF /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358536A244047E9004806FF /* CellData.swift */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
@@ -98,6 +102,10 @@
 		D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCountViewController.xib; sourceTree = "<group>"; };
 		D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountModel.swift; sourceTree = "<group>"; };
 		D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewModel.swift; sourceTree = "<group>"; };
+		D33166A32440D1B100C2048E /* BalloonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonPickerView.swift; sourceTree = "<group>"; };
+		D33166A52440D1CA00C2048E /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
+		D33166A72440D1DD00C2048E /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
+		D33166A92440D1EC00C2048E /* ThumbView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbView.swift; sourceTree = "<group>"; };
 		D3585368243FC36B004806FF /* TsundokuView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuView.strings; sourceTree = "<group>"; };
 		D358536A244047E9004806FF /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -215,13 +223,24 @@
 			path = TotalCountView;
 			sourceTree = "<group>";
 		};
-		D332B5D7243E20AD00B24D4D /* Gifs */ = {
+		D33166A22440D18200C2048E /* balloonPicker */ = {
+			isa = PBXGroup;
+			children = (
+				D33166A32440D1B100C2048E /* BalloonPickerView.swift */,
+				D33166A52440D1CA00C2048E /* BalloonView.swift */,
+				D33166A72440D1DD00C2048E /* TrackLayer.swift */,
+				D33166A92440D1EC00C2048E /* ThumbView.swift */,
+			);
+			path = balloonPicker;
+			sourceTree = "<group>";
+		};
+		D332B5D7243E20AD00B24D4D /* gifs */ = {
 			isa = PBXGroup;
 			children = (
 				D3AA182B243C53450020CCCC /* loading.gif */,
 				D3AA1829243C4B700020CCCC /* lupe.gif */,
 			);
-			path = Gifs;
+			path = gifs;
 			sourceTree = "<group>";
 		};
 		D35AFAB52429C07E0018EE9E /* Model */ = {
@@ -308,6 +327,7 @@
 			children = (
 				D3948028243F411D00307A1A /* TsundokuTableViewCell.swift */,
 				D3948029243F411D00307A1A /* TsundokuTableViewCell.xib */,
+				D33166A22440D18200C2048E /* balloonPicker */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -361,7 +381,7 @@
 				D3E78A9424289D4A00440CAF /* Assets.xcassets */,
 				D3E78A9624289D4A00440CAF /* LaunchScreen.storyboard */,
 				D3E78A9924289D4A00440CAF /* Info.plist */,
-				D332B5D7243E20AD00B24D4D /* Gifs */,
+				D332B5D7243E20AD00B24D4D /* gifs */,
 			);
 			path = TsundokuBreak;
 			sourceTree = "<group>";
@@ -715,16 +735,20 @@
 				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
 				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
+				D33166A62440D1CA00C2048E /* BalloonView.swift in Sources */,
+				D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */,
 				D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,
 				D320FDF9243315900062B0F3 /* BarCodeReaderViewModel.swift in Sources */,
 				D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */,
 				D358536B244047E9004806FF /* CellData.swift in Sources */,
 				D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */,
+				D33166A82440D1DD00C2048E /* TrackLayer.swift in Sources */,
 				D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */,
 				D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */,
 				D3808113243E312000D6A592 /* RealmModel.swift in Sources */,
 				D394802A243F411D00307A1A /* TsundokuTableViewCell.swift in Sources */,
+				D33166AA2440D1EC00C2048E /* ThumbView.swift in Sources */,
 				D32E6BF9242F8E8F0071EBC3 /* TotalCountViewController.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,

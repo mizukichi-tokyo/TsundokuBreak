@@ -8,7 +8,6 @@
 
 import UIKit
 import AlamofireImage
-import fluid_slider
 
 class TsundokuTableViewCell: UITableViewCell {
 
@@ -20,10 +19,17 @@ class TsundokuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-    @IBOutlet weak var slider: Slider!
+
+    @IBOutlet weak var pickerView: BalloonPickerView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
+
+        let balloonView = BalloonView()
+        balloonView.image = #imageLiteral(resourceName: "balloon")
+        pickerView.baloonView = balloonView
+        pickerView.value = 30
+        pickerView.tintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
 
     }
 
@@ -31,7 +37,6 @@ class TsundokuTableViewCell: UITableViewCell {
         self.titleLabel.text = cellData.title
         self.authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
-        setSlider()
     }
 
     private func setImageUrl(_ urlString: String) {
@@ -44,24 +49,6 @@ class TsundokuTableViewCell: UITableViewCell {
             filter: filter,
             imageTransition: .crossDissolve(0.5)
         )
-    }
-
-    private func setSlider() {
-        slider.attributedTextForFraction = { fraction in
-            let formatter = NumberFormatter()
-            formatter.maximumIntegerDigits = 3
-            formatter.maximumFractionDigits = 0
-            let string = formatter.string(from: (fraction * 500) as NSNumber) ?? ""
-            return NSAttributedString(string: string)
-        }
-        slider.setMinimumLabelAttributedText(NSAttributedString(string: "0"))
-        slider.setMaximumLabelAttributedText(NSAttributedString(string: "500"))
-        slider.fraction = 0.5
-        slider.shadowOffset = CGSize(width: 0, height: 10)
-        slider.shadowBlur = 5
-        slider.shadowColor = UIColor(white: 0, alpha: 0.1)
-        slider.contentViewColor = UIColor(red: 0.15, green: 0.67, blue: 0.99, alpha: 1.00)
-        slider.valueViewColor = .white
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
