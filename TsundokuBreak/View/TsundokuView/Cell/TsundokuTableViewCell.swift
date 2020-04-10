@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class TsundokuTableViewCell: UITableViewCell {
 
@@ -27,6 +28,19 @@ class TsundokuTableViewCell: UITableViewCell {
     func setCell(cellData: CellData) {
         self.titleLabel.text = cellData.title
         self.authorLabel.text = cellData.author
+        setImageUrl(cellData.thumbnailUrl)
+    }
+
+    private func setImageUrl(_ urlString: String) {
+        let url = URL(string: urlString)!
+        let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
+        let placeFolder = UIImage.gif(name: "loading")
+        bookImage.af.setImage(
+            withURL: url,
+            placeholderImage: placeFolder,
+            filter: filter,
+            imageTransition: .crossDissolve(0.5)
+        )
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
