@@ -33,7 +33,7 @@ class TsundokuViewController: UIViewController, Injectable {
         }
     }
 
-    private var tsundokuDataArray = [BookDataTuple]()
+    private var cellDataArray = [CellData]()
     private let disposeBag = DisposeBag()
 
     required init(with dependency: Dependency) {
@@ -61,11 +61,14 @@ class TsundokuViewController: UIViewController, Injectable {
             })
             .disposed(by: disposeBag)
 
-        viewModel.outputs?.tsundokuDataDriver
-            .drive(onNext: { tsundokuData in
-                self.tsundokuDataArray = tsundokuData
+        viewModel.outputs?.cellDataDriver
+            .drive(onNext: { cellData in
+                self.cellDataArray = cellData
+                print("celldata")
+                print(cellData.count)
             })
             .disposed(by: disposeBag)
+
     }
 
 }
@@ -76,7 +79,7 @@ extension TsundokuViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return tsundokuDataArray.count
+        return cellDataArray.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -84,8 +87,9 @@ extension TsundokuViewController: UITableViewDataSource {
         // swiftlint:disable force_cast
         let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customTsundokuTableCell.identifier) as! TsundokuTableViewCell
         // swiftlint:enable force_cast
-        guard tsundokuDataArray.count != 0 else { return cell }
-        cell.setCell(bookDataTuple: tsundokuDataArray[indexPath.row])
+        guard cellDataArray.count != 0 else { return cell }
+
+        cell.setCell(cellData: cellDataArray[indexPath.row])
 
         return cell
     }

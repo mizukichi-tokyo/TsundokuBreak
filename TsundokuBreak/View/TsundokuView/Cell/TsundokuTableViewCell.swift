@@ -12,7 +12,7 @@ class TsundokuTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
-            bookImage.image = UIImage.gif(name: "lupe")
+            bookImage.image = UIImage.gif(name: "loading")
         }
     }
 
@@ -21,18 +21,17 @@ class TsundokuTableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+
     }
 
-    func setCell(bookDataTuple: BookDataTuple) {
-        self.titleLabel.text = bookDataTuple.title
-        self.authorLabel.text = bookDataTuple.author
+    func setCell(cellData: CellData) {
+        self.titleLabel.text = cellData.title
+        self.authorLabel.text = cellData.author
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 
-        // Configure the view for the selected state
     }
 
 }

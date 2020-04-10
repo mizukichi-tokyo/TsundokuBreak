@@ -17,8 +17,7 @@ struct   TsundokuViewModelInput {
 
 protocol   TsundokuViewModelOutput {
     var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {get}
-    var tsundokuDataDriver: Driver<[BookDataTuple]> {get}
-
+    var cellDataDriver: Driver<[CellData]> {get}
 }
 
 protocol  TsundokuViewModelType {
@@ -31,7 +30,7 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
 
     private let model: TsundokuModelType
     var outputs: TsundokuViewModelOutput?
-    private let tsundokuDataRelay = BehaviorRelay<[BookDataTuple]>(value: [])
+    private let cellDataRelay = BehaviorRelay<[CellData]>(value: [])
     private let disposeBag = DisposeBag()
 
     init(with dependency: Dependency) {
@@ -49,19 +48,19 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
         model.outputs?.recordsObservable
             .subscribe(onNext: { [weak self] records in
                 guard let self = self else { return }
-                self.tsundokuDataRelay.accept(self.makeDataTupleArray(records: records))
+                self.cellDataRelay.accept(self.makeCellDataArray(records: records))
             })
             .disposed(by: disposeBag)
 
     }
 
-    private func makeDataTupleArray(records: Results<Record>? ) ->( [BookDataTuple] ) {
+    private func makeCellDataArray(records: Results<Record>? ) ->( [CellData] ) {
 
-        var dataArray = [BookDataTuple]()
+        var dataArray = [CellData]()
 
         for record in records! {
 
-            let dataTuple = BookDataTuple(
+            let cellData = CellData(
                 thumbnailUrl: record.thumbnailUrl,
                 title: record.title,
                 author: record.author,
@@ -71,7 +70,7 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
                 dokuryoFlag: record.dokuryoFlag
             )
 
-            dataArray.append(dataTuple)
+            dataArray.append(cellData)
         }
         return dataArray
     }
@@ -83,8 +82,8 @@ extension TsundokuViewModel: TsundokuViewModelOutput {
         return  model.outputs!.recordsChangeObservable
     }
 
-    var tsundokuDataDriver: Driver<[BookDataTuple]> {
-        return tsundokuDataRelay.asDriver()
+    var cellDataDriver: Driver<[CellData]> {
+        return cellDataRelay.asDriver()
     }
 
 }
