@@ -42,6 +42,9 @@
                             <constraint firstAttribute="width" constant="90" id="TDD-8E-c9u"/>
                             <constraint firstAttribute="height" constant="32" id="kNK-Of-ALE"/>
                         </constraints>
+                        <connections>
+                            <action selector="switchValueChanged:" destination="KGk-i7-Jjw" eventType="valueChanged" id="R2V-WR-5cx"/>
+                        </connections>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-U6-DIS" customClass="BalloonPickerView" customModule="TsundokuBreak" customModuleProvider="target">
                         <rect key="frame" x="4" y="115" width="312" height="24"/>

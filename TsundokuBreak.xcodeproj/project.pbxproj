@@ -37,6 +37,7 @@
 		D32F3D172441B38A00FC7BF0 /* TKLiquidSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D162441B38A00FC7BF0 /* TKLiquidSwitch.swift */; };
 		D32F3D192441B3C100FC7BF0 /* TKSimpleSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D182441B3C100FC7BF0 /* TKSimpleSwitch.swift */; };
 		D32F3D1B2441B3FE00FC7BF0 /* TKSmileSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D1A2441B3FE00FC7BF0 /* TKSmileSwitch.swift */; };
+		D32F3D1D24421E3600FC7BF0 /* CellSwitchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D1C24421E3600FC7BF0 /* CellSwitchDelegate.swift */; };
 		D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A32440D1B100C2048E /* BalloonPickerView.swift */; };
 		D33166A62440D1CA00C2048E /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A52440D1CA00C2048E /* BalloonView.swift */; };
 		D33166A82440D1DD00C2048E /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A72440D1DD00C2048E /* TrackLayer.swift */; };
@@ -112,6 +113,7 @@
 		D32F3D162441B38A00FC7BF0 /* TKLiquidSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLiquidSwitch.swift; sourceTree = "<group>"; };
 		D32F3D182441B3C100FC7BF0 /* TKSimpleSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSimpleSwitch.swift; sourceTree = "<group>"; };
 		D32F3D1A2441B3FE00FC7BF0 /* TKSmileSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSmileSwitch.swift; sourceTree = "<group>"; };
+		D32F3D1C24421E3600FC7BF0 /* CellSwitchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellSwitchDelegate.swift; sourceTree = "<group>"; };
 		D33166A32440D1B100C2048E /* BalloonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonPickerView.swift; sourceTree = "<group>"; };
 		D33166A52440D1CA00C2048E /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
 		D33166A72440D1DD00C2048E /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
@@ -311,6 +313,7 @@
 			isa = PBXGroup;
 			children = (
 				D32E6BF0242F8B890071EBC3 /* Injectable.swift */,
+				D32F3D1C24421E3600FC7BF0 /* CellSwitchDelegate.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,
 				D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */,
 				D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */,
+				D32F3D1D24421E3600FC7BF0 /* CellSwitchDelegate.swift in Sources */,
 				D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */,
 				D32F3D192441B3C100FC7BF0 /* TKSimpleSwitch.swift in Sources */,
 				D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */,

@@ -84,7 +84,6 @@ open class TKBaseSwitch: UIControl {
         }
     }
     
-//    @objc func toggleValue() {
     @objc internal func toggleValue() {
         self.on.toggle()
         valueChange?(!isOn)

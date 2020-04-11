@@ -86,9 +86,17 @@ extension TsundokuViewController: UITableViewDataSource {
         // swiftlint:enable force_cast
         guard cellDataArray.count != 0 else { return cell }
 
+        cell.delegate = self
+        cell.indexPathRowTag = indexPath.row
         cell.setCell(cellData: cellDataArray[indexPath.row])
 
         return cell
+    }
+}
+
+extension TsundokuViewController: CellSwitchDelegate {
+    func changeDokuryoFlag(indexPathRow: Int) {
+        print(indexPathRow)
     }
 }
 

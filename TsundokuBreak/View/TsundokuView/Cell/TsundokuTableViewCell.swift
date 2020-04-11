@@ -16,12 +16,22 @@ class TsundokuTableViewCell: UITableViewCell {
             bookImage.image = UIImage.gif(name: "loading")
         }
     }
-
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
-
     @IBOutlet weak var pickerView: BalloonPickerView!
     @IBOutlet weak var smileSwitch: TKSmileSwitch!
+
+    private var firstTime: Bool = true
+    weak var delegate: CellSwitchDelegate?
+    var indexPathRowTag: Int?
+
+    @IBAction func switchValueChanged(_ sender: Any) {
+        if firstTime {
+            firstTime = false
+        } else {
+            delegate?.changeDokuryoFlag(indexPathRow: indexPathRowTag!)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -59,7 +69,6 @@ class TsundokuTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
     }
 
 }
