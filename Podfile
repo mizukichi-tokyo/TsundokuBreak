@@ -21,7 +21,6 @@ target 'TsundokuBreak' do
     pod "CDAlertView"
     pod "RealmSwift"
     pod "RxRealm"
-    pod 'fluid-slider'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

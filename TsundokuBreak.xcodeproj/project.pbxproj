@@ -301,6 +301,7 @@
 				D320FDEC24330CA60062B0F3 /* TsundokuView */,
 				D320FDED24330D5A0062B0F3 /* DokuryoView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
+				D3E625772441AF4D00062CAC /* Resources */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -327,7 +328,6 @@
 			children = (
 				D3948028243F411D00307A1A /* TsundokuTableViewCell.swift */,
 				D3948029243F411D00307A1A /* TsundokuTableViewCell.xib */,
-				D33166A22440D18200C2048E /* balloonPicker */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -338,6 +338,14 @@
 				D3AC46BF242F584500C517A5 /* TabViewController.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		D3E625772441AF4D00062CAC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D33166A22440D18200C2048E /* balloonPicker */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		D3E78A7F24289D4900440CAF = {

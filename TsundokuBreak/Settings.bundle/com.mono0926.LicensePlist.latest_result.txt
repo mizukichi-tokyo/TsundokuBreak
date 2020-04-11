@@ -42,18 +42,6 @@ name: ColorMatchTabs, nameSpecified:
 body: The MIT License (MIT…
 version: 3.3
 
-name: fluid-slider, nameSpecified: 
-body: MIT License
-
-Copyrig…
-version: 1.1.0
-
-name: fluid-slider, nameSpecified: 
-body: MIT License
-
-Copyrig…
-version: 1.1.0
-
 name: LicensePlist, nameSpecified: 
 body: MIT License
 
@@ -119,18 +107,6 @@ version: 0.13.0
 name: Player, nameSpecified: 
 body: The MIT License (MIT…
 version: 0.13.0
-
-name: pop, nameSpecified: 
-body: BSD License
-
-For Pop…
-version: 1.0.12
-
-name: pop, nameSpecified: 
-body: BSD License
-
-For Pop…
-version: 1.0.12
 
 name: R.swift, nameSpecified: 
 body: The MIT License (MIT…

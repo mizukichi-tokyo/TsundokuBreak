@@ -6,8 +6,6 @@ PODS:
     - Player (= 0.13.0)
   - CDAlertView (0.10.0)
   - ColorMatchTabs (3.3)
-  - fluid-slider (1.1.0):
-    - pop
   - LicensePlist (2.15.1)
   - MaterialComponents/AnimationTiming (108.0.0)
   - MaterialComponents/Availability (108.0.0)
@@ -57,7 +55,6 @@ PODS:
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
   - Player (0.13.0)
-  - pop (1.0.12)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -87,7 +84,6 @@ DEPENDENCIES:
   - Cards
   - CDAlertView
   - ColorMatchTabs
-  - fluid-slider
   - LicensePlist
   - MaterialComponents/Buttons
   - MBProgressHUD
@@ -109,7 +105,6 @@ SPEC REPOS:
     - Cards
     - CDAlertView
     - ColorMatchTabs
-    - fluid-slider
     - LicensePlist
     - MaterialComponents
     - MBProgressHUD
@@ -117,7 +112,6 @@ SPEC REPOS:
     - MDFTextAccessibility
     - Moya
     - Player
-    - pop
     - R.swift
     - R.swift.Library
     - Realm
@@ -137,7 +131,6 @@ SPEC CHECKSUMS:
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
-  fluid-slider: 68037ac7247f16a89f3e24ff5d0167c8eea6f50b
   LicensePlist: 9fb7c521b431f94ea665046c15ed5f392583afbd
   MaterialComponents: 5ce7930b30fafd4c1ba402abf8e460dbde90cb94
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
@@ -145,7 +138,6 @@ SPEC CHECKSUMS:
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
   Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
-  pop: d582054913807fd11fd50bfe6a539d91c7e1a55a
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
@@ -159,6 +151,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: f6c42d51e7f50eafff9de924095d63678169a895
+PODFILE CHECKSUM: 030c78a8774185c1554c58548f8d5e2bf59f8d34
 
 COCOAPODS: 1.9.1

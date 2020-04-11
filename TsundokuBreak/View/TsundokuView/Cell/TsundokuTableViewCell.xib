@@ -35,6 +35,14 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DP6-QJ-cGu">
+                        <rect key="frame" x="214" y="66" width="90" height="32"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="90" id="TDD-8E-c9u"/>
+                            <constraint firstAttribute="height" constant="32" id="kNK-Of-ALE"/>
+                        </constraints>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-U6-DIS" customClass="BalloonPickerView" customModule="TsundokuBreak" customModuleProvider="target">
                         <rect key="frame" x="4" y="115" width="312" height="24"/>
                         <color key="tintColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -43,8 +51,10 @@
                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
                     <constraint firstItem="5kY-U6-DIS" firstAttribute="top" secondItem="kZT-dt-ncj" secondAttribute="bottom" constant="17" id="2mT-gR-4x1"/>
+                    <constraint firstItem="DP6-QJ-cGu" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="6LH-zp-euk"/>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="top" secondItem="5LL-6F-OGX" secondAttribute="bottom" constant="8" id="715-6c-HkE"/>
                     <constraint firstItem="5kY-U6-DIS" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="leading" constant="-20" id="7ak-bQ-6XD"/>
+                    <constraint firstItem="DP6-QJ-cGu" firstAttribute="top" secondItem="VIQ-4a-4nM" secondAttribute="bottom" constant="8" id="85h-dP-KsL"/>
                     <constraint firstAttribute="trailing" secondItem="5LL-6F-OGX" secondAttribute="trailing" constant="24" id="EWf-C0-PbE"/>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="trailing" constant="8" id="Mhg-Xg-aRV"/>
                     <constraint firstAttribute="bottomMargin" secondItem="5kY-U6-DIS" secondAttribute="bottom" id="QgI-nf-CkF"/>
