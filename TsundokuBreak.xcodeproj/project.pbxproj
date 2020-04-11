@@ -32,6 +32,11 @@
 		D32E6BFA242F8E8F0071EBC3 /* TotalCountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */; };
 		D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */; };
 		D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */; };
+		D32F3D132441B30500FC7BF0 /* TKBaseSwitcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D122441B30500FC7BF0 /* TKBaseSwitcher.swift */; };
+		D32F3D152441B32D00FC7BF0 /* TKExchangeSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D142441B32D00FC7BF0 /* TKExchangeSwitch.swift */; };
+		D32F3D172441B38A00FC7BF0 /* TKLiquidSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D162441B38A00FC7BF0 /* TKLiquidSwitch.swift */; };
+		D32F3D192441B3C100FC7BF0 /* TKSimpleSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D182441B3C100FC7BF0 /* TKSimpleSwitch.swift */; };
+		D32F3D1B2441B3FE00FC7BF0 /* TKSmileSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32F3D1A2441B3FE00FC7BF0 /* TKSmileSwitch.swift */; };
 		D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A32440D1B100C2048E /* BalloonPickerView.swift */; };
 		D33166A62440D1CA00C2048E /* BalloonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A52440D1CA00C2048E /* BalloonView.swift */; };
 		D33166A82440D1DD00C2048E /* TrackLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = D33166A72440D1DD00C2048E /* TrackLayer.swift */; };
@@ -102,6 +107,11 @@
 		D32E6BF8242F8E8F0071EBC3 /* TotalCountViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalCountViewController.xib; sourceTree = "<group>"; };
 		D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountModel.swift; sourceTree = "<group>"; };
 		D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalCountViewModel.swift; sourceTree = "<group>"; };
+		D32F3D122441B30500FC7BF0 /* TKBaseSwitcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKBaseSwitcher.swift; sourceTree = "<group>"; };
+		D32F3D142441B32D00FC7BF0 /* TKExchangeSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKExchangeSwitch.swift; sourceTree = "<group>"; };
+		D32F3D162441B38A00FC7BF0 /* TKLiquidSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKLiquidSwitch.swift; sourceTree = "<group>"; };
+		D32F3D182441B3C100FC7BF0 /* TKSimpleSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSimpleSwitch.swift; sourceTree = "<group>"; };
+		D32F3D1A2441B3FE00FC7BF0 /* TKSmileSwitch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TKSmileSwitch.swift; sourceTree = "<group>"; };
 		D33166A32440D1B100C2048E /* BalloonPickerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonPickerView.swift; sourceTree = "<group>"; };
 		D33166A52440D1CA00C2048E /* BalloonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalloonView.swift; sourceTree = "<group>"; };
 		D33166A72440D1DD00C2048E /* TrackLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackLayer.swift; sourceTree = "<group>"; };
@@ -223,6 +233,18 @@
 			path = TotalCountView;
 			sourceTree = "<group>";
 		};
+		D32F3D112441B2E800FC7BF0 /* TKSwitcherCollection */ = {
+			isa = PBXGroup;
+			children = (
+				D32F3D122441B30500FC7BF0 /* TKBaseSwitcher.swift */,
+				D32F3D142441B32D00FC7BF0 /* TKExchangeSwitch.swift */,
+				D32F3D162441B38A00FC7BF0 /* TKLiquidSwitch.swift */,
+				D32F3D182441B3C100FC7BF0 /* TKSimpleSwitch.swift */,
+				D32F3D1A2441B3FE00FC7BF0 /* TKSmileSwitch.swift */,
+			);
+			path = TKSwitcherCollection;
+			sourceTree = "<group>";
+		};
 		D33166A22440D18200C2048E /* balloonPicker */ = {
 			isa = PBXGroup;
 			children = (
@@ -301,7 +323,6 @@
 				D320FDEC24330CA60062B0F3 /* TsundokuView */,
 				D320FDED24330D5A0062B0F3 /* DokuryoView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
-				D3E625772441AF4D00062CAC /* Resources */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,6 +364,7 @@
 		D3E625772441AF4D00062CAC /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D32F3D112441B2E800FC7BF0 /* TKSwitcherCollection */,
 				D33166A22440D18200C2048E /* balloonPicker */,
 			);
 			path = Resources;
@@ -390,6 +412,7 @@
 				D3E78A9624289D4A00440CAF /* LaunchScreen.storyboard */,
 				D3E78A9924289D4A00440CAF /* Info.plist */,
 				D332B5D7243E20AD00B24D4D /* gifs */,
+				D3E625772441AF4D00062CAC /* Resources */,
 			);
 			path = TsundokuBreak;
 			sourceTree = "<group>";
@@ -742,6 +765,8 @@
 				D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */,
 				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
+				D32F3D152441B32D00FC7BF0 /* TKExchangeSwitch.swift in Sources */,
+				D32F3D172441B38A00FC7BF0 /* TKLiquidSwitch.swift in Sources */,
 				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
 				D33166A62440D1CA00C2048E /* BalloonView.swift in Sources */,
 				D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */,
@@ -753,6 +778,7 @@
 				D35AFABE2429C62E0018EE9E /* GoogleBooksAPIs.swift in Sources */,
 				D33166A82440D1DD00C2048E /* TrackLayer.swift in Sources */,
 				D3AC46C1242F584500C517A5 /* TabViewController.swift in Sources */,
+				D32F3D1B2441B3FE00FC7BF0 /* TKSmileSwitch.swift in Sources */,
 				D3E78A8C24289D4900440CAF /* AppDelegate.swift in Sources */,
 				D3808113243E312000D6A592 /* RealmModel.swift in Sources */,
 				D394802A243F411D00307A1A /* TsundokuTableViewCell.swift in Sources */,
@@ -763,10 +789,12 @@
 				D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */,
 				D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */,
 				D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */,
+				D32F3D192441B3C100FC7BF0 /* TKSimpleSwitch.swift in Sources */,
 				D32E6BFE242F90750071EBC3 /* TotalCountViewModel.swift in Sources */,
 				D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */,
 				D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */,
 				D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */,
+				D32F3D132441B30500FC7BF0 /* TKBaseSwitcher.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
