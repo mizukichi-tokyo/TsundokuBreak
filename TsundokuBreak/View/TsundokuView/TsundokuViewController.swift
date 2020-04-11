@@ -34,10 +34,12 @@ class TsundokuViewController: UIViewController, Injectable {
     }
 
     private var cellDataArray = [CellData]()
+    private let changeFlagRelay: PublishRelay<Int>
     private let disposeBag = DisposeBag()
 
     required init(with dependency: Dependency) {
         viewModel = dependency
+        self.changeFlagRelay = PublishRelay<Int>()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -51,7 +53,9 @@ class TsundokuViewController: UIViewController, Injectable {
     }
 
     private func setup() {
-        let input = TsundokuViewModelInput()
+        let input = TsundokuViewModelInput(
+            changeFlagRelay: changeFlagRelay
+        )
         viewModel.setup(input: input)
 
         viewModel.outputs?.recordsChangeObservable
@@ -96,7 +100,9 @@ extension TsundokuViewController: UITableViewDataSource {
 
 extension TsundokuViewController: CellSwitchDelegate {
     func changeDokuryoFlag(indexPathRow: Int) {
-        print(indexPathRow)
+        print("kokoga2kai?")
+        print("indexpath: ", indexPathRow)
+        changeFlagRelay.accept(indexPathRow)
     }
 }
 

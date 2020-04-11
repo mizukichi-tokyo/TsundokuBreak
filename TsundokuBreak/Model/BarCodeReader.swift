@@ -54,7 +54,7 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
 
     func setup(input: BarCodeReaderModelInput) {
         let realm = self.createRealm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        //        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         input.isbnRelay
             .subscribe(onNext: { [weak self] isbn in

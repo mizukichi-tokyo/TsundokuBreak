@@ -8,10 +8,12 @@
 
 import Foundation
 import RxSwift
+import RxCocoa
 import RealmSwift
 import RxRealm
 
 struct  TsundokuModelInput {
+    let changeFlagRelay: PublishRelay<Int>
 }
 
 protocol  TsundokuModelOutput {
@@ -37,8 +39,22 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
 
     func setup(input: TsundokuModelInput) {
         let realm = createRealm()
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         records = realm.objects(Record.self).sorted(byKeyPath: "creationTime", ascending: true).filter("dokuryoFlag == false")
+
+        input.changeFlagRelay
+            .subscribe(onNext: { [weak self] flag in
+                print("変更しますよ")
+                guard let self = self else { return }
+                let switched = self.records[flag]
+                try? realm.write {
+                    switched.dokuryoFlag = true
+                }
+
+            })
+            .disposed(by: disposeBag)
+
     }
 }
 

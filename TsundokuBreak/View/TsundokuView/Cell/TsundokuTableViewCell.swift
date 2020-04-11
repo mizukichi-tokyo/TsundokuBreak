@@ -29,7 +29,13 @@ class TsundokuTableViewCell: UITableViewCell {
         if firstTime {
             firstTime = false
         } else {
-            delegate?.changeDokuryoFlag(indexPathRow: indexPathRowTag!)
+
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
+                print("0.5秒後に実行")
+                self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
+
+            }
+            //            delegate?.changeDokuryoFlag(indexPathRow: indexPathRowTag!)
         }
     }
 

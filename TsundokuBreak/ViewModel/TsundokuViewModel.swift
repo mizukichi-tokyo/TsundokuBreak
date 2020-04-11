@@ -13,6 +13,7 @@ import RealmSwift
 import RxRealm
 
 struct   TsundokuViewModelInput {
+    let changeFlagRelay: PublishRelay<Int>
 }
 
 protocol   TsundokuViewModelOutput {
@@ -41,6 +42,7 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
     func setup(input: TsundokuViewModelInput) {
 
         let modelInput = TsundokuModelInput(
+            changeFlagRelay: input.changeFlagRelay
         )
 
         model.setup(input: modelInput)
@@ -55,7 +57,7 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
     }
 
     private func makeCellDataArray(records: Results<Record>? ) ->( [CellData] ) {
-
+        print("makecelldataArray")
         var dataArray = [CellData]()
 
         for record in records! {
