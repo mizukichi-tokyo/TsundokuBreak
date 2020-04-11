@@ -256,13 +256,13 @@
 			path = balloonPicker;
 			sourceTree = "<group>";
 		};
-		D332B5D7243E20AD00B24D4D /* gifs */ = {
+		D332B5D7243E20AD00B24D4D /* gif */ = {
 			isa = PBXGroup;
 			children = (
 				D3AA182B243C53450020CCCC /* loading.gif */,
 				D3AA1829243C4B700020CCCC /* lupe.gif */,
 			);
-			path = gifs;
+			path = gif;
 			sourceTree = "<group>";
 		};
 		D35AFAB52429C07E0018EE9E /* Model */ = {
@@ -411,7 +411,7 @@
 				D3E78A9424289D4A00440CAF /* Assets.xcassets */,
 				D3E78A9624289D4A00440CAF /* LaunchScreen.storyboard */,
 				D3E78A9924289D4A00440CAF /* Info.plist */,
-				D332B5D7243E20AD00B24D4D /* gifs */,
+				D332B5D7243E20AD00B24D4D /* gif */,
 				D3E625772441AF4D00062CAC /* Resources */,
 			);
 			path = TsundokuBreak;
