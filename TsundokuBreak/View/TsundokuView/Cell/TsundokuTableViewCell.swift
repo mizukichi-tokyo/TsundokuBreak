@@ -21,22 +21,15 @@ class TsundokuTableViewCell: UITableViewCell {
     @IBOutlet weak var pickerView: BalloonPickerView!
     @IBOutlet weak var smileSwitch: TKSmileSwitch!
 
-    private var firstTime: Bool = true
     weak var delegate: CellSwitchDelegate?
     var indexPathRowTag: Int?
 
     @IBAction func switchValueChanged(_ sender: Any) {
-        if firstTime {
-            firstTime = false
-        } else {
-
-            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.5) {
-                print("0.5秒後に実行")
-                self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
-
-            }
-            //            delegate?.changeDokuryoFlag(indexPathRow: indexPathRowTag!)
-        }
+        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.2) {
+        //            print("0.5秒後に実行")
+        //            self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
+        //        }
+        self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
     }
 
     override func awakeFromNib() {
@@ -54,11 +47,6 @@ class TsundokuTableViewCell: UITableViewCell {
         self.titleLabel.text = cellData.title
         self.authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
-        if cellData.dokuryoFlag {
-            return
-        } else {
-            self.smileSwitch.setOn(false)
-        }
     }
 
     private func setImageUrl(_ urlString: String) {

@@ -59,10 +59,15 @@ private class TKSmileFaceView: UIView {
         case sad
         func toColor() -> UIColor {
             switch self {
-            case .happy:
-                return UIColor(red: 0.388, green: 0.839, blue: 0.608, alpha: 1.000)
-            case .sad:
-                return UIColor(red: 0.843, green: 0.369, blue: 0.373, alpha: 1)
+//            case .happy:
+//                return UIColor(red: 0.388, green: 0.839, blue: 0.608, alpha: 1.000)
+//            case .sad:
+//                return UIColor(red: 0.843, green: 0.369, blue: 0.373, alpha: 1)
+                case .happy:
+                    return UIColor(red: 0.843, green: 0.369, blue: 0.373, alpha: 1)
+                case .sad:
+                    return UIColor(red: 0.388, green: 0.839, blue: 0.608, alpha: 1.000)
+
             }
         }
     }
@@ -84,7 +89,8 @@ private class TKSmileFaceView: UIView {
 
     // MARK: - Getter
     var isHappy: Bool {
-        return (faceType == .happy)
+//        return (faceType == .happy)
+                return (faceType == .sad)
     }
 
     var sizeScale: CGFloat {
