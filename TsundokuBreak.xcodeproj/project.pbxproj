@@ -268,9 +268,9 @@
 		D35AFAB52429C07E0018EE9E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */,
 				D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */,
 				D320FDF0243313660062B0F3 /* DokuryoModel.swift */,
+				D32E6BFB242F8FD90071EBC3 /* TotalCountModel.swift */,
 				D320FDF22433139C0062B0F3 /* BarCodeReader.swift */,
 			);
 			path = Model;
@@ -279,9 +279,9 @@
 		D35AFAB62429C08E0018EE9E /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */,
 				D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */,
 				D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */,
+				D32E6BFD242F90750071EBC3 /* TotalCountViewModel.swift */,
 				D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */,
 			);
 			path = ViewModel;
@@ -319,9 +319,9 @@
 			isa = PBXGroup;
 			children = (
 				D3AC4666242F4D0800C517A5 /* TabView */,
-				D32E6BF6242F8E680071EBC3 /* TotalCountView */,
 				D320FDEC24330CA60062B0F3 /* TsundokuView */,
 				D320FDED24330D5A0062B0F3 /* DokuryoView */,
+				D32E6BF6242F8E680071EBC3 /* TotalCountView */,
 				D35AFAC3242A061E0018EE9E /* BarCodeReaderView */,
 			);
 			path = View;

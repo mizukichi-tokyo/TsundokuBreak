@@ -71,6 +71,7 @@
                 <outlet property="authorLabel" destination="VIQ-4a-4nM" id="zVv-0b-ILd"/>
                 <outlet property="bookImage" destination="kZT-dt-ncj" id="6fH-o9-gaK"/>
                 <outlet property="pickerView" destination="5kY-U6-DIS" id="sus-Zb-6na"/>
+                <outlet property="smileSwitch" destination="DP6-QJ-cGu" id="rpE-CW-eK7"/>
                 <outlet property="titleLabel" destination="5LL-6F-OGX" id="YRu-fQ-jfE"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="138.61607142857142"/>

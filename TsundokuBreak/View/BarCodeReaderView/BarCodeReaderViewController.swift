@@ -51,6 +51,10 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
         self.dismiss(animated: true, completion: nil)
     }
 
+    @IBAction func testButtonPush(_ sender: Any) {
+        self.isbnRelay.accept("9784873116594")
+    }
+
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
@@ -107,7 +111,6 @@ extension BarCodeReaderViewController {
                     filter: filter,
                     imageTransition: .crossDissolve(0.5)
                 )
-                //                MBProgressHUD.hide(for: self.view, animated: true)
             })
             .disposed(by: disposeBag)
 

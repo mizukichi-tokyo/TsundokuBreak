@@ -51,8 +51,7 @@ class TsundokuViewController: UIViewController, Injectable {
     }
 
     private func setup() {
-        let input = TsundokuViewModelInput(
-        )
+        let input = TsundokuViewModelInput()
         viewModel.setup(input: input)
 
         viewModel.outputs?.recordsChangeObservable
@@ -97,6 +96,13 @@ extension TsundokuViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
+
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete {
+    //            //            table.deleteRows(at: [indexPath], with: .fade)
+    //            print(indexPath)
+    //        }
+    //    }
 }
 
 extension TsundokuViewController {

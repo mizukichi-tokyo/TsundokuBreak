@@ -73,28 +73,28 @@
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VBb-cv-H3Q">
-                            <rect key="frame" x="161" y="46" width="229" height="20.333333333333329"/>
+                            <rect key="frame" x="161" y="46" width="229" height="21"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="著者名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vIl-lZ-kxC">
-                            <rect key="frame" x="161" y="74.333333333333258" width="229" height="21"/>
+                            <rect key="frame" x="161" y="75" width="229" height="21"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="出版日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YcZ-Eg-ymz">
-                            <rect key="frame" x="161" y="103.33333333333326" width="229" height="21"/>
+                            <rect key="frame" x="161" y="104" width="229" height="21"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ページ数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aE7-6t-fQW">
-                            <rect key="frame" x="161" y="132.33333333333326" width="229" height="20"/>
+                            <rect key="frame" x="161" y="133" width="229" height="20"/>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,6 +114,14 @@
                                 <action selector="addTouched:" destination="-1" eventType="touchUpInside" id="0k1-jE-N1N"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-Kv-fDi">
+                            <rect key="frame" x="330" y="256" width="75" height="30"/>
+                            <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="TestButton"/>
+                            <connections>
+                                <action selector="testButtonPush:" destination="-1" eventType="touchUpInside" id="rCg-T1-efS"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -130,12 +138,14 @@
                         <constraint firstItem="K2H-7D-DBJ" firstAttribute="leading" secondItem="HIM-2N-vh9" secondAttribute="leading" constant="24" id="Sfk-0R-Big"/>
                         <constraint firstItem="5bZ-Cy-VJw" firstAttribute="leading" secondItem="HIM-2N-vh9" secondAttribute="leading" constant="24" id="Uma-xe-vHb"/>
                         <constraint firstItem="4SP-gT-f4d" firstAttribute="leading" secondItem="HIM-2N-vh9" secondAttribute="leading" constant="8" id="V4k-jH-1QT"/>
+                        <constraint firstAttribute="trailing" secondItem="SBx-Kv-fDi" secondAttribute="trailing" constant="9" id="VVo-xO-lEz"/>
                         <constraint firstItem="4SP-gT-f4d" firstAttribute="top" secondItem="HIM-2N-vh9" secondAttribute="top" constant="8" id="W13-Hm-Tk3"/>
                         <constraint firstItem="aE7-6t-fQW" firstAttribute="top" secondItem="YcZ-Eg-ymz" secondAttribute="bottom" constant="8" id="a2n-qS-6wk"/>
                         <constraint firstAttribute="trailing" secondItem="K2H-7D-DBJ" secondAttribute="trailing" constant="24" id="dec-G4-hlT"/>
                         <constraint firstItem="YcZ-Eg-ymz" firstAttribute="leading" secondItem="5bZ-Cy-VJw" secondAttribute="trailing" constant="8" id="fKV-xM-hbM"/>
                         <constraint firstItem="VBb-cv-H3Q" firstAttribute="leading" secondItem="5bZ-Cy-VJw" secondAttribute="trailing" constant="8" id="hny-CS-L4M"/>
                         <constraint firstAttribute="trailing" secondItem="aE7-6t-fQW" secondAttribute="trailing" constant="24" id="q07-7t-FLK"/>
+                        <constraint firstItem="K2H-7D-DBJ" firstAttribute="top" secondItem="SBx-Kv-fDi" secondAttribute="bottom" constant="8.6666666666666288" id="rwF-uK-FVN"/>
                         <constraint firstAttribute="trailing" secondItem="vIl-lZ-kxC" secondAttribute="trailing" constant="24" id="w9n-Lo-cHa"/>
                         <constraint firstItem="4SP-gT-f4d" firstAttribute="centerX" secondItem="HIM-2N-vh9" secondAttribute="centerX" id="ypg-oH-mD3"/>
                     </constraints>

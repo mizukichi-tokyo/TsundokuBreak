@@ -21,6 +21,7 @@ class TsundokuTableViewCell: UITableViewCell {
     @IBOutlet weak var authorLabel: UILabel!
 
     @IBOutlet weak var pickerView: BalloonPickerView!
+    @IBOutlet weak var smileSwitch: TKSmileSwitch!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +38,11 @@ class TsundokuTableViewCell: UITableViewCell {
         self.titleLabel.text = cellData.title
         self.authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
+        if cellData.dokuryoFlag {
+            return
+        } else {
+            self.smileSwitch.setOn(false)
+        }
     }
 
     private func setImageUrl(_ urlString: String) {

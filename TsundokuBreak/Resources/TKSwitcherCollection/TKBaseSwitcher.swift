@@ -83,7 +83,8 @@ open class TKBaseSwitch: UIControl {
             view.removeFromSuperview()
         }
     }
-
+    
+//    @objc func toggleValue() {
     @objc internal func toggleValue() {
         self.on.toggle()
         valueChange?(!isOn)
