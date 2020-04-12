@@ -47,18 +47,8 @@ final class  DokuryoModel: DokuryoModelType, Injectable {
         input.cellDeleteRelay
             .withLatestFrom(Observable.collection(from: records)) { indexPath, records in
                 return records[indexPath]
-        }.subscribe(Realm.rx.delete()).disposed(by: disposeBag)
-        //        input.cellDeleteRelay
-        //            .subscribe(onNext: { [weak self] deleteCell in
-        //                guard let self = self else { return }
-        //                let deleteCell = self.records[deleteCell]
-        //                print("deleteCell@model")
-        //                print(deleteCell)
-        //                //                try? realm.write {
-        //                //                    switchedCell.dokuryoFlag = true
-        //                //                }
-        //            })
-        //            .disposed(by: disposeBag)
+        }.subscribe(Realm.rx.delete())
+            .disposed(by: disposeBag)
 
     }
 

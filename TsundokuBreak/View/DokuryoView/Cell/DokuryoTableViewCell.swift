@@ -46,7 +46,12 @@ class DokuryoTableViewCell: UITableViewCell {
         titleLabel.text = cellData.title
         authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
+        setTrashBoxButton()
+    }
+
+    private func setTrashBoxButton() {
         trashBox.isEnabled = true
+        trashBox.setSelected(selected: false, animated: false)
     }
 
     private func setImageUrl(_ urlString: String) {
