@@ -11,7 +11,7 @@ import AlamofireImage
 import FaveButton
 
 class DokuryoTableViewCell: UITableViewCell {
-
+    weak var delegate: CellDeleteDelegate?
     var indexPathRowTag: Int?
 
     @IBOutlet weak var bookImage: UIImageView! {
@@ -21,6 +21,15 @@ class DokuryoTableViewCell: UITableViewCell {
     }
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var trashBox: FaveButton!
+    @IBAction func touchUpTrashBox(_ sender: Any) {
+
+        trashBox.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+            //print("2.0秒後に実行")
+            self.delegate?.deleteCell(indexPathRow: self.indexPathRowTag!)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -37,6 +46,7 @@ class DokuryoTableViewCell: UITableViewCell {
         titleLabel.text = cellData.title
         authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
+        trashBox.isEnabled = true
     }
 
     private func setImageUrl(_ urlString: String) {

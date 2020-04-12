@@ -43,6 +43,9 @@
                             <constraint firstAttribute="width" constant="30" id="Xbl-tg-Con"/>
                         </constraints>
                         <state key="normal" image="trashBox"/>
+                        <connections>
+                            <action selector="touchUpTrashBox:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="TRZ-id-uag"/>
+                        </connections>
                     </button>
                 </subviews>
                 <constraints>
@@ -64,6 +67,7 @@
                 <outlet property="authorLabel" destination="wXI-ew-75J" id="CCW-Ba-X4U"/>
                 <outlet property="bookImage" destination="O6b-1G-sFv" id="Vnx-vf-vAm"/>
                 <outlet property="titleLabel" destination="72h-n9-iv3" id="qRO-yy-hcy"/>
+                <outlet property="trashBox" destination="6G7-12-uV4" id="oXE-Ra-SKW"/>
             </connections>
             <point key="canvasLocation" x="140.57971014492756" y="133.92857142857142"/>
         </tableViewCell>

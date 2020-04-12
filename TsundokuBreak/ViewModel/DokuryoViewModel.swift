@@ -13,6 +13,7 @@ import RealmSwift
 import RxRealm
 
 struct   DokuryoViewModelInput {
+    let cellDeleteRelay: PublishRelay<Int>
 }
 
 protocol   DokuryoViewModelOutput {
@@ -41,7 +42,9 @@ final class   DokuryoViewModel: DokuryoViewModelType, Injectable {
     }
 
     func setup(input: DokuryoViewModelInput) {
-        let modelInput = DokuryoModelInput()
+        let modelInput = DokuryoModelInput(
+            cellDeleteRelay: input.cellDeleteRelay
+        )
 
         model.setup(input: modelInput)
 

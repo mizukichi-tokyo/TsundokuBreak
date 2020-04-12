@@ -18,6 +18,7 @@ class DokuryoViewController: UIViewController, Injectable {
     private let viewModel: DokuryoViewModelType
 
     private var cellDataArray = [CellData]()
+    private let cellDeleteRelay: PublishRelay<Int>
     private let disposeBag = DisposeBag()
 
     @IBOutlet weak var tableView: UITableView! {
@@ -34,6 +35,7 @@ class DokuryoViewController: UIViewController, Injectable {
 
     required init(with dependency: Dependency) {
         viewModel = dependency
+        self.cellDeleteRelay = PublishRelay<Int>()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -47,7 +49,9 @@ class DokuryoViewController: UIViewController, Injectable {
     }
 
     private func setup() {
-        let input = DokuryoViewModelInput()
+        let input = DokuryoViewModelInput(
+            cellDeleteRelay: cellDeleteRelay
+        )
         viewModel.setup(input: input)
 
         viewModel.outputs?.recordsChangeObservable
@@ -82,6 +86,7 @@ extension DokuryoViewController: UITableViewDataSource {
         // swiftlint:enable force_cast
         guard cellDataArray.count != 0 else { return cell }
 
+        cell.delegate = self
         cell.indexPathRowTag = indexPath.row
         cell.setCell(cellData: cellDataArray[indexPath.row])
 
@@ -89,17 +94,16 @@ extension DokuryoViewController: UITableViewDataSource {
     }
 }
 
+extension DokuryoViewController: CellDeleteDelegate {
+    func deleteCell(indexPathRow: Int) {
+        cellDeleteRelay.accept(indexPathRow)
+    }
+}
+
 extension DokuryoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
-
-    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-    //        if editingStyle == .delete {
-    //            //            table.deleteRows(at: [indexPath], with: .fade)
-    //            print(indexPath)
-    //        }
-    //    }
 }
 
 extension DokuryoViewController {

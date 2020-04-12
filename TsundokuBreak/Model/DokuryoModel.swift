@@ -13,6 +13,7 @@ import RealmSwift
 import RxRealm
 
 struct  DokuryoModelInput {
+    let cellDeleteRelay: PublishRelay<Int>
 }
 
 protocol  DokuryoModelOutput {
@@ -42,6 +43,23 @@ final class  DokuryoModel: DokuryoModelType, Injectable {
         records = realm.objects(Record.self)
             .sorted(byKeyPath: "creationTime", ascending: true)
             .filter("dokuryoFlag == true")
+
+        input.cellDeleteRelay
+            .withLatestFrom(Observable.collection(from: records)) { indexPath, records in
+                return records[indexPath]
+        }.subscribe(Realm.rx.delete()).disposed(by: disposeBag)
+        //        input.cellDeleteRelay
+        //            .subscribe(onNext: { [weak self] deleteCell in
+        //                guard let self = self else { return }
+        //                let deleteCell = self.records[deleteCell]
+        //                print("deleteCell@model")
+        //                print(deleteCell)
+        //                //                try? realm.write {
+        //                //                    switchedCell.dokuryoFlag = true
+        //                //                }
+        //            })
+        //            .disposed(by: disposeBag)
+
     }
 
 }
