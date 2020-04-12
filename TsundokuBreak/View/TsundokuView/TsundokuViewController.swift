@@ -111,6 +111,13 @@ extension TsundokuViewController: CellValueChangeDelegate {
 }
 
 extension TsundokuViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        //        tableView.estimatedRowHeight = 150 //セルの高さ
+        return UITableView.automaticDimension //自動設定
+
+    }
+
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
     }
