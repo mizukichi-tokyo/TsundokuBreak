@@ -44,6 +44,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
+                            <action selector="sliderChangeValue:" destination="KGk-i7-Jjw" eventType="valueChanged" id="dzy-TS-6QC"/>
                             <action selector="touchUpSlider:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mmk-nH-nNk"/>
                         </connections>
                     </view>
@@ -78,6 +79,12 @@
                             <action selector="checkTouchUp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="62B-FO-iyr"/>
                         </connections>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="読了/ページ数" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Kw-FN-DNY">
+                        <rect key="frame" x="97" y="66" width="151" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 <constraints>
@@ -85,7 +92,9 @@
                     <constraint firstItem="5kY-U6-DIS" firstAttribute="top" secondItem="kZT-dt-ncj" secondAttribute="bottom" constant="17" id="2mT-gR-4x1"/>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="top" secondItem="5LL-6F-OGX" secondAttribute="bottom" constant="8" id="715-6c-HkE"/>
                     <constraint firstItem="5kY-U6-DIS" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="leading" constant="-20" id="7ak-bQ-6XD"/>
+                    <constraint firstItem="9Kw-FN-DNY" firstAttribute="leading" secondItem="VIQ-4a-4nM" secondAttribute="leading" id="D5m-c4-pyT"/>
                     <constraint firstAttribute="trailing" secondItem="5LL-6F-OGX" secondAttribute="trailing" constant="24" id="EWf-C0-PbE"/>
+                    <constraint firstItem="9Kw-FN-DNY" firstAttribute="top" secondItem="VIQ-4a-4nM" secondAttribute="bottom" constant="8" id="HLG-8A-30s"/>
                     <constraint firstItem="VIQ-4a-4nM" firstAttribute="leading" secondItem="kZT-dt-ncj" secondAttribute="trailing" constant="8" id="Mhg-Xg-aRV"/>
                     <constraint firstAttribute="bottomMargin" secondItem="5kY-U6-DIS" secondAttribute="bottom" id="QgI-nf-CkF"/>
                     <constraint firstItem="5LL-6F-OGX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="azK-Ju-BRa"/>
@@ -95,6 +104,7 @@
                     <constraint firstItem="kZT-dt-ncj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="hgz-4c-Cqy"/>
                     <constraint firstAttribute="trailing" secondItem="VIQ-4a-4nM" secondAttribute="trailing" constant="24" id="mT2-Ew-5Ze"/>
                     <constraint firstItem="jsg-oJ-r4W" firstAttribute="trailing" secondItem="VIQ-4a-4nM" secondAttribute="trailing" id="vp4-sH-ejc"/>
+                    <constraint firstItem="jsg-oJ-r4W" firstAttribute="leading" secondItem="9Kw-FN-DNY" secondAttribute="trailing" constant="8" id="wkj-Wq-uK2"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -102,6 +112,7 @@
                 <outlet property="authorLabel" destination="VIQ-4a-4nM" id="zVv-0b-ILd"/>
                 <outlet property="bookImage" destination="kZT-dt-ncj" id="6fH-o9-gaK"/>
                 <outlet property="checkButton" destination="jsg-oJ-r4W" id="Z7L-q9-4Fc"/>
+                <outlet property="pageCountLabel" destination="9Kw-FN-DNY" id="pM6-zU-D3h"/>
                 <outlet property="pickerView" destination="5kY-U6-DIS" id="sus-Zb-6na"/>
                 <outlet property="titleLabel" destination="5LL-6F-OGX" id="YRu-fQ-jfE"/>
             </connections>

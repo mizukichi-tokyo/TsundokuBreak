@@ -9,28 +9,38 @@
 import UIKit
 import AlamofireImage
 import FaveButton
+import RxSwift
+import RxCocoa
 
 class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
-
+    weak var delegate: CellValueChangeDelegate?
+    var indexPathRowTag: Int?
+    private var pageCount: Int = 0
+    private let readPageRelay = PublishRelay<Int>()
+    private let disposeBag = DisposeBag()
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
             bookImage.image = UIImage.gif(name: "loading")
         }
     }
+
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var authorLabel: UILabel!
+    @IBOutlet weak var pageCountLabel: UILabel!
     @IBOutlet weak var pickerView: BalloonPickerView!
-
-    weak var delegate: CellValueChangeDelegate?
-    var indexPathRowTag: Int?
-
     @IBOutlet weak var checkButton: FaveButton!
+
     @IBAction func checkTouchUp(_ sender: Any) {
         checkButton.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-            print("2.0秒後に実行")
+            //print("2.0秒後に実行")
             self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
         }
+    }
+
+    @IBAction func sliderChangeValue(_ sender: Any) {
+        let readPage = Int(round(pickerView.value))
+        readPageRelay.accept(readPage)
     }
 
     @IBAction func touchUpSlider(_ sender: Any) {
@@ -45,15 +55,24 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         balloonView.image = #imageLiteral(resourceName: "balloon")
         pickerView.baloonView = balloonView
         pickerView.value = 0
-        //        pickerView.tintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
+
+        readPageRelay
+            .subscribe(onNext: { [weak self] readPage in
+                guard let self = self else {return}
+                self.pageCountLabel.text = "読書進捗: "+String(readPage)+"/"+String(self.pageCount)
+            })
+            .disposed(by: disposeBag)
+
     }
 
     func setCell(cellData: CellData) {
-        self.titleLabel.text = cellData.title
-        self.authorLabel.text = cellData.author
+        titleLabel.text = cellData.title
+        authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
         setPicker(cellData)
         setCheckButton()
+        pageCount = cellData.pageCount
+        pageCountLabel.text = "読書進捗: "+String(cellData.readPage)+"/"+String(pageCount)
     }
 
     private func setImageUrl(_ urlString: String) {

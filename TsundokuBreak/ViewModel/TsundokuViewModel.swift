@@ -59,11 +59,9 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
     }
 
     private func makeCellDataArray(records: Results<Record>? ) ->( [CellData] ) {
-        print("makecelldataArray")
         var dataArray = [CellData]()
 
         for record in records! {
-
             let cellData = CellData(
                 thumbnailUrl: record.thumbnailUrl,
                 title: record.title,
@@ -73,12 +71,10 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
                 readPage: record.readPage,
                 dokuryoFlag: record.dokuryoFlag
             )
-
             dataArray.append(cellData)
         }
         return dataArray
     }
-
 }
 
 extension TsundokuViewModel: TsundokuViewModelOutput {
@@ -89,5 +85,4 @@ extension TsundokuViewModel: TsundokuViewModelOutput {
     var cellDataDriver: Driver<[CellData]> {
         return cellDataRelay.asDriver()
     }
-
 }
