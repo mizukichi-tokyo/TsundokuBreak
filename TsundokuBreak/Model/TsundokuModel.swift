@@ -48,10 +48,15 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
             .subscribe(onNext: { [weak self] flag in
                 guard let self = self else { return }
                 let switchedCell = self.records[flag]
-                try? realm.write {
-                    switchedCell.dokuryoFlag = true
-                    switchedCell.switchedTime = Date().timeIntervalSinceReferenceDate
+                do {
+                    return try realm.write {
+                        switchedCell.dokuryoFlag = true
+                        switchedCell.switchedTime = Date().timeIntervalSinceReferenceDate
+                    }
+                } catch let error as NSError {
+                    assertionFailure("realm error: \(error)")
                 }
+
             })
             .disposed(by: disposeBag)
 
@@ -59,8 +64,12 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
             .subscribe(onNext: { [weak self] changeData in
                 guard let self = self else { return }
                 let changedCell = self.records[changeData[0]]
-                try? realm.write {
-                    changedCell.readPage = changeData[1]
+                do {
+                    return try realm.write {
+                        changedCell.readPage = changeData[1]
+                    }
+                } catch let error as NSError {
+                    assertionFailure("realm error: \(error)")
                 }
             })
             .disposed(by: disposeBag)
