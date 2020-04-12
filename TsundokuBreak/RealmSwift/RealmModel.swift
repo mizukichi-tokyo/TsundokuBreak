@@ -18,4 +18,5 @@ final class Record: Object {
     @objc dynamic var pageCount: Int = 0
     @objc dynamic var readPage: Int = 0
     @objc dynamic var dokuryoFlag: Bool = false
+    @objc dynamic var switchedTime: TimeInterval = Date().timeIntervalSinceReferenceDate
 }

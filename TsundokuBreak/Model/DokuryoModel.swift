@@ -7,11 +7,18 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import RealmSwift
+import RxRealm
 
 struct  DokuryoModelInput {
+    let cellDeleteRelay: PublishRelay<Int>
 }
 
 protocol  DokuryoModelOutput {
+    var recordsObservable: Observable<Results<Record>> {get}
+    var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {get}
 }
 
 protocol DokuryoModelType {
@@ -19,8 +26,10 @@ protocol DokuryoModelType {
     func setup(input: DokuryoModelInput)
 }
 
-final class  DokuryoModel: DokuryoModelType, Injectable, DokuryoModelOutput {
+final class  DokuryoModel: DokuryoModelType, Injectable {
     struct Dependency {}
+    private let disposeBag = DisposeBag()
+    private var records: Results<Record>!
 
     var outputs: DokuryoModelOutput?
 
@@ -29,7 +38,43 @@ final class  DokuryoModel: DokuryoModelType, Injectable, DokuryoModelOutput {
     }
 
     func setup(input: DokuryoModelInput) {
+        let realm = createRealm()
 
+        records = realm.objects(Record.self)
+            .sorted(byKeyPath: "switchedTime", ascending: true)
+            .filter("dokuryoFlag == true")
+
+        input.cellDeleteRelay
+            .withLatestFrom(Observable.collection(from: records)) { indexPath, records in
+                return records[indexPath]
+        }.subscribe(Realm.rx.delete())
+            .disposed(by: disposeBag)
+
+    }
+
+}
+
+extension DokuryoModel {
+    private func createRealm() -> Realm {
+        do {
+            return try Realm()
+        } catch let error as NSError {
+            assertionFailure("realm error: \(error)")
+            let config = Realm.Configuration(deleteRealmIfMigrationNeeded: true)
+            // swiftlint:disable:next force_try
+            return try! Realm(configuration: config)
+            // swiftlint:disable:previous force_try
+        }
+    }
+}
+
+extension DokuryoModel: DokuryoModelOutput {
+    var recordsObservable: Observable<Results<Record>> {
+        return  Observable.collection(from: records)
+    }
+
+    var recordsChangeObservable: Observable<(AnyRealmCollection<Record>, RealmChangeset?)> {
+        return  Observable.changeset(from: records)
     }
 
 }

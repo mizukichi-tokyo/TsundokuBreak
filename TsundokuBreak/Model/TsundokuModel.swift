@@ -50,6 +50,7 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
                 let switchedCell = self.records[flag]
                 try? realm.write {
                     switchedCell.dokuryoFlag = true
+                    switchedCell.switchedTime = Date().timeIntervalSinceReferenceDate
                 }
             })
             .disposed(by: disposeBag)

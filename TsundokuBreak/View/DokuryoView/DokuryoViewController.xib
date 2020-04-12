@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DokuryoViewController" customModule="TsundokuBreak" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="aHh-CB-PEz" id="on6-hk-7Hj"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,35 +18,20 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HTb-TU-eQo" customClass="MDCFloatingButton">
-                    <rect key="frame" x="182" y="649.33333333333337" width="50" height="50"/>
-                    <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="I05-W8-bOg"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Wqv-7b-UDB"/>
-                        <constraint firstAttribute="height" constant="50" id="Xdq-L7-JmF"/>
-                        <constraint firstAttribute="width" secondItem="HTb-TU-eQo" secondAttribute="height" multiplier="1:1" id="nKY-JD-2Q1"/>
-                        <constraint firstAttribute="width" constant="50" id="nty-HQ-hof"/>
-                        <constraint firstAttribute="width" secondItem="HTb-TU-eQo" secondAttribute="height" multiplier="1:1" id="sN4-3f-sVA"/>
-                    </constraints>
-                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <state key="normal" image="plus" catalog="system"/>
-                    <connections>
-                        <action selector="buttonTouch:" destination="-1" eventType="touchUpInside" id="iVB-ny-R8G"/>
-                    </connections>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aHh-CB-PEz">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
-                <constraint firstItem="HTb-TU-eQo" firstAttribute="width" secondItem="HTb-TU-eQo" secondAttribute="height" multiplier="1:1" id="2MS-ca-78M"/>
-                <constraint firstItem="HTb-TU-eQo" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="3WO-2l-nzo"/>
-                <constraint firstItem="HTb-TU-eQo" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.95" id="tHa-P2-4hf"/>
+                <constraint firstItem="aHh-CB-PEz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="BPf-dp-4MJ"/>
+                <constraint firstItem="aHh-CB-PEz" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="E4l-UU-zfd"/>
+                <constraint firstItem="aHh-CB-PEz" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="FvP-kd-dAm"/>
+                <constraint firstItem="aHh-CB-PEz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="i2P-b3-ofM"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
-            <point key="canvasLocation" x="139" y="130"/>
+            <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>
         </view>
     </objects>
-    <resources>
-        <image name="plus" catalog="system" width="128" height="113"/>
-    </resources>
 </document>
