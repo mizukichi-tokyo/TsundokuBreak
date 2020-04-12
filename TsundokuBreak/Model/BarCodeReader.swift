@@ -54,7 +54,7 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
 
     func setup(input: BarCodeReaderModelInput) {
         let realm = self.createRealm()
-        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        //        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         input.isbnRelay
             .subscribe(onNext: { [weak self] isbn in
@@ -101,12 +101,12 @@ extension BarCodeReaderModel {
 
     private func processJsonData(jsonData: BookInfo) {
         self.bookInfo.accept(jsonData)
-        print(jsonData.totalItems!)
-        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-        print(jsonData.items?[0].volumeInfo?.title as Any)
-        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
+        //        print(jsonData.totalItems!)
+        //        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
+        //        print(jsonData.items?[0].volumeInfo?.title as Any)
+        //        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
+        //        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
+        //        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
 
     }
 
@@ -210,10 +210,19 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
         self.bookInfo
             .subscribe(onNext: { info in
                 let urlString = info.items?[0].volumeInfo?.imageLinks?.thumbnail
-                guard var url = urlString else {return}
-                url = "https" + url.dropFirst(4)
-                urlRelay.accept(URL(string: url)!)
-                self.thumbnailUrl = url
+
+                var url: String
+                if var url = urlString {
+                    url = "https" + url.dropFirst(4)
+                    urlRelay.accept(URL(string: url)!)
+                    self.thumbnailUrl = url
+
+                } else {
+                    url = "https://f.easyuploader.app/eu-prd/upload/20200411045606_306332414a534e397464.png"
+                    urlRelay.accept(URL(string: url)!)
+                    self.thumbnailUrl = url
+                }
+
             })
             .disposed(by: disposeBag)
 

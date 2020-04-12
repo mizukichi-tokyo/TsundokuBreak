@@ -21,6 +21,7 @@ target 'TsundokuBreak' do
     pod "CDAlertView"
     pod "RealmSwift"
     pod "RxRealm"
+    pod 'FaveButton'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

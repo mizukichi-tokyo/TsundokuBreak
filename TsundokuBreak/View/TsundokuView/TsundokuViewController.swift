@@ -8,6 +8,10 @@
 
 import UIKit
 import MaterialComponents
+import RxSwift
+import RxCocoa
+import RealmSwift
+import RxRealm
 
 class TsundokuViewController: UIViewController, Injectable {
 
@@ -17,8 +21,27 @@ class TsundokuViewController: UIViewController, Injectable {
     typealias Dependency = TsundokuViewModelType
     private let viewModel: TsundokuViewModelType
 
+    @IBOutlet weak var tableView: UITableView! {
+        didSet {
+            tableView.dataSource = self
+            tableView.delegate = self
+
+            tableView.register(
+                UINib(nibName: R.string.tsundokuView.tsundokuTableViewCell(), bundle: nil),
+                forCellReuseIdentifier: R.reuseIdentifier.customTsundokuTableCell.identifier
+            )
+        }
+    }
+
+    private var cellDataArray = [CellData]()
+    private let changeFlagRelay: PublishRelay<Int>
+    private let changeReadPageRelay: PublishRelay<[Int]>
+    private let disposeBag = DisposeBag()
+
     required init(with dependency: Dependency) {
         viewModel = dependency
+        self.changeFlagRelay = PublishRelay<Int>()
+        self.changeReadPageRelay = PublishRelay<[Int]>()
         super.init(nibName: nil, bundle: nil)
     }
 
@@ -28,20 +51,76 @@ class TsundokuViewController: UIViewController, Injectable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setup()
     }
 
-    /*
-     // MARK: - Navigation
+    private func setup() {
+        let input = TsundokuViewModelInput(
+            changeFlagRelay: changeFlagRelay,
+            changeReadPageRelay: changeReadPageRelay
+        )
+        viewModel.setup(input: input)
 
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+        viewModel.outputs?.recordsChangeObservable
+            .subscribe(onNext: { [unowned self] _ in
+                self.tableView.reloadData()
+            })
+            .disposed(by: disposeBag)
 
+        viewModel.outputs?.cellDataDriver
+            .drive(onNext: { cellData in
+                self.cellDataArray = cellData
+            })
+            .disposed(by: disposeBag)
+
+    }
+
+}
+
+extension TsundokuViewController: UITableViewDataSource {
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return cellDataArray.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+
+        // swiftlint:disable force_cast
+        let cell = tableView.dequeueReusableCell(withIdentifier: R.reuseIdentifier.customTsundokuTableCell.identifier) as! TsundokuTableViewCell
+        // swiftlint:enable force_cast
+        guard cellDataArray.count != 0 else { return cell }
+
+        cell.delegate = self
+        cell.indexPathRowTag = indexPath.row
+        cell.setCell(cellData: cellDataArray[indexPath.row])
+
+        return cell
+    }
+}
+
+extension TsundokuViewController: CellValueChangeDelegate {
+    func changeDokuryoFlag(indexPathRow: Int) {
+        changeFlagRelay.accept(indexPathRow)
+    }
+    func changeReadPage(indexPathRow: Int, readPage: Int) {
+        changeReadPageRelay.accept([indexPathRow, readPage])
+    }
+}
+
+extension TsundokuViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+
+    //    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+    //        if editingStyle == .delete {
+    //            //            table.deleteRows(at: [indexPath], with: .fade)
+    //            print(indexPath)
+    //        }
+    //    }
 }
 
 extension TsundokuViewController {

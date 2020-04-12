@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TsundokuViewController" customModule="TsundokuBreak" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="tBX-sV-5oO" id="q3J-Zl-jss"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -17,6 +18,10 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBX-sV-5oO">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-nF-7yz" customClass="MDCFloatingButton">
                     <rect key="frame" x="182" y="649.33333333333337" width="50" height="50"/>
                     <color key="backgroundColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -34,8 +39,12 @@
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="tBX-sV-5oO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="5HN-ei-JhL"/>
                 <constraint firstItem="fZx-nF-7yz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6LR-7J-8of"/>
                 <constraint firstItem="fZx-nF-7yz" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" multiplier="0.95" id="LtT-0u-NCd"/>
+                <constraint firstItem="tBX-sV-5oO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pzh-cf-MRe"/>
+                <constraint firstItem="tBX-sV-5oO" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="QBe-1M-a8I"/>
+                <constraint firstItem="tBX-sV-5oO" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="fyE-jO-SDb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="129.61956521739131"/>

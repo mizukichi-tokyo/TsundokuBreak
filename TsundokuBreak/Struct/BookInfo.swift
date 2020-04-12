@@ -12,6 +12,7 @@ struct BookInfo: Codable {
     let items: [Item]?
 }
 
+// swiftlint:disable identifier_name
 // MARK: - Item
 struct Item: Codable {
     let kind, id, etag: String?
@@ -21,6 +22,7 @@ struct Item: Codable {
     let accessInfo: AccessInfo?
     let searchInfo: SearchInfo?
 }
+// swiftlint:enable identifier_name
 
 // MARK: - AccessInfo
 struct AccessInfo: Codable {

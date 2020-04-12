@@ -8,7 +8,7 @@ class StubContentViewControllersProvider {
         //        let totalCountViewController = TotalCountViewController.makeVC()
         let totalCountViewController = TsundokuViewController.makeVC()
 
-        let tsundokuViewController = TsundokuViewController.makeVC()
+        let tsundokuViewController = DokuryoViewController.makeVC()
 
         let dokuryoViewController = DokuryoViewController.makeVC()
 
