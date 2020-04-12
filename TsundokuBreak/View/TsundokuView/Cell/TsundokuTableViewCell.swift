@@ -39,12 +39,12 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
     }
 
     @IBAction func sliderChangeValue(_ sender: Any) {
-        let readPage = Int(round(pickerView.value))
+        let readPage = Int(floor(pickerView.value))
         readPageRelay.accept(readPage)
     }
 
     @IBAction func touchUpSlider(_ sender: Any) {
-        let readPage = Int(round(pickerView.value))
+        let readPage = Int(floor(pickerView.value))
         self.delegate?.changeReadPage(indexPathRow: self.indexPathRowTag!, readPage: readPage)
     }
 
