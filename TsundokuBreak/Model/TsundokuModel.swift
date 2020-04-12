@@ -40,7 +40,7 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
 
     func setup(input: TsundokuModelInput) {
         let realm = createRealm()
-        //        print(Realm.Configuration.defaultConfiguration.fileURL!)
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         records = realm.objects(Record.self).sorted(byKeyPath: "creationTime", ascending: true).filter("dokuryoFlag == false")
 
@@ -50,6 +50,7 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
                 let switchedCell = self.records[flag]
                 try? realm.write {
                     switchedCell.dokuryoFlag = true
+                    switchedCell.switchedTime = Date().timeIntervalSinceReferenceDate
                 }
             })
             .disposed(by: disposeBag)

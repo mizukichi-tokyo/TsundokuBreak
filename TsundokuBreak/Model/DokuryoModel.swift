@@ -41,7 +41,7 @@ final class  DokuryoModel: DokuryoModelType, Injectable {
         let realm = createRealm()
 
         records = realm.objects(Record.self)
-            .sorted(byKeyPath: "creationTime", ascending: true)
+            .sorted(byKeyPath: "switchedTime", ascending: true)
             .filter("dokuryoFlag == true")
 
         input.cellDeleteRelay
