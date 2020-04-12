@@ -14,6 +14,7 @@ import RxRealm
 
 struct   TsundokuViewModelInput {
     let changeFlagRelay: PublishRelay<Int>
+    let changeReadPageRelay: PublishRelay<[Int]>
 }
 
 protocol   TsundokuViewModelOutput {
@@ -42,7 +43,8 @@ final class   TsundokuViewModel: TsundokuViewModelType, Injectable {
     func setup(input: TsundokuViewModelInput) {
 
         let modelInput = TsundokuModelInput(
-            changeFlagRelay: input.changeFlagRelay
+            changeFlagRelay: input.changeFlagRelay,
+            changeReadPageRelay: input.changeReadPageRelay
         )
 
         model.setup(input: modelInput)

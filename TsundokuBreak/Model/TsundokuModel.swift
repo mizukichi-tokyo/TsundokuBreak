@@ -14,6 +14,7 @@ import RxRealm
 
 struct  TsundokuModelInput {
     let changeFlagRelay: PublishRelay<Int>
+    let changeReadPageRelay: PublishRelay<[Int]>
 }
 
 protocol  TsundokuModelOutput {
@@ -45,13 +46,21 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
 
         input.changeFlagRelay
             .subscribe(onNext: { [weak self] flag in
-                print("変更しますよ")
                 guard let self = self else { return }
-                let switched = self.records[flag]
+                let switchedCell = self.records[flag]
                 try? realm.write {
-                    switched.dokuryoFlag = true
+                    switchedCell.dokuryoFlag = true
                 }
+            })
+            .disposed(by: disposeBag)
 
+        input.changeReadPageRelay
+            .subscribe(onNext: { [weak self] changeData in
+                guard let self = self else { return }
+                let changedCell = self.records[changeData[0]]
+                try? realm.write {
+                    changedCell.readPage = changeData[1]
+                }
             })
             .disposed(by: disposeBag)
 

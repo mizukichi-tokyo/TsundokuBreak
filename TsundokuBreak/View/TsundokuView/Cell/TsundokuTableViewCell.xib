@@ -38,6 +38,11 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5kY-U6-DIS" customClass="BalloonPickerView" customModule="TsundokuBreak" customModuleProvider="target">
                         <rect key="frame" x="4" y="115" width="312" height="24"/>
                         <color key="tintColor" red="1" green="0.5409764051" blue="0.84731429820000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                         <connections>
                             <action selector="touchUpSlider:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Mmk-nH-nNk"/>
                         </connections>
@@ -70,7 +75,7 @@
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
                         <connections>
-                            <action selector="checkTOuchUp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="HdL-b3-caC"/>
+                            <action selector="checkTouchUp:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="62B-FO-iyr"/>
                         </connections>
                     </button>
                 </subviews>

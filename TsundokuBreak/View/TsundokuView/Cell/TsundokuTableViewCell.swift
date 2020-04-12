@@ -21,20 +21,21 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
     @IBOutlet weak var authorLabel: UILabel!
     @IBOutlet weak var pickerView: BalloonPickerView!
 
-    weak var delegate: CellSwitchDelegate?
+    weak var delegate: CellValueChangeDelegate?
     var indexPathRowTag: Int?
 
     @IBOutlet weak var checkButton: FaveButton!
-
-    @IBAction func checkTOuchUp(_ sender: Any) {
-        //        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
-        //            print("2.0秒後に実行")
-        //            self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
-        //        }
+    @IBAction func checkTouchUp(_ sender: Any) {
+        checkButton.isEnabled = false
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
+            print("2.0秒後に実行")
+            self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
+        }
     }
 
     @IBAction func touchUpSlider(_ sender: Any) {
-        print("Touch Up!")
+        let readPage = Int(round(pickerView.value))
+        self.delegate?.changeReadPage(indexPathRow: self.indexPathRowTag!, readPage: readPage)
     }
 
     override func awakeFromNib() {
@@ -43,16 +44,16 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         let balloonView = BalloonView()
         balloonView.image = #imageLiteral(resourceName: "balloon")
         pickerView.baloonView = balloonView
-        pickerView.value = 30
+        pickerView.value = 0
         //        pickerView.tintColor = #colorLiteral(red: 0.2392156869, green: 0.6745098233, blue: 0.9686274529, alpha: 1)
-
     }
 
     func setCell(cellData: CellData) {
         self.titleLabel.text = cellData.title
         self.authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
-        checkButton.isSelected = false
+        setPicker(cellData)
+        setCheckButton()
     }
 
     private func setImageUrl(_ urlString: String) {
@@ -65,6 +66,16 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
             filter: filter,
             imageTransition: .crossDissolve(0.5)
         )
+    }
+
+    private func setPicker(_ cellData: CellData) {
+        pickerView.maximumValue = Double(cellData.pageCount)
+        pickerView.value = Double(cellData.readPage)
+    }
+
+    private func setCheckButton() {
+        checkButton.isEnabled = true
+        checkButton.setSelected(selected: false, animated: false)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
