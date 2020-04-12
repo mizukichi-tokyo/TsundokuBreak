@@ -25,26 +25,38 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="72h-n9-iv3">
-                        <rect key="frame" x="89" y="8" width="29" height="21"/>
+                        <rect key="frame" x="89" y="8" width="207" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="author" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wXI-ew-75J">
-                        <rect key="frame" x="89" y="34" width="50" height="21"/>
+                        <rect key="frame" x="89" y="34" width="169" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6G7-12-uV4" customClass="FaveButton" customModule="FaveButton">
+                        <rect key="frame" x="266" y="38" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="QcU-yi-VtU"/>
+                            <constraint firstAttribute="width" constant="30" id="Xbl-tg-Con"/>
+                        </constraints>
+                        <state key="normal" image="trashBox"/>
+                    </button>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="6G7-12-uV4" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="629-BF-7Vd"/>
                     <constraint firstItem="wXI-ew-75J" firstAttribute="leading" secondItem="72h-n9-iv3" secondAttribute="leading" id="BWh-uk-asb"/>
                     <constraint firstItem="O6b-1G-sFv" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="LAx-rm-n80"/>
                     <constraint firstItem="wXI-ew-75J" firstAttribute="top" secondItem="72h-n9-iv3" secondAttribute="bottom" constant="5" id="Ue6-tD-M5t"/>
+                    <constraint firstItem="72h-n9-iv3" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailing" constant="-24" id="Xgy-9v-Nmn"/>
                     <constraint firstItem="72h-n9-iv3" firstAttribute="top" secondItem="O6b-1G-sFv" secondAttribute="top" id="d6e-Sq-76A"/>
                     <constraint firstItem="72h-n9-iv3" firstAttribute="leading" secondItem="O6b-1G-sFv" secondAttribute="trailing" constant="8" symbolic="YES" id="htC-od-EMV"/>
+                    <constraint firstItem="6G7-12-uV4" firstAttribute="leading" secondItem="wXI-ew-75J" secondAttribute="trailing" constant="8" id="jsR-dD-ibu"/>
                     <constraint firstItem="O6b-1G-sFv" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="nXa-KD-54F"/>
                     <constraint firstAttribute="bottom" secondItem="O6b-1G-sFv" secondAttribute="bottom" constant="8" id="qG8-Ym-t5v"/>
+                    <constraint firstAttribute="trailing" secondItem="6G7-12-uV4" secondAttribute="trailing" constant="24" id="yso-kq-pU1"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -53,7 +65,10 @@
                 <outlet property="bookImage" destination="O6b-1G-sFv" id="Vnx-vf-vAm"/>
                 <outlet property="titleLabel" destination="72h-n9-iv3" id="qRO-yy-hcy"/>
             </connections>
-            <point key="canvasLocation" x="140.57971014492756" y="134.26339285714286"/>
+            <point key="canvasLocation" x="140.57971014492756" y="133.92857142857142"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <image name="trashBox" width="256" height="256"/>
+    </resources>
 </document>
