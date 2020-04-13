@@ -2,8 +2,6 @@ PODS:
   - Alamofire (5.1.0)
   - AlamofireImage (4.1.0):
     - Alamofire (~> 5.1)
-  - Cards (1.4.0):
-    - Player (= 0.13.0)
   - CDAlertView (0.10.0)
   - ColorMatchTabs (3.3)
   - DZNEmptyDataSet (1.8.1)
@@ -56,7 +54,6 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
-  - Player (0.13.0)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -83,7 +80,6 @@ PODS:
 
 DEPENDENCIES:
   - AlamofireImage
-  - Cards
   - CDAlertView
   - ColorMatchTabs
   - DZNEmptyDataSet
@@ -106,7 +102,6 @@ SPEC REPOS:
   trunk:
     - Alamofire
     - AlamofireImage
-    - Cards
     - CDAlertView
     - ColorMatchTabs
     - DZNEmptyDataSet
@@ -117,7 +112,6 @@ SPEC REPOS:
     - MDFInternationalization
     - MDFTextAccessibility
     - Moya
-    - Player
     - R.swift
     - R.swift.Library
     - Realm
@@ -134,7 +128,6 @@ SPEC REPOS:
 SPEC CHECKSUMS:
   Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
   AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
-  Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
@@ -145,7 +138,6 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
-  Player: 968d8d07d923bcdd6f7e4091c9e306eb44a5f7a4
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
@@ -159,6 +151,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 8c95601f28de53911389aba58d7281a3a7a0eaac
+PODFILE CHECKSUM: 452435f5b80e6fe32d255f00d5e2f0053f587b48
 
 COCOAPODS: 1.9.1

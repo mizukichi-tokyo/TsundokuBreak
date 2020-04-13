@@ -71,6 +71,7 @@ class TsundokuViewController: UIViewController, Injectable {
         viewModel.outputs?.cellDataDriver
             .drive(onNext: { cellData in
                 self.cellDataArray = cellData
+                self.tableView.reloadData()
             })
             .disposed(by: disposeBag)
 

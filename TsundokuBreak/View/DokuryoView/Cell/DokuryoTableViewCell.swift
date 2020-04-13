@@ -9,6 +9,7 @@
 import UIKit
 import AlamofireImage
 import FaveButton
+import CDAlertView
 
 class DokuryoTableViewCell: UITableViewCell {
     weak var delegate: CellDeleteDelegate?
@@ -27,13 +28,14 @@ class DokuryoTableViewCell: UITableViewCell {
         trashBox.isEnabled = false
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
             //print("2.0秒後に実行")
-            self.delegate?.deleteCell(indexPathRow: self.indexPathRowTag!)
+            self.doAlert()
         }
     }
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -47,6 +49,7 @@ class DokuryoTableViewCell: UITableViewCell {
         authorLabel.text = cellData.author
         setImageUrl(cellData.thumbnailUrl)
         setTrashBoxButton()
+
     }
 
     private func setTrashBoxButton() {
@@ -64,6 +67,36 @@ class DokuryoTableViewCell: UITableViewCell {
             filter: filter,
             imageTransition: .crossDissolve(0.5)
         )
+    }
+
+    private func doAlert() {
+        let alert = CDAlertView(title: "本当に削除しますか？",
+                                message: "一度削除したら元に戻りません",
+                                type: .warning
+        )
+        let cancelAction = CDAlertViewAction(
+            title: "やめます",
+            handler: { _ in self.resetCell()}
+        )
+        let doneAction = CDAlertViewAction(
+            title: "OK! 💪",
+            handler: { _ in self.deleteCell()}
+        )
+        alert.add(action: cancelAction)
+        alert.add(action: doneAction)
+
+        alert.show()
+
+    }
+
+    private func deleteCell() -> Bool {
+        self.delegate?.deleteCell(indexPathRow: self.indexPathRowTag!)
+        return true
+    }
+
+    private func resetCell() -> Bool {
+        self.setTrashBoxButton()
+        return true
     }
 
 }

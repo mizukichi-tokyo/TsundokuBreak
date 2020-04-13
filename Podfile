@@ -13,7 +13,6 @@ target 'TsundokuBreak' do
     pod 'Moya'
     pod 'LicensePlist'
     pod 'ColorMatchTabs'
-    pod 'Cards'
     pod 'MaterialComponents/Buttons'
     pod 'AlamofireImage'
     pod 'SwiftGifOrigin'

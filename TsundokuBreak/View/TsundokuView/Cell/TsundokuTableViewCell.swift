@@ -11,6 +11,7 @@ import AlamofireImage
 import FaveButton
 import RxSwift
 import RxCocoa
+import CDAlertView
 
 class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
     weak var delegate: CellValueChangeDelegate?
@@ -35,6 +36,10 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
             //print("2.0秒後に実行")
             self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
+            let alert = CDAlertView(title: "読了おめでとう！", message: "読了リストに本を追加しました", type: .custom(image: UIImage(named: "popper")!))
+            alert.circleFillColor = UIColor.systemGray5
+            alert.hideAnimationDuration = 0.88
+            alert.show()
         }
     }
 

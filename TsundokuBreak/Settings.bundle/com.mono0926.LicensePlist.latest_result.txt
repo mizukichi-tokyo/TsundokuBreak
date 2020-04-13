@@ -14,18 +14,6 @@ name: AlamofireImage, nameSpecified:
 body: Copyright (c) 2015 A…
 version: 4.1.0
 
-name: Cards, nameSpecified: 
-body: MIT License
-
-Copyrig…
-version: 1.4.0
-
-name: Cards, nameSpecified: 
-body: MIT License
-
-Copyrig…
-version: 1.4.0
-
 name: CDAlertView, nameSpecified: 
 body: Copyright (c) 2016 C…
 version: 0.10.0
@@ -115,14 +103,6 @@ version: 14.0.0
 name: Moya, nameSpecified: 
 body: The MIT License (MIT…
 version: 14.0.0
-
-name: Player, nameSpecified: 
-body: The MIT License (MIT…
-version: 0.13.0
-
-name: Player, nameSpecified: 
-body: The MIT License (MIT…
-version: 0.13.0
 
 name: R.swift, nameSpecified: 
 body: The MIT License (MIT…
