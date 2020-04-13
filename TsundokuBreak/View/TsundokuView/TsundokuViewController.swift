@@ -12,7 +12,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
-import EmptyStateKit
+import DZNEmptyDataSet
 
 class TsundokuViewController: UIViewController, Injectable {
 
@@ -85,14 +85,6 @@ extension TsundokuViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        if cellDataArray.count == 0 {
-            view.emptyState.format = TableState.noTsundoku.format
-            view.emptyState.delegate = self
-            view.emptyState.show(TableState.noTsundoku)
-        } else {
-            view.emptyState.hide()
-        }
-
         return cellDataArray.count
     }
 
@@ -120,13 +112,6 @@ extension TsundokuViewController: CellValueChangeDelegate {
     }
 }
 
-extension TsundokuViewController: EmptyStateDelegate {
-
-    func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
-        //        view.emptyState.hide()
-        self.view.window?.rootViewController?.present(BarCodeReaderViewController.makeVC(), animated: true, completion: nil)
-    }
-}
 extension TsundokuViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -136,6 +121,32 @@ extension TsundokuViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+}
+
+extension TsundokuViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
+    func verticalOffset(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
+        return -60
+    }
+
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Search")
+    }
+
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "積読本を探そう！", attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.boldSystemFont(ofSize: 20)
+        ])
+    }
+
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "積読リストに登録しよう！", attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.systemFont(ofSize: 15)
+        ])
+
     }
 }
 

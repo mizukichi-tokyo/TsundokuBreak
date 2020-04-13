@@ -11,7 +11,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
-import EmptyStateKit
+import DZNEmptyDataSet
 
 class DokuryoViewController: UIViewController, Injectable {
 
@@ -78,13 +78,6 @@ extension DokuryoViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
 
-        if cellDataArray.count == 0 {
-            view.emptyState.format = TableState.noDokuryo.format
-            view.emptyState.show(TableState.noDokuryo)
-        } else {
-            view.emptyState.hide()
-        }
-
         return cellDataArray.count
     }
 
@@ -112,6 +105,32 @@ extension DokuryoViewController: CellDeleteDelegate {
 extension DokuryoViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         return true
+    }
+}
+
+extension DokuryoViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate {
+
+    func verticalOffset(forEmptyDataSet scrollView: UIScrollView!) -> CGFloat {
+        return -60
+    }
+
+    func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
+        return UIImage(named: "Box")
+    }
+
+    func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "読了した本がありません", attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.boldSystemFont(ofSize: 20)
+        ])
+    }
+
+    func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
+        return NSAttributedString(string: "読了したら追加されます", attributes: [
+            .foregroundColor: UIColor.gray,
+            .font: UIFont.systemFont(ofSize: 15)
+        ])
+
     }
 }
 

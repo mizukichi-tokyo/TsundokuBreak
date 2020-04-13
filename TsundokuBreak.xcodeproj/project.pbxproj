@@ -21,9 +21,6 @@
 		D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDFE243334570062B0F3 /* DokuryoViewController.swift */; };
 		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
 		D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */; };
-		D3257255244465E50038582E /* TableState.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3257254244465E50038582E /* TableState.swift */; };
-		D32572572444660D0038582E /* TableState+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32572562444660D0038582E /* TableState+Format.swift */; };
-		D32572592444668A0038582E /* String+Hex.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32572582444668A0038582E /* String+Hex.swift */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -99,9 +96,6 @@
 		D320FDFE243334570062B0F3 /* DokuryoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewController.swift; sourceTree = "<group>"; };
 		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
 		D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReadableArea.swift; sourceTree = "<group>"; };
-		D3257254244465E50038582E /* TableState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableState.swift; sourceTree = "<group>"; };
-		D32572562444660D0038582E /* TableState+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TableState+Format.swift"; sourceTree = "<group>"; };
-		D32572582444668A0038582E /* String+Hex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Hex.swift"; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -222,16 +216,6 @@
 			path = DokuryoView;
 			sourceTree = "<group>";
 		};
-		D3257253244465BA0038582E /* EmptyState */ = {
-			isa = PBXGroup;
-			children = (
-				D3257254244465E50038582E /* TableState.swift */,
-				D32572562444660D0038582E /* TableState+Format.swift */,
-				D32572582444668A0038582E /* String+Hex.swift */,
-			);
-			path = EmptyState;
-			sourceTree = "<group>";
-		};
 		D32B48E9242F3736006F3AAA /* TabDataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -309,7 +293,6 @@
 				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
 				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
 				D358536A244047E9004806FF /* CellData.swift */,
-				D3257253244465BA0038582E /* EmptyState */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -779,13 +762,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D3257255244465E50038582E /* TableState.swift in Sources */,
 				D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */,
 				D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */,
 				D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */,
 				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,
 				D32B48EF242F376A006F3AAA /* TabItem.swift in Sources */,
-				D32572572444660D0038582E /* TableState+Format.swift in Sources */,
 				D3356B9124435E93006A8DBB /* CellDeleteDelegate.swift in Sources */,
 				D3356B8E244343F2006A8DBB /* DokuryoTableViewCell.swift in Sources */,
 				D32E6BF1242F8B890071EBC3 /* Injectable.swift in Sources */,
@@ -793,7 +774,6 @@
 				D33166A42440D1B100C2048E /* BalloonPickerView.swift in Sources */,
 				D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */,
 				D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */,
-				D32572592444668A0038582E /* String+Hex.swift in Sources */,
 				D320FDF9243315900062B0F3 /* BarCodeReaderViewModel.swift in Sources */,
 				D32E6BFC242F8FD90071EBC3 /* TotalCountModel.swift in Sources */,
 				D358536B244047E9004806FF /* CellData.swift in Sources */,

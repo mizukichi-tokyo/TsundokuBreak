@@ -6,7 +6,7 @@ PODS:
     - Player (= 0.13.0)
   - CDAlertView (0.10.0)
   - ColorMatchTabs (3.3)
-  - EmptyStateKit (1.1.0)
+  - DZNEmptyDataSet (1.8.1)
   - FaveButton (3.2.1)
   - LicensePlist (2.15.1)
   - MaterialComponents/AnimationTiming (108.0.0)
@@ -86,7 +86,7 @@ DEPENDENCIES:
   - Cards
   - CDAlertView
   - ColorMatchTabs
-  - EmptyStateKit
+  - DZNEmptyDataSet
   - FaveButton
   - LicensePlist
   - MaterialComponents/Buttons
@@ -109,7 +109,7 @@ SPEC REPOS:
     - Cards
     - CDAlertView
     - ColorMatchTabs
-    - EmptyStateKit
+    - DZNEmptyDataSet
     - FaveButton
     - LicensePlist
     - MaterialComponents
@@ -137,7 +137,7 @@ SPEC CHECKSUMS:
   Cards: 45ae6bd0eca7b5e8016d3b6cb30b60b04753f68f
   CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
   ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
-  EmptyStateKit: dc41e9ce5c6089f67a49d063bce73ade9f2ba73f
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
   FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
   LicensePlist: 9fb7c521b431f94ea665046c15ed5f392583afbd
   MaterialComponents: 5ce7930b30fafd4c1ba402abf8e460dbde90cb94
@@ -159,6 +159,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: c7192ae07a61d48c194e93c4f1e7bd12db414238
+PODFILE CHECKSUM: 8c95601f28de53911389aba58d7281a3a7a0eaac
 
 COCOAPODS: 1.9.1

@@ -21,6 +21,12 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tBX-sV-5oO">
                     <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="Mz9-1W-nVz"/>
+                        <outlet property="delegate" destination="-1" id="HcA-yI-CMI"/>
+                        <outlet property="emptyDataSetDelegate" destination="-1" id="YRg-MD-eTr"/>
+                        <outlet property="emptyDataSetSource" destination="-1" id="Uz0-7r-fgh"/>
+                    </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fZx-nF-7yz" customClass="MDCFloatingButton">
                     <rect key="frame" x="182" y="649.33333333333337" width="50" height="50"/>
