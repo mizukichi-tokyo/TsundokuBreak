@@ -116,7 +116,7 @@ extension DokuryoViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     }
 
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
-        return UIImage(named: "Box")
+        return R.image.box()
     }
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {

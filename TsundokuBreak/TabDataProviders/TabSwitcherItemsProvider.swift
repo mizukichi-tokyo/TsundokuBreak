@@ -6,16 +6,16 @@ class TabItemsProvider {
     static let items = {
         return [
             TabItem(
-                title: "積読リスト",
+                title: R.string.tabSwitcherItemsProvider.tsundokuList(),
                 tintColor: UIColor.rgba(red: 253, green: 150, blue: 187, alpha: 1),
-                normalImage: UIImage(named: "tsundoku_normal")!,
-                highlightedImage: UIImage(named: "tsundoku_highlighted")!
+                normalImage: R.image.tsundoku_normal()!,
+                highlightedImage: R.image.tsundoku_highlighted()!
             ),
             TabItem(
-                title: "読了リスト",
+                title: R.string.tabSwitcherItemsProvider.tsundokuList(),
                 tintColor: UIColor.rgba(red: 245, green: 154, blue: 95, alpha: 1),
-                normalImage: UIImage(named: "check_normal")!,
-                highlightedImage: UIImage(named: "check_highlighted")!
+                normalImage: R.image.check_normal()!,
+                highlightedImage: R.image.check_highlighted()!
             )
         ]
     }()

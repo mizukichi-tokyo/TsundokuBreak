@@ -218,7 +218,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
                     self.thumbnailUrl = url
 
                 } else {
-                    url = "https://f.easyuploader.app/eu-prd/upload/20200411045606_306332414a534e397464.png"
+                    url = "https://f.easyuploader.app/eu-prd/upload/20200414034116_36323844636e77646250.png"
                     urlRelay.accept(URL(string: url)!)
                     self.thumbnailUrl = url
                 }

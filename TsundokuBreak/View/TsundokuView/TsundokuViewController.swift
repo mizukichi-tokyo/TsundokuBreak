@@ -133,7 +133,7 @@ extension TsundokuViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
 
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
-        return UIImage(named: "Search")
+        return R.image.search()
     }
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {

@@ -22,6 +22,7 @@
 		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
 		D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */; };
 		D325725F2444C8660038582E /* rgbConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D325725E2444C8660038582E /* rgbConverter.swift */; };
+		D32572612444E4670038582E /* TabSwitcherItemsProvider.strings in Resources */ = {isa = PBXBuildFile; fileRef = D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -94,6 +95,7 @@
 		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
 		D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReadableArea.swift; sourceTree = "<group>"; };
 		D325725E2444C8660038582E /* rgbConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgbConverter.swift; sourceTree = "<group>"; };
+		D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabSwitcherItemsProvider.strings; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -286,6 +288,7 @@
 		D35AFAB82429C0D60018EE9E /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */,
 				D3585368243FC36B004806FF /* TsundokuView.strings */,
 				D3356B8A24433631006A8DBB /* DokuryoView.strings */,
 			);
@@ -539,6 +542,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D32572612444E4670038582E /* TabSwitcherItemsProvider.strings in Resources */,
 				D3585369243FC36B004806FF /* TsundokuView.strings in Resources */,
 				D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */,
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,

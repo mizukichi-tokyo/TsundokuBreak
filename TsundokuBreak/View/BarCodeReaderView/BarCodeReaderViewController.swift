@@ -226,7 +226,8 @@ extension BarCodeReaderViewController {
     // swiftlint:disable identifier_name
     func barCodeImageSet(x: CGFloat, y: CGFloat, width: CGFloat, height: CGFloat) {
 
-        let barcodeImage: UIImage = UIImage(imageLiteralResourceName: "barcode")
+        let barcodeImage: UIImage = R.image.barcode()!
+
         let imageView = UIImageView(image: barcodeImage)
         imageView.frame = CGRect(x: cameraView.frame.size.width * x, y: cameraView.frame.size.height * y, width: cameraView.frame.size.width * width, height: cameraView.frame.size.height * height)
         cameraView.addSubview(imageView)

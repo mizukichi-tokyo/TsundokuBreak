@@ -1,0 +1,9 @@
+/* 
+  TabSwitcherItemsProvider.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"tsundokuList" = "積読リスト";
+"dokuryoList" = "読了リスト";
