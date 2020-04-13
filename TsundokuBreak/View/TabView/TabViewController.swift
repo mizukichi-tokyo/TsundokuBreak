@@ -18,7 +18,7 @@ class TabViewController: ColorMatchTabsViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        titleLabel.font = UIFont.boldSystemFont(ofSize: titleLabel.font.pointSize)
+        titleLabel.font = UIFont.systemFont(ofSize: 20, weight: UIFont.Weight(rawValue: 10))
 
         colorMatchTabDataSource = self
     }
