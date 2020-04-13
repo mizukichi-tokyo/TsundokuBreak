@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "books_dark.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
+      "filename" : "check_highlighted.png",
       "idiom" : "universal",
       "scale" : "2x"
     },

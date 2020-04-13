@@ -21,6 +21,7 @@
 		D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDFE243334570062B0F3 /* DokuryoViewController.swift */; };
 		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
 		D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */; };
+		D325725F2444C8660038582E /* rgbConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D325725E2444C8660038582E /* rgbConverter.swift */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -92,6 +93,7 @@
 		D320FDFE243334570062B0F3 /* DokuryoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewController.swift; sourceTree = "<group>"; };
 		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
 		D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReadableArea.swift; sourceTree = "<group>"; };
+		D325725E2444C8660038582E /* rgbConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgbConverter.swift; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -208,6 +210,14 @@
 			path = DokuryoView;
 			sourceTree = "<group>";
 		};
+		D325725D2444C8550038582E /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				D325725E2444C8660038582E /* rgbConverter.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		D32B48E9242F3736006F3AAA /* TabDataProviders */ = {
 			isa = PBXGroup;
 			children = (
@@ -269,11 +279,6 @@
 		D35AFAB72429C0C30018EE9E /* Struct */ = {
 			isa = PBXGroup;
 			children = (
-				D32B48EE242F376A006F3AAA /* TabItem.swift */,
-				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
-				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
-				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
-				D358536A244047E9004806FF /* CellData.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -377,10 +382,16 @@
 		D3E78A8A24289D4900440CAF /* TsundokuBreak */ = {
 			isa = PBXGroup;
 			children = (
+				D325725D2444C8550038582E /* Extension */,
 				D3808111243E30E600D6A592 /* RealmSwift */,
 				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB82429C0D60018EE9E /* Strings */,
 				D35AFAB72429C0C30018EE9E /* Struct */,
+				D32B48EE242F376A006F3AAA /* TabItem.swift */,
+				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
+				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
+				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
+				D358536A244047E9004806FF /* CellData.swift */,
 				D35AFAB92429C0EA0018EE9E /* Protocol */,
 				D35AFAB52429C07E0018EE9E /* Model */,
 				D35AFAB62429C08E0018EE9E /* ViewModel */,
@@ -768,6 +779,7 @@
 				D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */,
 				D32F3D1D24421E3600FC7BF0 /* CellValueChangeDelegate.swift in Sources */,
 				D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */,
+				D325725F2444C8660038582E /* rgbConverter.swift in Sources */,
 				D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */,
 				D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */,
 				D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */,
