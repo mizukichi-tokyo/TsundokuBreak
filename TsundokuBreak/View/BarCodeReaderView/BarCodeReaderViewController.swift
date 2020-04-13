@@ -55,6 +55,7 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
         self.isbnRelay.accept("9784873116594")
     }
 
+    let cameraAuthStatus = AVCaptureDevice.authorizationStatus(for: .video)
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
 
@@ -172,6 +173,53 @@ extension BarCodeReaderViewController {
 }
 
 extension BarCodeReaderViewController {
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+
+        checkPermission()
+
+        NotificationCenter.default.addObserver(self, selector: #selector(checkPermission), name: UIApplication.willEnterForegroundNotification, object: nil)
+    }
+
+    @objc private func checkPermission() {
+        switch cameraAuthStatus {
+        case .notDetermined:
+            requestCameraPermission()
+        case .restricted, .denied:
+            alertCameraAccessNeeded()
+        case .authorized:
+            break
+        @unknown default:
+            alertCameraAccessNeeded()
+        }
+    }
+
+    func requestCameraPermission() {
+        AVCaptureDevice.requestAccess(for: .video, completionHandler: {accessGranted in
+            print("camera permission ", accessGranted)
+        })
+    }
+
+    func alertCameraAccessNeeded() {
+        let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
+
+        let alert = UIAlertController(
+            title: NSLocalizedString("need camera access", comment: ""),
+            message: NSLocalizedString("camera usage perpose", comment: ""),
+            preferredStyle: UIAlertController.Style.alert
+        )
+
+        alert.addAction(UIAlertAction(title: NSLocalizedString("don't allow", comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { (_) -> Void in
+            UIApplication.shared.open(settingsAppURL, options: [:], completionHandler: nil)
+        }))
+
+        present(alert, animated: true, completion: nil)
+    }
+}
+
+extension BarCodeReaderViewController {
+
     func barCodeReader(_ barCodeReadableArea: BarCodeReadableArea) {
         // swiftlint:disable identifier_name
         let x: CGFloat = barCodeReadableArea.x
