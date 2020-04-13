@@ -50,14 +50,6 @@ name: DZNEmptyDataSet, nameSpecified:
 body: The MIT License (MIT…
 version: 1.8.1
 
-name: EmptyStateKit, nameSpecified: 
-body: Copyright (c) 2019 a…
-version: 1.1.0
-
-name: EmptyStateKit, nameSpecified: 
-body: Copyright (c) 2019 a…
-version: 1.1.0
-
 name: FaveButton, nameSpecified: 
 body: The MIT License (MIT…
 version: 3.2.1
