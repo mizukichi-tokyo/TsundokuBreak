@@ -151,7 +151,7 @@ extension BarCodeReaderViewController {
                                 type: .warning
         )
         let doneAction = CDAlertViewAction(
-            title: "OK! 💪",
+            title: "OK!",
             handler: { _ in self.restartCapture()}
         )
         alert.add(action: doneAction)

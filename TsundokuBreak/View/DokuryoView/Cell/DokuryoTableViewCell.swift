@@ -79,7 +79,7 @@ class DokuryoTableViewCell: UITableViewCell {
             handler: { _ in self.resetCell()}
         )
         let doneAction = CDAlertViewAction(
-            title: "OK! 💪",
+            title: "OK!",
             handler: { _ in self.deleteCell()}
         )
         alert.add(action: cancelAction)
