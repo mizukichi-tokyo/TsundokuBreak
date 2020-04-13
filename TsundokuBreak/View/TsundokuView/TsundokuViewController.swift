@@ -52,6 +52,7 @@ class TsundokuViewController: UIViewController, Injectable {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setup()
     }
 

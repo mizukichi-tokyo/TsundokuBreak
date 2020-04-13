@@ -7,15 +7,15 @@ class TabItemsProvider {
         return [
             TabItem(
                 title: "積読リスト",
-                tintColor: UIColor(red: 0.51, green: 0.72, blue: 0.25, alpha: 1.00),
-                normalImage: UIImage(named: "products_normal")!,
-                highlightedImage: UIImage(named: "products_highlighted")!
+                tintColor: UIColor.rgba(red: 253, green: 150, blue: 187, alpha: 1),
+                normalImage: UIImage(named: "tsundoku_normal")!,
+                highlightedImage: UIImage(named: "tsundoku_highlighted")!
             ),
             TabItem(
                 title: "読了リスト",
-                tintColor: UIColor(red: 0.15, green: 0.67, blue: 0.99, alpha: 1.00),
-                normalImage: UIImage(named: "venues_normal")!,
-                highlightedImage: UIImage(named: "venues_highlighted")!
+                tintColor: UIColor.rgba(red: 245, green: 154, blue: 95, alpha: 1),
+                normalImage: UIImage(named: "check_normal")!,
+                highlightedImage: UIImage(named: "check_highlighted")!
             )
         ]
     }()
