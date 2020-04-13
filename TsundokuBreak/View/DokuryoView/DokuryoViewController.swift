@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
+import EmptyStateKit
 
 class DokuryoViewController: UIViewController, Injectable {
 
@@ -76,6 +77,14 @@ extension DokuryoViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        if cellDataArray.count == 0 {
+            view.emptyState.format = TableState.noDokuryo.format
+            view.emptyState.show(TableState.noDokuryo)
+        } else {
+            view.emptyState.hide()
+        }
+
         return cellDataArray.count
     }
 

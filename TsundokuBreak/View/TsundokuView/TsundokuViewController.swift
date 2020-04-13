@@ -12,6 +12,7 @@ import RxSwift
 import RxCocoa
 import RealmSwift
 import RxRealm
+import EmptyStateKit
 
 class TsundokuViewController: UIViewController, Injectable {
 
@@ -83,6 +84,15 @@ extension TsundokuViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        if cellDataArray.count == 0 {
+            view.emptyState.format = TableState.noTsundoku.format
+            view.emptyState.delegate = self
+            view.emptyState.show(TableState.noTsundoku)
+        } else {
+            view.emptyState.hide()
+        }
+
         return cellDataArray.count
     }
 
@@ -110,6 +120,13 @@ extension TsundokuViewController: CellValueChangeDelegate {
     }
 }
 
+extension TsundokuViewController: EmptyStateDelegate {
+
+    func emptyState(emptyState: EmptyState, didPressButton button: UIButton) {
+        //        view.emptyState.hide()
+        self.view.window?.rootViewController?.present(BarCodeReaderViewController.makeVC(), animated: true, completion: nil)
+    }
+}
 extension TsundokuViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

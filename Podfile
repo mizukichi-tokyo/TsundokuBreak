@@ -22,6 +22,7 @@ target 'TsundokuBreak' do
     pod "RealmSwift"
     pod "RxRealm"
     pod 'FaveButton'
+    pod 'EmptyStateKit'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths
