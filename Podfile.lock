@@ -54,6 +54,7 @@ PODS:
     - Moya/Core (= 14.0.0)
   - Moya/Core (14.0.0):
     - Alamofire (~> 5.0)
+  - Onboard (2.3.3)
   - R.swift (5.1.0):
     - R.swift.Library (~> 5.1.0)
   - R.swift.Library (5.1.0)
@@ -88,6 +89,7 @@ DEPENDENCIES:
   - MaterialComponents/Buttons
   - MBProgressHUD
   - Moya
+  - Onboard
   - R.swift
   - RealmSwift
   - RxBlocking
@@ -112,6 +114,7 @@ SPEC REPOS:
     - MDFInternationalization
     - MDFTextAccessibility
     - Moya
+    - Onboard
     - R.swift
     - R.swift.Library
     - Realm
@@ -138,6 +141,7 @@ SPEC CHECKSUMS:
   MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
   MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
   Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
   R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
   R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
   Realm: e125f464884cda953ebefe70c671b75b03b81b9b
@@ -151,6 +155,6 @@ SPEC CHECKSUMS:
   SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
   SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
 
-PODFILE CHECKSUM: 452435f5b80e6fe32d255f00d5e2f0053f587b48
+PODFILE CHECKSUM: 716072503b9681142371a732c5f7fdc31fdb86a8
 
 COCOAPODS: 1.9.1

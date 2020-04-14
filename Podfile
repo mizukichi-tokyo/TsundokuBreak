@@ -22,6 +22,7 @@ target 'TsundokuBreak' do
     pod "RxRealm"
     pod 'FaveButton'
     pod 'DZNEmptyDataSet'
+    pod 'Onboard'
 
   target 'TsundokuBreakTests' do
     inherit! :search_paths

@@ -47,6 +47,8 @@
 		D3356B8E244343F2006A8DBB /* DokuryoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3356B8C244343F2006A8DBB /* DokuryoTableViewCell.swift */; };
 		D3356B8F244343F2006A8DBB /* DokuryoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3356B8D244343F2006A8DBB /* DokuryoTableViewCell.xib */; };
 		D3356B9124435E93006A8DBB /* CellDeleteDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3356B9024435E93006A8DBB /* CellDeleteDelegate.swift */; };
+		D351BFCC244614B300BB7C50 /* UIImageResize.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351BFCB244614B300BB7C50 /* UIImageResize.swift */; };
+		D351BFD02446174300BB7C50 /* walkthrouh.gif in Resources */ = {isa = PBXBuildFile; fileRef = D351BFCF2446174300BB7C50 /* walkthrouh.gif */; };
 		D3585369243FC36B004806FF /* TsundokuView.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3585368243FC36B004806FF /* TsundokuView.strings */; };
 		D358536B244047E9004806FF /* CellData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D358536A244047E9004806FF /* CellData.swift */; };
 		D35AFAAD2428AF290018EE9E /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35AFAAC2428AF290018EE9E /* R.generated.swift */; };
@@ -128,6 +130,8 @@
 		D3356B8C244343F2006A8DBB /* DokuryoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoTableViewCell.swift; sourceTree = "<group>"; };
 		D3356B8D244343F2006A8DBB /* DokuryoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoTableViewCell.xib; sourceTree = "<group>"; };
 		D3356B9024435E93006A8DBB /* CellDeleteDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellDeleteDelegate.swift; sourceTree = "<group>"; };
+		D351BFCB244614B300BB7C50 /* UIImageResize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageResize.swift; sourceTree = "<group>"; };
+		D351BFCF2446174300BB7C50 /* walkthrouh.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = walkthrouh.gif; sourceTree = "<group>"; };
 		D3585368243FC36B004806FF /* TsundokuView.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuView.strings; sourceTree = "<group>"; };
 		D358536A244047E9004806FF /* CellData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellData.swift; sourceTree = "<group>"; };
 		D35AFAAC2428AF290018EE9E /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				D325725E2444C8660038582E /* rgbConverter.swift */,
+				D351BFCB244614B300BB7C50 /* UIImageResize.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 		D332B5D7243E20AD00B24D4D /* gif */ = {
 			isa = PBXGroup;
 			children = (
+				D351BFCF2446174300BB7C50 /* walkthrouh.gif */,
 				D3AA182B243C53450020CCCC /* loading.gif */,
 				D3AA1829243C4B700020CCCC /* lupe.gif */,
 			);
@@ -414,12 +420,12 @@
 		D3E78A8A24289D4900440CAF /* TsundokuBreak */ = {
 			isa = PBXGroup;
 			children = (
-				D325725D2444C8550038582E /* Extension */,
-				D3808111243E30E600D6A592 /* RealmSwift */,
-				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB82429C0D60018EE9E /* Strings */,
 				D35AFAB72429C0C30018EE9E /* Struct */,
 				D35AFAB92429C0EA0018EE9E /* Protocol */,
+				D325725D2444C8550038582E /* Extension */,
+				D3808111243E30E600D6A592 /* RealmSwift */,
+				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB52429C07E0018EE9E /* Model */,
 				D35AFAB62429C08E0018EE9E /* ViewModel */,
 				D35AFABA2429C14D0018EE9E /* View */,
@@ -588,6 +594,7 @@
 				D31405CD2445B5F8007BF4FA /* BarCodeReaderModel.strings in Resources */,
 				D3AA182A243C4B700020CCCC /* lupe.gif in Resources */,
 				D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */,
+				D351BFD02446174300BB7C50 /* walkthrouh.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -789,6 +796,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D32B48EC242F3745006F3AAA /* TabSwitcherItemsProvider.swift in Sources */,
+				D351BFCC244614B300BB7C50 /* UIImageResize.swift in Sources */,
 				D32B48ED242F3745006F3AAA /* ControllersProvider.swift in Sources */,
 				D320FE00243334570062B0F3 /* DokuryoViewController.swift in Sources */,
 				D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */,

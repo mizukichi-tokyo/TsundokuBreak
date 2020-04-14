@@ -205,7 +205,10 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
 
                 var url: String
                 if var url = urlString {
-                    url = R.string.barCodeReaderModel.https() + url.dropFirst(4)
+                    let first5 = url.prefix(5)
+                    if first5 != R.string.barCodeReaderModel.https() {
+                        url = R.string.barCodeReaderModel.https() + url.dropFirst(4)
+                    }
                     urlRelay.accept(URL(string: url)!)
                     self.thumbnailUrl = url
 

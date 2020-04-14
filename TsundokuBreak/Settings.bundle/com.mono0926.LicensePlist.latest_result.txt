@@ -104,6 +104,14 @@ name: Moya, nameSpecified:
 body: The MIT License (MIT…
 version: 14.0.0
 
+name: Onboard, nameSpecified: 
+body: Copyright (c) 2014 M…
+version: 2.3.3
+
+name: Onboard, nameSpecified: 
+body: Copyright (c) 2014 M…
+version: 2.3.3
+
 name: R.swift, nameSpecified: 
 body: The MIT License (MIT…
 version: 5.1.0
