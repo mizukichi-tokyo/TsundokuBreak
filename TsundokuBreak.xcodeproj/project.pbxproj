@@ -10,9 +10,17 @@
 		2446BF2BD84AFFEEB6559C9F /* Pods_TsundokuBreak_TsundokuBreakUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2FECEEE1F6EB33E21311149 /* Pods_TsundokuBreak_TsundokuBreakUITests.framework */; };
 		B206B2BBA9562D05BFD4E3A5 /* Pods_TsundokuBreak.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8953B91220F65947BBB51A3F /* Pods_TsundokuBreak.framework */; };
 		B25B29122F51D1E89BD35B7C /* Pods_TsundokuBreakTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E393BE0FF29D18021969D6E /* Pods_TsundokuBreakTests.framework */; };
+		D31405C52445A9FD007BF4FA /* TsundokuModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405C42445A9FD007BF4FA /* TsundokuModel.strings */; };
+		D31405C92445AAB0007BF4FA /* DokuryoModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405C82445AAB0007BF4FA /* DokuryoModel.strings */; };
+		D31405CD2445B5F8007BF4FA /* BarCodeReaderModel.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405CC2445B5F8007BF4FA /* BarCodeReaderModel.strings */; };
+		D31405CF2445B82B007BF4FA /* TsundokuViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405CE2445B82B007BF4FA /* TsundokuViewController.strings */; };
+		D31405D12445B8FA007BF4FA /* TsundokuTableViewCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405D02445B8FA007BF4FA /* TsundokuTableViewCell.strings */; };
+		D31405D32445BB02007BF4FA /* DokuryoViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405D22445BB02007BF4FA /* DokuryoViewController.strings */; };
+		D31405D52445BBB8007BF4FA /* DokuryoTableViewCell.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405D42445BBB8007BF4FA /* DokuryoTableViewCell.strings */; };
+		D31405D72445BDAA007BF4FA /* BarCodeReaderViewController.strings in Resources */ = {isa = PBXBuildFile; fileRef = D31405D62445BDAA007BF4FA /* BarCodeReaderViewController.strings */; };
 		D320FDEF2433107D0062B0F3 /* TsundokuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */; };
 		D320FDF1243313660062B0F3 /* DokuryoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF0243313660062B0F3 /* DokuryoModel.swift */; };
-		D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF22433139C0062B0F3 /* BarCodeReader.swift */; };
+		D320FDF32433139C0062B0F3 /* BarCodeReaderModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF22433139C0062B0F3 /* BarCodeReaderModel.swift */; };
 		D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */; };
 		D320FDF72433157D0062B0F3 /* DokuryoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */; };
 		D320FDF9243315900062B0F3 /* BarCodeReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */; };
@@ -22,6 +30,7 @@
 		D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D320FDFF243334570062B0F3 /* DokuryoViewController.xib */; };
 		D320FE032435A7720062B0F3 /* BarCodeReadableArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */; };
 		D325725F2444C8660038582E /* rgbConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D325725E2444C8660038582E /* rgbConverter.swift */; };
+		D32572612444E4670038582E /* TabSwitcherItemsProvider.strings in Resources */ = {isa = PBXBuildFile; fileRef = D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */; };
 		D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = D32B48DA242C56D3006F3AAA /* Settings.bundle */; };
 		D32B48E2242F036A006F3AAA /* BarCodeReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */; };
 		D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */; };
@@ -82,9 +91,17 @@
 		8D5DB48AACE17C3F469075CD /* Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.release.xcconfig"; sourceTree = "<group>"; };
 		A7CC1E48F6BC90E4414EFD94 /* Pods-TsundokuBreakTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreakTests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreakTests/Pods-TsundokuBreakTests.debug.xcconfig"; sourceTree = "<group>"; };
 		CE78ACBFAC2A057650901A42 /* Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; path = "Target Support Files/Pods-TsundokuBreak-TsundokuBreakUITests/Pods-TsundokuBreak-TsundokuBreakUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D31405C42445A9FD007BF4FA /* TsundokuModel.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuModel.strings; sourceTree = "<group>"; };
+		D31405C82445AAB0007BF4FA /* DokuryoModel.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DokuryoModel.strings; sourceTree = "<group>"; };
+		D31405CC2445B5F8007BF4FA /* BarCodeReaderModel.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BarCodeReaderModel.strings; sourceTree = "<group>"; };
+		D31405CE2445B82B007BF4FA /* TsundokuViewController.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuViewController.strings; sourceTree = "<group>"; };
+		D31405D02445B8FA007BF4FA /* TsundokuTableViewCell.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TsundokuTableViewCell.strings; sourceTree = "<group>"; };
+		D31405D22445BB02007BF4FA /* DokuryoViewController.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DokuryoViewController.strings; sourceTree = "<group>"; };
+		D31405D42445BBB8007BF4FA /* DokuryoTableViewCell.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = DokuryoTableViewCell.strings; sourceTree = "<group>"; };
+		D31405D62445BDAA007BF4FA /* BarCodeReaderViewController.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = BarCodeReaderViewController.strings; sourceTree = "<group>"; };
 		D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuModel.swift; sourceTree = "<group>"; };
 		D320FDF0243313660062B0F3 /* DokuryoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoModel.swift; sourceTree = "<group>"; };
-		D320FDF22433139C0062B0F3 /* BarCodeReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReader.swift; sourceTree = "<group>"; };
+		D320FDF22433139C0062B0F3 /* BarCodeReaderModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderModel.swift; sourceTree = "<group>"; };
 		D320FDF42433156C0062B0F3 /* TsundokuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TsundokuViewModel.swift; sourceTree = "<group>"; };
 		D320FDF62433157D0062B0F3 /* DokuryoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DokuryoViewModel.swift; sourceTree = "<group>"; };
 		D320FDF8243315900062B0F3 /* BarCodeReaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewModel.swift; sourceTree = "<group>"; };
@@ -94,6 +111,7 @@
 		D320FDFF243334570062B0F3 /* DokuryoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DokuryoViewController.xib; sourceTree = "<group>"; };
 		D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReadableArea.swift; sourceTree = "<group>"; };
 		D325725E2444C8660038582E /* rgbConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = rgbConverter.swift; sourceTree = "<group>"; };
+		D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = TabSwitcherItemsProvider.strings; sourceTree = "<group>"; };
 		D32B48DA242C56D3006F3AAA /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = TsundokuBreak/Settings.bundle; sourceTree = "<group>"; };
 		D32B48E0242F036A006F3AAA /* BarCodeReaderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarCodeReaderViewController.swift; sourceTree = "<group>"; };
 		D32B48E1242F036A006F3AAA /* BarCodeReaderViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BarCodeReaderViewController.xib; sourceTree = "<group>"; };
@@ -261,7 +279,7 @@
 			children = (
 				D320FDEE2433107D0062B0F3 /* TsundokuModel.swift */,
 				D320FDF0243313660062B0F3 /* DokuryoModel.swift */,
-				D320FDF22433139C0062B0F3 /* BarCodeReader.swift */,
+				D320FDF22433139C0062B0F3 /* BarCodeReaderModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -279,6 +297,11 @@
 		D35AFAB72429C0C30018EE9E /* Struct */ = {
 			isa = PBXGroup;
 			children = (
+				D32B48EE242F376A006F3AAA /* TabItem.swift */,
+				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
+				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
+				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
+				D358536A244047E9004806FF /* CellData.swift */,
 			);
 			path = Struct;
 			sourceTree = "<group>";
@@ -286,8 +309,17 @@
 		D35AFAB82429C0D60018EE9E /* Strings */ = {
 			isa = PBXGroup;
 			children = (
+				D32572602444E4670038582E /* TabSwitcherItemsProvider.strings */,
 				D3585368243FC36B004806FF /* TsundokuView.strings */,
 				D3356B8A24433631006A8DBB /* DokuryoView.strings */,
+				D31405C42445A9FD007BF4FA /* TsundokuModel.strings */,
+				D31405C82445AAB0007BF4FA /* DokuryoModel.strings */,
+				D31405CC2445B5F8007BF4FA /* BarCodeReaderModel.strings */,
+				D31405CE2445B82B007BF4FA /* TsundokuViewController.strings */,
+				D31405D02445B8FA007BF4FA /* TsundokuTableViewCell.strings */,
+				D31405D22445BB02007BF4FA /* DokuryoViewController.strings */,
+				D31405D42445BBB8007BF4FA /* DokuryoTableViewCell.strings */,
+				D31405D62445BDAA007BF4FA /* BarCodeReaderViewController.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -387,11 +419,6 @@
 				D32B48E9242F3736006F3AAA /* TabDataProviders */,
 				D35AFAB82429C0D60018EE9E /* Strings */,
 				D35AFAB72429C0C30018EE9E /* Struct */,
-				D32B48EE242F376A006F3AAA /* TabItem.swift */,
-				D35AFABB2429C4830018EE9E /* BookInfo.swift */,
-				D35AFABD2429C62E0018EE9E /* GoogleBooksAPIs.swift */,
-				D320FE022435A7720062B0F3 /* BarCodeReadableArea.swift */,
-				D358536A244047E9004806FF /* CellData.swift */,
 				D35AFAB92429C0EA0018EE9E /* Protocol */,
 				D35AFAB52429C07E0018EE9E /* Model */,
 				D35AFAB62429C08E0018EE9E /* ViewModel */,
@@ -539,7 +566,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D31405CF2445B82B007BF4FA /* TsundokuViewController.strings in Resources */,
+				D32572612444E4670038582E /* TabSwitcherItemsProvider.strings in Resources */,
+				D31405C52445A9FD007BF4FA /* TsundokuModel.strings in Resources */,
+				D31405D52445BBB8007BF4FA /* DokuryoTableViewCell.strings in Resources */,
 				D3585369243FC36B004806FF /* TsundokuView.strings in Resources */,
+				D31405D12445B8FA007BF4FA /* TsundokuTableViewCell.strings in Resources */,
 				D32B48E3242F036A006F3AAA /* BarCodeReaderViewController.xib in Resources */,
 				D32B48DB242C56D3006F3AAA /* Settings.bundle in Resources */,
 				D3AC46C4242F595A00C517A5 /* MainStoryboard.storyboard in Resources */,
@@ -547,9 +579,13 @@
 				D3E78A9824289D4A00440CAF /* LaunchScreen.storyboard in Resources */,
 				D394802B243F411D00307A1A /* TsundokuTableViewCell.xib in Resources */,
 				D320FE01243334570062B0F3 /* DokuryoViewController.xib in Resources */,
+				D31405C92445AAB0007BF4FA /* DokuryoModel.strings in Resources */,
+				D31405D32445BB02007BF4FA /* DokuryoViewController.strings in Resources */,
+				D31405D72445BDAA007BF4FA /* BarCodeReaderViewController.strings in Resources */,
 				D3E78A9524289D4A00440CAF /* Assets.xcassets in Resources */,
 				D3AA182C243C53450020CCCC /* loading.gif in Resources */,
 				D3356B8B24433631006A8DBB /* DokuryoView.strings in Resources */,
+				D31405CD2445B5F8007BF4FA /* BarCodeReaderModel.strings in Resources */,
 				D3AA182A243C4B700020CCCC /* lupe.gif in Resources */,
 				D320FDFD243333FF0062B0F3 /* TsundokuViewController.xib in Resources */,
 			);
@@ -775,7 +811,7 @@
 				D33166AA2440D1EC00C2048E /* ThumbView.swift in Sources */,
 				D35AFABC2429C4830018EE9E /* BookInfo.swift in Sources */,
 				D3E78A8E24289D4900440CAF /* SceneDelegate.swift in Sources */,
-				D320FDF32433139C0062B0F3 /* BarCodeReader.swift in Sources */,
+				D320FDF32433139C0062B0F3 /* BarCodeReaderModel.swift in Sources */,
 				D320FDFC243333FF0062B0F3 /* TsundokuViewController.swift in Sources */,
 				D32F3D1D24421E3600FC7BF0 /* CellValueChangeDelegate.swift in Sources */,
 				D320FDF52433156C0062B0F3 /* TsundokuViewModel.swift in Sources */,

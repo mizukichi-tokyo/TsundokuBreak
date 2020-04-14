@@ -21,7 +21,7 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
     private let disposeBag = DisposeBag()
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
-            bookImage.image = UIImage.gif(name: "loading")
+            bookImage.image = UIImage.gif(name: R.string.tsundokuTableViewCell.gifloading())
         }
     }
 
@@ -36,7 +36,11 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.8) {
             //print("2.0秒後に実行")
             self.delegate?.changeDokuryoFlag(indexPathRow: self.indexPathRowTag!)
-            let alert = CDAlertView(title: "読了おめでとう！", message: "読了リストに本を追加しました", type: .custom(image: UIImage(named: "popper")!))
+            let alert = CDAlertView(
+                title: R.string.tsundokuTableViewCell.alertTitle(),
+                message: R.string.tsundokuTableViewCell.alertDescription(),
+                type: .custom(image: R.image.popper()!)
+            )
             alert.circleFillColor = UIColor.systemGray5
             alert.hideAnimationDuration = 0.88
             alert.show()
@@ -64,7 +68,7 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         readPageRelay
             .subscribe(onNext: { [weak self] readPage in
                 guard let self = self else {return}
-                self.pageCountLabel.text = "読書進捗: "+String(readPage)+"/"+String(self.pageCount)
+                self.pageCountLabel.text = R.string.tsundokuTableViewCell.dokushoSintyoku()+String(readPage)+"/"+String(self.pageCount)
             })
             .disposed(by: disposeBag)
 
@@ -77,13 +81,13 @@ class TsundokuTableViewCell: UITableViewCell, FaveButtonDelegate {
         setPicker(cellData)
         setCheckButton()
         pageCount = cellData.pageCount
-        pageCountLabel.text = "読書進捗: "+String(cellData.readPage)+"/"+String(pageCount)
+        pageCountLabel.text = R.string.tsundokuTableViewCell.dokushoSintyoku()+String(cellData.readPage)+"/"+String(pageCount)
     }
 
     private func setImageUrl(_ urlString: String) {
         let url = URL(string: urlString)!
         let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
-        let placeFolder = UIImage.gif(name: "loading")
+        let placeFolder = UIImage.gif(name: R.string.tsundokuTableViewCell.gifloading())
         bookImage.af.setImage(
             withURL: url,
             placeholderImage: placeFolder,

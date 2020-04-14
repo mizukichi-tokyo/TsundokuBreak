@@ -17,7 +17,7 @@ class DokuryoTableViewCell: UITableViewCell {
 
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
-            bookImage.image = UIImage.gif(name: "loading")
+            bookImage.image = UIImage.gif(name: R.string.dokuryoTableViewCell.loading())
         }
     }
     @IBOutlet weak var titleLabel: UILabel!
@@ -60,7 +60,7 @@ class DokuryoTableViewCell: UITableViewCell {
     private func setImageUrl(_ urlString: String) {
         let url = URL(string: urlString)!
         let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
-        let placeFolder = UIImage.gif(name: "loading")
+        let placeFolder = UIImage.gif(name: R.string.dokuryoTableViewCell.loading())
         bookImage.af.setImage(
             withURL: url,
             placeholderImage: placeFolder,
@@ -70,16 +70,17 @@ class DokuryoTableViewCell: UITableViewCell {
     }
 
     private func doAlert() {
-        let alert = CDAlertView(title: "本当に削除しますか？",
-                                message: "一度削除したら元に戻りません",
-                                type: .warning
+        let alert = CDAlertView(
+            title: R.string.dokuryoTableViewCell.alertTitle(),
+            message: R.string.dokuryoTableViewCell.alertDescription(),
+            type: .warning
         )
         let cancelAction = CDAlertViewAction(
-            title: "やめます",
+            title: R.string.dokuryoTableViewCell.cancel(),
             handler: { _ in self.resetCell()}
         )
         let doneAction = CDAlertViewAction(
-            title: "OK!",
+            title: R.string.dokuryoTableViewCell.ok(),
             handler: { _ in self.deleteCell()}
         )
         alert.add(action: cancelAction)

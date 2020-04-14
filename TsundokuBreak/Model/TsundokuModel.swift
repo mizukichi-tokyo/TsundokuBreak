@@ -42,7 +42,7 @@ final class  TsundokuModel: TsundokuModelType, Injectable {
         let realm = createRealm()
         print(Realm.Configuration.defaultConfiguration.fileURL!)
 
-        records = realm.objects(Record.self).sorted(byKeyPath: "creationTime", ascending: true).filter("dokuryoFlag == false")
+        records = realm.objects(Record.self).sorted(byKeyPath: R.string.tsundokuModel.creationTime(), ascending: true).filter(R.string.tsundokuModel.dokuryoFalse())
 
         input.changeFlagRelay
             .subscribe(onNext: { [weak self] flag in

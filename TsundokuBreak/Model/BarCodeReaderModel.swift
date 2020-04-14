@@ -54,7 +54,6 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
 
     func setup(input: BarCodeReaderModelInput) {
         let realm = self.createRealm()
-        //        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
         input.isbnRelay
             .subscribe(onNext: { [weak self] isbn in
@@ -79,7 +78,7 @@ final class  BarCodeReaderModel: BarCodeReaderModelType, Injectable {
 
 extension BarCodeReaderModel {
     private func getRequest(isbnNumber: String) {
-        var isbnString: String = "isbn:"
+        var isbnString: String = R.string.barCodeReaderModel.isbn()
         isbnString += isbnNumber
 
         provider.request(.search( isbnString )) { result in
@@ -101,13 +100,6 @@ extension BarCodeReaderModel {
 
     private func processJsonData(jsonData: BookInfo) {
         self.bookInfo.accept(jsonData)
-        //        print(jsonData.totalItems!)
-        //        print(jsonData.items?[0].volumeInfo?.imageLinks?.thumbnail as Any)
-        //        print(jsonData.items?[0].volumeInfo?.title as Any)
-        //        print(jsonData.items?[0].volumeInfo?.authors?[0] as Any)
-        //        print(jsonData.items?[0].volumeInfo?.publishedDate as Any)
-        //        print(jsonData.items?[0].volumeInfo?.pageCount as Any)
-
     }
 
     private func makeRecord() -> Record {
@@ -163,7 +155,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let authorString = info.items?[0].volumeInfo?.authors?[0]
                 guard let author = authorString else {return}
-                authorRelay.accept("著者: " + author)
+                authorRelay.accept(R.string.barCodeReaderModel.author() + author)
                 self.author = author
             })
             .disposed(by: disposeBag)
@@ -179,7 +171,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let publicationString = info.items?[0].volumeInfo?.publishedDate
                 guard let publication = publicationString else {return}
-                publicationRelay.accept("出版日: " + publication)
+                publicationRelay.accept(R.string.barCodeReaderModel.publishDate() + publication)
                 self.publication = publication
             })
             .disposed(by: disposeBag)
@@ -195,7 +187,7 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
             .subscribe(onNext: { info in
                 let pageCountString = info.items?[0].volumeInfo?.pageCount
                 guard let pageCount = pageCountString else {return}
-                pageCountRelay.accept("ページ数: " + String(pageCount))
+                pageCountRelay.accept(R.string.barCodeReaderModel.pageCount() + String(pageCount))
                 self.pageCount = pageCount
             })
             .disposed(by: disposeBag)
@@ -213,12 +205,12 @@ extension BarCodeReaderModel: BarCodeReaderModelOutput {
 
                 var url: String
                 if var url = urlString {
-                    url = "https" + url.dropFirst(4)
+                    url = R.string.barCodeReaderModel.https() + url.dropFirst(4)
                     urlRelay.accept(URL(string: url)!)
                     self.thumbnailUrl = url
 
                 } else {
-                    url = "https://f.easyuploader.app/eu-prd/upload/20200411045606_306332414a534e397464.png"
+                    url = R.string.barCodeReaderModel.noImageUrl()
                     urlRelay.accept(URL(string: url)!)
                     self.thumbnailUrl = url
                 }

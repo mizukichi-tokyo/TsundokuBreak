@@ -1,0 +1,19 @@
+/* 
+  BarCodeReaderViewController.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"lupe" = "lupe";
+"loading" = "loading";
+"barcodeError" = "バーコードエラー";
+"barcodeErrorDescription" = "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\n\nもう一度、\n上段のバーコードを読み取ってください";
+"ok" = "OK!";
+"doneBookAPI" = "書籍のデータを取得しました";
+"allowCameraTitle" = "カメラを許可してください";
+"allowCameraDescription" = "バーコードを読み取るためにカメラが必要です";
+"dontAllow" = "許可しない";
+"allow" = "許可する";
+"noCameraTitle"= "Scanning not supported";
+"haveNoCamera" = "Your device does not support scanning a code from an item. Please use a device with a camera.";

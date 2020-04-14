@@ -116,20 +116,24 @@ extension DokuryoViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate 
     }
 
     func image(forEmptyDataSet scrollView: UIScrollView!) -> UIImage! {
-        return UIImage(named: "Box")
+        return R.image.box()
     }
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "読了した本がありません", attributes: [
-            .foregroundColor: UIColor.gray,
-            .font: UIFont.boldSystemFont(ofSize: 20)
+        return NSAttributedString(
+            string: R.string.dokuryoViewController.alertTitle(),
+            attributes: [
+                .foregroundColor: UIColor.gray,
+                .font: UIFont.boldSystemFont(ofSize: 20)
         ])
     }
 
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "読了したら追加されます", attributes: [
-            .foregroundColor: UIColor.gray,
-            .font: UIFont.systemFont(ofSize: 15)
+        return NSAttributedString(
+            string: R.string.dokuryoViewController.alertDescription(),
+            attributes: [
+                .foregroundColor: UIColor.gray,
+                .font: UIFont.systemFont(ofSize: 15)
         ])
 
     }
