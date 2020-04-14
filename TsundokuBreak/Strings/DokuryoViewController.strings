@@ -1,0 +1,9 @@
+/* 
+  DokuryoViewController.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"AlertTitle" = "読了した本がありません";
+"AlertDescription" = "積読リストを消化しよう！";

@@ -1,0 +1,14 @@
+/* 
+  BarCodeReader.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+
+"isbn" = "isbn:";
+"author" = "著者: ";
+"publishDate" = "出版日: ";
+"pageCount" = "ページ数: ";
+"https" = "https";
+"noImageUrl" = "https://f.easyuploader.app/eu-prd/upload/20200414034116_36323844636e77646250.png";

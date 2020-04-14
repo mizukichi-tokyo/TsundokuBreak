@@ -137,14 +137,14 @@ extension TsundokuViewController: DZNEmptyDataSetSource, DZNEmptyDataSetDelegate
     }
 
     func title(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "積読本を探そう！", attributes: [
+        return NSAttributedString(string: R.string.tsundokuViewController.title(), attributes: [
             .foregroundColor: UIColor.gray,
             .font: UIFont.boldSystemFont(ofSize: 20)
         ])
     }
 
     func description(forEmptyDataSet scrollView: UIScrollView!) -> NSAttributedString! {
-        return NSAttributedString(string: "積読リストに登録しよう！", attributes: [
+        return NSAttributedString(string: R.string.tsundokuViewController.description(), attributes: [
             .foregroundColor: UIColor.gray,
             .font: UIFont.systemFont(ofSize: 15)
         ])

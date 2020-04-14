@@ -37,7 +37,7 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
     @IBOutlet weak var cameraView: UIView!
     @IBOutlet weak var bookImage: UIImageView! {
         didSet {
-            bookImage.image = UIImage.gif(name: "lupe")
+            bookImage.image = UIImage.gif(name: R.string.barCodeReaderViewController.lupe())
         }
     }
 
@@ -105,7 +105,7 @@ extension BarCodeReaderViewController {
             .emit(onNext: { [weak self] url in
                 guard let self = self else { return }
                 let filter = AspectScaledToFillSizeFilter(size: self.bookImage.frame.size)
-                let placeFolder = UIImage.gif(name: "loading")
+                let placeFolder = UIImage.gif(name: R.string.barCodeReaderViewController.loading())
                 self.bookImage.af.setImage(
                     withURL: url,
                     placeholderImage: placeFolder,
@@ -147,12 +147,13 @@ extension BarCodeReaderViewController {
     func zeroItemTrueProcess() {
         AudioServicesPlaySystemSound(SystemSoundID(kSystemSoundID_Vibrate))
 
-        let alert = CDAlertView(title: "バーコードエラー",
-                                message: "下段のバーコードを読み取っているか、\nデータベースに該当書籍がありません。\n\nもう一度、\n上段のバーコードを読み取ってください",
-                                type: .warning
+        let alert = CDAlertView(
+            title: R.string.barCodeReaderViewController.barcodeError(),
+            message: R.string.barCodeReaderViewController.barcodeErrorDescription(),
+            type: .warning
         )
         let doneAction = CDAlertViewAction(
-            title: "OK!",
+            title: R.string.barCodeReaderViewController.ok(),
             handler: { _ in self.restartCapture()}
         )
         alert.add(action: doneAction)
@@ -167,7 +168,7 @@ extension BarCodeReaderViewController {
     }
 
     func zeroItemFalseProcess() {
-        instructLabel.text = "書籍のデータを取得しました"
+        instructLabel.text = R.string.barCodeReaderViewController.doneBookAPI()
         addButton.isEnabled = true
     }
 }
@@ -204,13 +205,14 @@ extension BarCodeReaderViewController {
         let settingsAppURL = URL(string: UIApplication.openSettingsURLString)!
 
         let alert = UIAlertController(
-            title: NSLocalizedString("need camera access", comment: ""),
-            message: NSLocalizedString("camera usage perpose", comment: ""),
+            title: NSLocalizedString(R.string.barCodeReaderViewController.allowCameraTitle(), comment: ""),
+            message: NSLocalizedString(R.string.barCodeReaderViewController.allowCameraDescription(), comment: ""),
             preferredStyle: UIAlertController.Style.alert
         )
 
-        alert.addAction(UIAlertAction(title: NSLocalizedString("don't allow", comment: ""), style: .cancel, handler: nil))
-        alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: ""), style: .default, handler: { (_) -> Void in
+        alert.addAction(UIAlertAction(title: NSLocalizedString(R.string.barCodeReaderViewController.dontAllow(),
+                                                               comment: ""), style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: NSLocalizedString(R.string.barCodeReaderViewController.allow(), comment: ""), style: .default, handler: { (_) -> Void in
             UIApplication.shared.open(settingsAppURL, options: [:], completionHandler: nil)
         }))
 
@@ -284,8 +286,12 @@ extension BarCodeReaderViewController {
     // swiftlint:enable identifier_name
 
     func failed() {
-        let alertController = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default))
+        let alertController = UIAlertController(
+            title: R.string.barCodeReaderViewController.noCameraTitle(),
+            message: R.string.barCodeReaderViewController.haveNoCamera(),
+            preferredStyle: .alert
+        )
+        alertController.addAction(UIAlertAction(title: R.string.barCodeReaderViewController.ok(), style: .default))
         present(alertController, animated: true)
         captureSession = nil
     }
