@@ -128,29 +128,15 @@
                                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SBx-Kv-fDi">
-                                    <rect key="frame" x="323" y="401" width="75" height="30"/>
-                                    <color key="backgroundColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="30" id="fX1-tT-DKr"/>
-                                        <constraint firstAttribute="width" constant="75" id="hfd-9A-shz"/>
-                                    </constraints>
-                                    <state key="normal" title="TestButton"/>
-                                    <connections>
-                                        <action selector="testButtonPush:" destination="-1" eventType="touchUpInside" id="rCg-T1-efS"/>
-                                    </connections>
-                                </button>
                             </subviews>
                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="VBb-cv-H3Q" firstAttribute="top" secondItem="4SP-gT-f4d" secondAttribute="bottom" constant="8" id="3Qj-DO-JWo"/>
                                 <constraint firstAttribute="trailing" secondItem="4SP-gT-f4d" secondAttribute="trailing" id="6i5-pP-ob1"/>
-                                <constraint firstAttribute="trailing" secondItem="SBx-Kv-fDi" secondAttribute="trailing" id="8B3-XT-9bK"/>
                                 <constraint firstItem="vIl-lZ-kxC" firstAttribute="leading" secondItem="5bZ-Cy-VJw" secondAttribute="trailing" constant="8" id="8Gy-zn-1BM"/>
                                 <constraint firstItem="4SP-gT-f4d" firstAttribute="top" secondItem="yBC-L6-zYJ" secondAttribute="top" id="9TU-eW-szN"/>
                                 <constraint firstItem="YcZ-Eg-ymz" firstAttribute="leading" secondItem="5bZ-Cy-VJw" secondAttribute="trailing" constant="8" id="APz-ph-ee8"/>
                                 <constraint firstItem="K2H-7D-DBJ" firstAttribute="leading" secondItem="yBC-L6-zYJ" secondAttribute="leading" id="DWt-XS-Fc4"/>
-                                <constraint firstAttribute="bottom" secondItem="SBx-Kv-fDi" secondAttribute="bottom" id="ImV-bX-Tza"/>
                                 <constraint firstAttribute="trailing" secondItem="VBb-cv-H3Q" secondAttribute="trailing" id="It3-hi-5cm"/>
                                 <constraint firstItem="aE7-6t-fQW" firstAttribute="top" secondItem="YcZ-Eg-ymz" secondAttribute="bottom" constant="8" id="KLS-ta-wcD"/>
                                 <constraint firstAttribute="trailing" secondItem="YcZ-Eg-ymz" secondAttribute="trailing" id="KNZ-vJ-BXm"/>

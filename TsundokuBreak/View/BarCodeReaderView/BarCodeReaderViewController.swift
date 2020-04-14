@@ -51,10 +51,6 @@ final class BarCodeReaderViewController: UIViewController, Injectable, AVCapture
         self.dismiss(animated: true, completion: nil)
     }
 
-    @IBAction func testButtonPush(_ sender: Any) {
-        self.isbnRelay.accept("9784873116594")
-    }
-
     let cameraAuthStatus = AVCaptureDevice.authorizationStatus(for: .video)
     var captureSession: AVCaptureSession!
     var previewLayer: AVCaptureVideoPreviewLayer!
