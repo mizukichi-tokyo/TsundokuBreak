@@ -45,35 +45,27 @@
   
 ## 使用したライブラリ
 
-[RxSwift](https://github.com/ReactiveX/RxSwift)　リアクティブプログラミング用
- [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)　リアクティブプログラミング用
+ - [RxSwift](https://github.com/ReactiveX/RxSwift)　リアクティブプログラミング用 
+ -  [RxCocoa](https://github.com/ReactiveX/RxSwift/tree/master/RxCocoa)　リアクティブプログラミング用
+ - [RealmSwift](https://realm.io/docs/swift/latest)　ネイティブアプリDB操作用
+ - [RxRealm](https://github.com/RxSwiftCommunity/RxRealm) 上記のものをRxSwiftで扱うライブラリ
+ - [RxTest](https://github.com/ReactiveX/RxSwift/tree/master/RxTest) RxSwiftのテスト用
+ - [RxBlocking](https://github.com/ReactiveX/RxSwift/tree/master/RxBlocking)　RxSwiftのテスト用
+ - [Moya](https://github.com/Moya/Moya) ネットワークを抽象化するレイヤーの役割をしてくれるライブラリ
+ - [AlamofireImage](https://github.com/Alamofire/AlamofireImage)画像キャッシュライブラリ
  
-[RealmSwift](https://realm.io/docs/swift/latest)　ネイティブアプリDB操作用
-[RxRealm](https://github.com/RxSwiftCommunity/RxRealm) 上記のものをRxSwiftで扱うライブラリ
-
-[RxTest](https://github.com/ReactiveX/RxSwift/tree/master/RxTest)  RxSwiftのテスト用
-[RxBlocking](https://github.com/ReactiveX/RxSwift/tree/master/RxBlocking)　RxSwiftのテスト用
-
-[Moya](https://github.com/Moya/Moya) ネットワークを抽象化するレイヤーの役割をしてくれるライブラリ
-[AlamofireImage](https://github.com/Alamofire/AlamofireImage) 画像キャッシュライブラリ
-
-
-[SwiftLint](https://github.com/realm/SwiftLint)　校正ツール
-[R.swift](https://github.com/mac-cain13/R.swift)　ハードコーディングによるスペルミス対策
-[LicensePlist](https://github.com/mono0926/LicensePlist)  ライセンス一覧を生成するツール
-
-[MaterialComponents/Buttons](https://material.io/develop/ios/components/buttons/)　FABのライブラリ
-[ColorMatchTabs](https://github.com/Yalantis/ColorMatchTabs) ポップなタブのライブラリ
-[SwiftGifOrigin](https://github.com/swiftgif/SwiftGif) .gifを読みこむためのライブラリ
-
-[MBProgressHUD](https://github.com/jdg/MBProgressHUD)  progressHUD
-[CDAlertView](https://github.com/candostdagdeviren/CDAlertView) ポップなアラート
-[FaveButton](https://github.com/janselv/fave-button)　可愛いボタンのライブラリ
-[DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)　エンプティエステート
-[Onboard](https://github.com/mamaral/Onboard)　初回説明用ライブラリ
-
-
-
+ - [SwiftLint](https://github.com/realm/SwiftLint)　校正ツール
+ - [R.swift](https://github.com/mac-cain13/R.swift)　ハードコーディングによるスペルミス対策
+ - [LicensePlist](https://github.com/mono0926/LicensePlist) ライセンス一覧を生成するツール
+ 
+ - [MaterialComponents/Buttons](https://material.io/develop/ios/components/buttons/)　FABのライブラリ
+ - [ColorMatchTabs](https://github.com/Yalantis/ColorMatchTabs)ポップなタブのライブラリ
+ -  [SwiftGifOrigin](https://github.com/swiftgif/SwiftGif).gifを読みこむためのライブラリ
+ - [MBProgressHUD](https://github.com/jdg/MBProgressHUD)  progressHUD
+ - [CDAlertView](https://github.com/candostdagdeviren/CDAlertView)ポップなアラート
+ - [FaveButton](https://github.com/janselv/fave-button)　可愛いボタンのライブラリ
+ - [DZNEmptyDataSet](https://github.com/dzenbot/DZNEmptyDataSet)　エンプティエステート
+ - [Onboard](https://github.com/mamaral/Onboard)　初回説明用ライブラリ
 
 ## 今後の予定
 テストコードの整備
