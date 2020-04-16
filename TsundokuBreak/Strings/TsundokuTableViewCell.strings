@@ -1,0 +1,11 @@
+/* 
+  TsundokuTableViewCell.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"gifloading" = "loading";
+"alertTitle" = "読了おめでとう！";
+"alertDescription" = "読了リストに本を追加しました";
+"dokushoSintyoku" = "読書進捗: ";

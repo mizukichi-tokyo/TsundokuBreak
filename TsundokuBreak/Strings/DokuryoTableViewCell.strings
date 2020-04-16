@@ -1,0 +1,12 @@
+/* 
+  DokuryoTableViewCell.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"loading" = "loading";
+"alertTitle" = "本当に削除しますか？";
+"alertDescription" = "一度削除したら元に戻りません";
+"cancel" = "やめます";
+"ok" = "OK!";

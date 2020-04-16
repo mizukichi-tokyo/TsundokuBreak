@@ -1,0 +1,18 @@
+excluded:
+  - Carthage
+  - Pods/
+  - Podfile
+  - Podfile.lock
+  - vendor
+  - R.generated.swift
+  - TsundokuBreak/AppDelegate.swift
+  - TsundokuBreak/SceneDelegate.swift
+  # GoogleBooksAPIsの形式に準拠するため
+  - TsundokuBreak/Struct/BookInfo.swift
+  - TsundokuBreak/Resources
+# swiftlintがfastlaneのswiftコードを見に行ってしまうので、vendorをlint対象外としている。
+disabled_rules:
+- line_length
+- trailing_whitespace
+- empty_enum_arguments # enumの引数を省略したいため
+- trailing_closure # RxSwiftのOnNextでwarningが出るため

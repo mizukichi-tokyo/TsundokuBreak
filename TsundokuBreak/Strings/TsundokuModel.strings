@@ -1,0 +1,9 @@
+/* 
+  TsundokuModel.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"creationTime" = "creationTime";
+"dokuryoFalse" = "dokuryoFlag == false";

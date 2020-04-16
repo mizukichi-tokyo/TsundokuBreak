@@ -1,3 +1,160 @@
-PODFILE CHECKSUM: 6ab402c479f367bb54c0a43d96b0c334c300568d
+PODS:
+  - Alamofire (5.1.0)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - CDAlertView (0.10.0)
+  - ColorMatchTabs (3.3)
+  - DZNEmptyDataSet (1.8.1)
+  - FaveButton (3.2.1)
+  - LicensePlist (2.15.1)
+  - MaterialComponents/AnimationTiming (108.0.0)
+  - MaterialComponents/Availability (108.0.0)
+  - MaterialComponents/Buttons (108.0.0):
+    - MaterialComponents/Elevation
+    - MaterialComponents/Ink
+    - MaterialComponents/private/Math
+    - MaterialComponents/Ripple
+    - MaterialComponents/ShadowElevations
+    - MaterialComponents/ShadowLayer
+    - MaterialComponents/Shapes
+    - MaterialComponents/Typography
+    - MDFInternationalization
+    - MDFTextAccessibility
+  - MaterialComponents/Elevation (108.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/Ink (108.0.0):
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/private/Application (108.0.0)
+  - MaterialComponents/private/Color (108.0.0):
+    - MaterialComponents/Availability
+  - MaterialComponents/private/Math (108.0.0)
+  - MaterialComponents/Ripple (108.0.0):
+    - MaterialComponents/AnimationTiming
+    - MaterialComponents/Availability
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+  - MaterialComponents/ShadowElevations (108.0.0)
+  - MaterialComponents/ShadowLayer (108.0.0):
+    - MaterialComponents/ShadowElevations
+  - MaterialComponents/Shapes (108.0.0):
+    - MaterialComponents/private/Color
+    - MaterialComponents/private/Math
+    - MaterialComponents/ShadowLayer
+  - MaterialComponents/Typography (108.0.0):
+    - MaterialComponents/private/Application
+    - MaterialComponents/private/Math
+  - MBProgressHUD (1.2.0)
+  - MDFInternationalization (2.0.0)
+  - MDFTextAccessibility (2.0.0)
+  - Moya (14.0.0):
+    - Moya/Core (= 14.0.0)
+  - Moya/Core (14.0.0):
+    - Alamofire (~> 5.0)
+  - Onboard (2.3.3)
+  - R.swift (5.1.0):
+    - R.swift.Library (~> 5.1.0)
+  - R.swift.Library (5.1.0)
+  - Realm (4.4.0):
+    - Realm/Headers (= 4.4.0)
+  - Realm/Headers (4.4.0)
+  - RealmSwift (4.4.0):
+    - Realm (= 4.4.0)
+  - RxBlocking (5.1.1):
+    - RxSwift (~> 5)
+  - RxCocoa (5.1.1):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRealm (2.0.0):
+    - RealmSwift (~> 4.0)
+    - RxSwift (~> 5.0)
+  - RxRelay (5.1.1):
+    - RxSwift (~> 5)
+  - RxSwift (5.1.1)
+  - RxTest (5.1.1):
+    - RxSwift (~> 5)
+  - SwiftGifOrigin (1.7.0)
+  - SwiftLint (0.39.2)
 
-COCOAPODS: 1.8.3
+DEPENDENCIES:
+  - AlamofireImage
+  - CDAlertView
+  - ColorMatchTabs
+  - DZNEmptyDataSet
+  - FaveButton
+  - LicensePlist
+  - MaterialComponents/Buttons
+  - MBProgressHUD
+  - Moya
+  - Onboard
+  - R.swift
+  - RealmSwift
+  - RxBlocking
+  - RxCocoa
+  - RxRealm
+  - RxSwift
+  - RxTest
+  - SwiftGifOrigin
+  - SwiftLint
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - CDAlertView
+    - ColorMatchTabs
+    - DZNEmptyDataSet
+    - FaveButton
+    - LicensePlist
+    - MaterialComponents
+    - MBProgressHUD
+    - MDFInternationalization
+    - MDFTextAccessibility
+    - Moya
+    - Onboard
+    - R.swift
+    - R.swift.Library
+    - Realm
+    - RealmSwift
+    - RxBlocking
+    - RxCocoa
+    - RxRealm
+    - RxRelay
+    - RxSwift
+    - RxTest
+    - SwiftGifOrigin
+    - SwiftLint
+
+SPEC CHECKSUMS:
+  Alamofire: 9d5c5f602928e512395b30950c5984eca840093c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  CDAlertView: ee6a87c90c4283c8d316d55633db1a6981f1cc51
+  ColorMatchTabs: 8d63cd25099bdb8929438f468bb52aafd288d7a0
+  DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  FaveButton: 93cfebf6030336fa7653fad2068c3152ed668b39
+  LicensePlist: 9fb7c521b431f94ea665046c15ed5f392583afbd
+  MaterialComponents: 5ce7930b30fafd4c1ba402abf8e460dbde90cb94
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MDFInternationalization: 010097556d6b09d2c4ea38e0820ea6d37be6a314
+  MDFTextAccessibility: 85c09a1bd9c321f494348e632a25063bcda35a53
+  Moya: 5b45dacb75adb009f97fde91c204c1e565d31916
+  Onboard: 4d6e943e20bdd6bc229df967a347dd7514bc2a6f
+  R.swift: 8cbc4fc69b740305b6a17c8a8ed968eb788962d9
+  R.swift.Library: fa85ce1e0d0b7e818cd9e080df910ba54d2776cc
+  Realm: e125f464884cda953ebefe70c671b75b03b81b9b
+  RealmSwift: 33656a42bd300959a081fc13347376bc478071af
+  RxBlocking: 5f700a78cad61ce253ebd37c9a39b5ccc76477b4
+  RxCocoa: 32065309a38d29b5b0db858819b5bf9ef038b601
+  RxRealm: 900f5c7e6f0a2d6527b56eaf7283f3035ec1e8ba
+  RxRelay: d77f7d771495f43c556cbc43eebd1bb54d01e8e9
+  RxSwift: 81470a2074fa8780320ea5fe4102807cb7118178
+  RxTest: 711632d5644dffbeb62c936a521b5b008a1e1faa
+  SwiftGifOrigin: fbd6cf37afcfcf97a5c3db996ddc0492e5c5c145
+  SwiftLint: 22ccbbe3b8008684be5955693bab135e0ed6a447
+
+PODFILE CHECKSUM: 716072503b9681142371a732c5f7fdc31fdb86a8
+
+COCOAPODS: 1.9.1
