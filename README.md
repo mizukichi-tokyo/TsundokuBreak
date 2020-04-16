@@ -1,6 +1,5 @@
 # 作成したアプリ
 
-＜画像＞
 ![appImage](./ReadmeImages/appImage.png)
 
 ## App URL
