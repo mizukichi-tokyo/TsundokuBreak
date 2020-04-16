@@ -1,0 +1,9 @@
+/* 
+  TsundokuViewController.strings
+  TsundokuBreak
+
+  Created by Mizuki Kubota on 2020/04/14.
+  Copyright © 2020 MizukiKubota. All rights reserved.
+*/
+"title" = "積読本を探そう！";
+"description" = "積読リストに登録しよう！";
